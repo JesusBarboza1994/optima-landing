@@ -2,22 +2,13 @@ import styled from "@emotion/styled"
 import portada from '../assets/template.jpg'
 import conexiones from '../assets/conexiones.png'
 import { colors } from "../styles/colors"
+import Titulo from "./titulo"
 
 const Wrapper = styled.div`
   
 `
 const Presentacion = styled.div`
   margin-top:70px;
-  hr{
-    border: 1px solid ${colors.blue[400]};
-    width: 200px;
-    margin-bottom: 20px;
-  }
-  h2{
-    color: ${colors.gray.medium};
-    font-size:22px;
-    margin-bottom: 0px;
-  }
 `
 const Portada = styled.div`
   background-image: url(${portada});
@@ -28,6 +19,7 @@ const Portada = styled.div`
   color:${colors.white};
   h1{
     font-size: 28px;
+    font-weight:400;
   }
 `
 const Container = styled.div`
@@ -48,8 +40,7 @@ export default function Template({title, descrip, Main}){
       <Container>
         <Presentacion>
           <img src={conexiones} alt='imagen'/>
-          <h2>{descrip}</h2>
-          <hr/>
+          <Titulo titulo={descrip}/>
         </Presentacion>
         <Main/>
       </Container>

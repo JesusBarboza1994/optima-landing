@@ -27,21 +27,37 @@ const DivText = styled.div`
   display:flex;
   gap:40px;
   padding-bottom:40px;
-  justify-content:space-evenly;
+  justify-content:space-between;
 `
 const OptimaDiv = styled.div`
-  max-width:1000px;
+  padding-left:30px;
+  max-width:800px;
   p{
     text-align:justify;
+    font-size:14px;
   }
   div{
     display:flex;
     color:${colors.white};
     gap: 20px;
   }
+  h2{
+    width:100%;
+    text-align:start;
+    font-size:18px;
+  }
 `
 const ContactDiv = styled.div`
-
+  padding-left:30px;
+  width:100%;
+  h2{
+    text-align:start;
+    font-size:18px;
+  }
+  p{
+    text-align:start;
+    font-size:14px;
+  }
 `
 const Circle = styled.div`
   width:40px;

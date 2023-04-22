@@ -1,5 +1,11 @@
+import SeguridadMain from "../components/seguridad-main";
+import Template from "../components/template-page";
+
 export default function SeguridadSalud(){
   return(
-    <h1>Seguridad y Salud</h1>
+    <Template title={"Seguridad y Salud"}
+      descrip={"Seguridad Y Salud"}
+      Main={SeguridadMain}
+    />
   )
 }

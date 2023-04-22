@@ -1,5 +1,11 @@
+import CalidadMain from "../components/calidad-main";
+import Template from "../components/template-page";
+
 export default function Calidad(){
   return(
-    <h1>Calidad</h1>
+    <Template title={"Calidad"}
+      descrip={"Calidad"}
+      Main={CalidadMain}
+    />
   )
 }
