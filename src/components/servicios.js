@@ -8,7 +8,8 @@ import Titulo from "./titulo"
 const Wrapper = styled.div`
   display:flex;
   flex-wrap:wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap:20px;
   padding-bottom:80px;
 `
 const Card = styled.div`
@@ -23,6 +24,10 @@ const Card = styled.div`
     padding:10px 0px;
   }
 `
+const Img = styled.img`
+  max-width:350px;
+`
+
 export default function Servicios(){
   return(
     <>
@@ -31,15 +36,15 @@ export default function Servicios(){
 
         <Card>
           <h2>Mantenimiento</h2>
-          <img src={servicio1} alt="imagen" style={{width:"350px"}}/>
+          <Img src={servicio1} alt="imagen" />
         </Card>
         <Card>
           <h2>Capacitaciones</h2>
-          <img src={servicio2} alt="imagen" style={{width:"350px"}}/>
+          <Img src={servicio2} alt="imagen" />
         </Card>
         <Card>
           <h2>Auditoría</h2>
-          <img src={servicio3} alt="imagen" style={{width:"350px"}}/>
+          <Img src={servicio3} alt="imagen" />
         </Card>
       </Wrapper>
     </>
