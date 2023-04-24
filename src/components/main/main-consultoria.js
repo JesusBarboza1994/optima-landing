@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { FaCheck } from "react-icons/fa"
-import consultoria1 from "../assets/consultoria/consultoria1.jpg"
-import consultoria2 from "../assets/consultoria/consultoria2.jpg"
+import consultoria1 from "../../assets/consultoria/consultoria1.jpg"
+import consultoria2 from "../../assets/consultoria/consultoria2.jpg"
 
 const Wrapper = styled.div`
   ul{

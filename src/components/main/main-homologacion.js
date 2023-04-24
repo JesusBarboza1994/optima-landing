@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
-import homologacion from "../assets/homologacion/homologacion.png"
-import { colors } from "../styles/colors"
+import homologacion from "../../assets/homologacion/homologacion.png"
+import { colors } from "../../styles/colors"
 const Wrapper = styled.div`
   padding-bottom:50px;
   p{

@@ -1,5 +1,4 @@
-import ConsultoriaMain from "../components/consultoria-main";
-import HomologacionMain from "../components/homologacion-main";
+import HomologacionMain from "../components/main/main-homologacion";
 import Template from "../components/template-page";
 
 export default function Homologaciones(){

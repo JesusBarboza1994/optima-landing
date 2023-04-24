@@ -1,4 +1,4 @@
-import ConsultoriaMain from "../components/consultoria-main";
+import ConsultoriaMain from "../components/main/main-consultoria";
 import Template from "../components/template-page";
 
 export default function Consultoria(){

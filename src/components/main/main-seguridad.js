@@ -1,11 +1,11 @@
 import styled from "@emotion/styled"
-import seguridad1 from "../assets/seguridad/seguridad1.jpg"
-import seguridad2 from "../assets/seguridad/seguridad2.png"
-import seguridad3 from "../assets/seguridad/seguridad3.png"
-import seguridad4 from "../assets/seguridad/seguridad4.jpg"
-import { colors } from "../styles/colors"
-import Titulo from "./titulo"
-import Servicios from "./servicios"
+import seguridad1 from "../../assets/seguridad/seguridad1.jpg"
+import seguridad2 from "../../assets/seguridad/seguridad2.png"
+import seguridad3 from "../../assets/seguridad/seguridad3.png"
+import seguridad4 from "../../assets/seguridad/seguridad4.jpg"
+import { colors } from "../../styles/colors"
+import Titulo from "../titulo"
+import Servicios from "../servicios"
 
 const Wrapper = styled.div`
   margin:50px 0px;

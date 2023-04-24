@@ -1,10 +1,10 @@
 import styled from "@emotion/styled"
-import calidad1 from "../assets/calidad/calidad1.jpg"
-import calidad2 from "../assets/calidad/calidad2.jpg"
-import calidad3 from "../assets/calidad/calidad3.jpg"
-import Servicios from "./servicios"
-import Titulo from "./titulo"
-import { colors } from "../styles/colors"
+import calidad1 from "../../assets/calidad/calidad1.jpg"
+import calidad2 from "../../assets/calidad/calidad2.jpg"
+import calidad3 from "../../assets/calidad/calidad3.jpg"
+import Servicios from "../servicios"
+import Titulo from "../titulo"
+import { colors } from "../../styles/colors"
 
 const Wrapper = styled.div`
   h3{

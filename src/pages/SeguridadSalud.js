@@ -1,4 +1,4 @@
-import SeguridadMain from "../components/seguridad-main";
+import SeguridadMain from "../components//main/main-seguridad";
 import Template from "../components/template-page";
 
 export default function SeguridadSalud(){

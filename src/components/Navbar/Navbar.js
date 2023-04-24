@@ -3,18 +3,28 @@ import { Link  } from "react-router-dom";
 import { colors, ColorStyle } from "../../styles/colors";
 import {RxHamburgerMenu} from "react-icons/rx"
 import optima from '../../assets/optima-logo.png'
+import { useState } from "react";
 
 const Li = styled.li`
   list-style:none;
 `
 const List = styled.ul`
   display:flex;
+  flex-wrap:wrap;
   justify-content: flex-end;
   align-items:center;
   gap: 40px;
   margin:0px;
   width:100%;
   padding: 20px 40px;
+  @media (max-width: 1250px) {
+    flex-direction:column;
+    width:100%;
+    display:${props => props.menu};
+    position: absolute;
+    left:0;
+    top:0;
+  }
 `
 const StyledLink = styled(Link)`
   text-decoration:none;
@@ -44,15 +54,28 @@ const Nav = styled.nav`
   position: sticky;
   top:0px;
   z-index:1;
+  @media (max-width: 1250px) {
+    position:relative;
+  }
+ 
 `
 const Menu = styled(RxHamburgerMenu)`
   cursor:pointer;
   scale:1.5;
+  display:none;
+  @media (max-width: 1250px) {
+    display:block;
+  }
 `
 
 export function Navbar(){
+  const [menu, setMenu] = useState("none");
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  function handleMenu(){
+    menu==="none" ? setMenu("block") : setMenu("none");
+    
   }
 
   const urls = ["nosotros", "calidad", "seguridad-y-salud", "medio-ambiente", "homologaciones", "consultoria", "blog", "contacto"]
@@ -63,7 +86,7 @@ export function Navbar(){
           <img src={optima} alt="optima" style={{width:"180px"}}/>
         </a>
       </div>
-      <List>
+      <List menu={menu}>
         { urls.map((url, index)=>{
          
           return(
@@ -73,9 +96,9 @@ export function Navbar(){
           )
           })
         }
-        {/* <Menu/> */}
       
       </List>
+      <Menu onClick={handleMenu} />
     </Nav>
   )
 }
