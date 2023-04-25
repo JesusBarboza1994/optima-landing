@@ -17,9 +17,14 @@ const Portada = styled.div`
 `
 const Wrapper = styled.div`
   display:flex;
+  flex-wrap:wrap;
   justify-content:flex-end;
   gap:30px;
   margin: 40px auto;
+  padding: 0px 20px;
+  @media (max-width: 1250px) {
+    justify-content:center;
+  }
 `
 const Form = styled.div`
   max-width:560px;
@@ -34,6 +39,9 @@ const Form = styled.div`
 `
 const Img = styled.img`
   width:50%;  
+  @media (max-width: 1200px) {
+    width:100%;
+  }
 `
 const Input = styled.input`
   width:90%;

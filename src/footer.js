@@ -25,38 +25,46 @@ const BlueDiv = styled.div`
 `
 const DivText = styled.div`
   display:flex;
-  gap:40px;
+  gap:10px;
   padding-bottom:40px;
   justify-content:space-between;
+  flex-wrap:wrap;
 `
 const OptimaDiv = styled.div`
   padding-left:30px;
   max-width:800px;
+  padding: 10px 20px;
   p{
     text-align:justify;
     font-size:14px;
+    padding: 0px 20px;
   }
   div{
     display:flex;
     color:${colors.white};
     gap: 20px;
   }
+  > div{
+    padding: 0px 20px;
+  }
   h2{
     width:100%;
     text-align:start;
     font-size:18px;
+    padding: 10px 20px;
   }
 `
 const ContactDiv = styled.div`
-  padding-left:30px;
-  width:100%;
+  padding:0 30px;
   h2{
     text-align:start;
     font-size:18px;
+    padding: 0px 20px;
   }
   p{
     text-align:start;
     font-size:14px;
+    padding: 0px 20px;
   }
 `
 const Circle = styled.div`

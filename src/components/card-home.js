@@ -6,6 +6,12 @@ const Wrapper = styled.div`
   flex-direction:column;
   width:510px;
   align-items:center;
+  margin: 0px 20px;
+  @media (max-width: 530px) {
+    width:100%;
+    justify-content:center;
+    margin: 0px 60px;
+  }
 `
 const Title = styled.div`
   background:${colors.blue[100]};
@@ -16,7 +22,7 @@ const Title = styled.div`
 const Figure = styled.figure`
   position: relative;
   overflow: hidden;
-  max-width:448px;
+  max-width:350px;
   margin:0px;
   &:hover img{
     transform: translateY(-50%);
@@ -43,6 +49,8 @@ const Figcaption = styled.figcaption`
 const Img= styled.img`
   display: block;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  padding: 0px 20px;
+  width:100%;
   
 `
 

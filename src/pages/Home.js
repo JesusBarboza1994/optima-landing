@@ -16,7 +16,8 @@ import Portada from '../components/portada-home'
 
 
 const Wrapper = styled.div`
-
+  display:flex;
+  flex-direction:column;
 `
 const WrapperHome = styled.div`
   display: flex;
@@ -34,12 +35,13 @@ const WrapperCard = styled.div`
   display: flex;
   flex-wrap:wrap;
   gap: 30px;
-  justify-content:space-evenly;
+  justify-content:center;
+  gap:20px;
 `
 const HacemosSection = styled.section`
   max-width:945px;
   margin:auto;
-  padding: 100px 0px;
+  padding: 100px 20px;
   hr{
     border: 1px solid ${colors.blue[400]};
     width: 200px;
@@ -51,7 +53,7 @@ const HacemosSection = styled.section`
 const ParlanteSection = styled.section`
   margin:auto;
   max-width:800px;
-  padding:50px 0px;
+  padding:50px 20px;
   hr{
     border: 1px solid ${colors.blue[400]};
     width: 200px;

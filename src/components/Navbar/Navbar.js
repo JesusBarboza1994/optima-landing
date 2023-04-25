@@ -7,6 +7,10 @@ import { useState } from "react";
 
 const Li = styled.li`
   list-style:none;
+  @media (max-width: 1250px) {
+    padding: 10px 0px;
+    border: 1px solid ${colors.white};
+  }
 `
 const List = styled.ul`
   display:flex;
@@ -19,11 +23,13 @@ const List = styled.ul`
   padding: 20px 40px;
   @media (max-width: 1250px) {
     flex-direction:column;
-    width:100%;
+    width:50%;
     display:${props => props.menu};
     position: absolute;
-    left:0;
-    top:0;
+    right:0;
+    top:50px;
+    background:${colors.black};
+    padding: 0px 0px;
   }
 `
 const StyledLink = styled(Link)`
@@ -33,6 +39,9 @@ const StyledLink = styled(Link)`
   &:hover{
     color:${colors.blue[600]};
     transform: translateY(10px);
+  }
+  @media (max-width: 1250px) {
+    color:${colors.white};
   }
 `
 const StyledLinkButton = styled(Link)`
@@ -63,6 +72,7 @@ const Menu = styled(RxHamburgerMenu)`
   cursor:pointer;
   scale:1.5;
   display:none;
+  margin-right:40px;
   @media (max-width: 1250px) {
     display:block;
   }
@@ -70,15 +80,17 @@ const Menu = styled(RxHamburgerMenu)`
 
 export function Navbar(){
   const [menu, setMenu] = useState("none");
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  
   function handleMenu(){
-    menu==="none" ? setMenu("block") : setMenu("none");
-    
+    menu==="none" ? setMenu("block") : setMenu("none");    
+  }
+
+  function handleCloseMenu(){
+    setMenu("none");
   }
 
   const urls = ["nosotros", "calidad", "seguridad-y-salud", "medio-ambiente", "homologaciones", "consultoria", "blog", "contacto"]
+  const mainNav = ["Nosotros", "Calidad", "Seguridad y Salud", "Medio Ambiente", "Homologaciones", "Consultoría", "Blog", "Contacto"]
   return(
     <Nav >
       <div style={{paddingLeft:"20px"}}>
@@ -86,12 +98,12 @@ export function Navbar(){
           <img src={optima} alt="optima" style={{width:"180px"}}/>
         </a>
       </div>
-      <List menu={menu}>
+      <List menu={menu} onClick={handleCloseMenu}>
         { urls.map((url, index)=>{
          
           return(
             <Li>
-              <StyledLink  to={`/${url}`} key={'b'+index}>{capitalizeFirstLetter(url)}</StyledLink>
+              <StyledLink  to={`/${url}`} key={'b'+index}>{mainNav[index]}</StyledLink>
             </Li>
           )
           })

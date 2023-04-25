@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   margin:auto;
   p{
     text-align:justify;
+    margin: 20px 40px;
   }
 `
 const Portada = styled.div`
@@ -51,17 +52,34 @@ const TextDiv = styled.div`
   p{
     color:${colors.gray.light};
   }
+  @media (max-width: 1200px) {
+    position:static;
+    margin: 0 20px;
+  }
 `
 const DivCard = styled.div`
   margin-bottom: 200px;
   margin-left:300px;
   position:relative;
   top:45px;
+  @media (max-width: 1200px) {
+    position:static;
+    margin: 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    margin-top:20px;
+  }
 `
 const Img = styled.img`
   width:60%;
   position:relative;
   right:-150px;
+  @media (max-width: 1200px) {
+    position:static;
+    margin-top:20px;
+  }
 `
 
 const Card = ({title, text1, text2, image}) =>{
@@ -81,6 +99,10 @@ const Section = styled.section`
   background: ${colors.stone[100]};
   width:100%;
   padding-bottom:100px;
+  @media (max-width: 1200px) {
+  
+    margin-top:20px;
+  }
 `
 const Title = styled.h2`
   font-size:40px;
