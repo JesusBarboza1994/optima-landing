@@ -5,10 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from './context/auth-context';
+import { Global } from '@emotion/react';
+import { reset, global } from './styles/global';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Global styles={reset} />
+    <Global styles={global} />
     <BrowserRouter>
       <AuthProvider>
         <App />

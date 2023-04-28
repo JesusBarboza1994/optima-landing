@@ -4,12 +4,17 @@ import { colors } from "../styles/colors"
 const H1 = styled.h1`
   font-size:22px;
   font-weight:500;
-
+  padding-top:50px;
+  color:${colors.gray.medium};
+  font-weight:600;
 `
 const Hr = styled.hr`
-  border: 1px solid ${colors.blue[400]};
-  width: 200px;
+  width: 20%;
   margin-bottom: 20px;
+  margin-top: 20px;
+  border:0;
+  border-top: 1px solid ${colors.blue[200]};
+  font-weight:100;
 `
 
 

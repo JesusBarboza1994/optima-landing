@@ -1,9 +1,9 @@
 import { colors } from "./colors";
 
 export const fonts = {
-  primary: `"Source Code Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  primary: `Raleway, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
-  secondary: `"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  secondary: `"Montserrat", BlinkMacSystemFont, "Segoe UI",
   Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
 };
 

@@ -5,10 +5,13 @@ import { colors } from "../styles/colors"
 import Titulo from "./titulo"
 
 const Wrapper = styled.div`
-  
+
 `
 const Presentacion = styled.div`
   margin-top:70px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 `
 const Portada = styled.div`
   background-image: url(${portada});
@@ -23,12 +26,20 @@ const Portada = styled.div`
   }
 `
 const Container = styled.div`
+  display: flex;
+  flex-direction:column;
+  width:100%;
   max-width:1200px;
   margin:auto;
+  padding-left:50px;
+  padding-right:50px;
   p{
     font-size:16px;
     color:${colors.gray.light};
     text-align:start;
+  }
+  @media(max-width:1200px){
+    max-width:750px;
   }
 `
 export default function Template({title, descrip, Main}){
