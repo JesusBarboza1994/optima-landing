@@ -18,6 +18,7 @@ const Title = styled.div`
   font-size:22px;
   padding:10px 0px;
   width:100%;
+  color:${colors.black};
 `
 const Figure = styled.figure`
   position: relative;

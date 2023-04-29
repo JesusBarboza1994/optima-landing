@@ -21,15 +21,24 @@ const Wrapper = styled.div`
 `
 const WrapperHome = styled.div`
   display: flex;
-  flex-wrap:wrap;
   gap: 20px;
   justify-content:center;
   padding-bottom:20px;
+  @media(max-width:1000px){
+    flex-direction:column;
+    max-width:750px;
+    margin:auto;
+    p{
+      text-align:center;
+    }
+  }
 `
 const SectionMethod = styled.section`
   background: ${colors.blue[100]};
   margin:auto;
   padding:20px 0px;
+  color: ${colors.gray.medium};
+  width:100%;
 `
 const WrapperCard = styled.div`
   display: flex;
@@ -39,39 +48,60 @@ const WrapperCard = styled.div`
   gap:20px;
 `
 const HacemosSection = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   max-width:945px;
   margin:auto;
   padding: 100px 20px;
   hr{
-    border: 1px solid ${colors.blue[400]};
+    border-top: 1px solid ${colors.blue[400]};
     width: 200px;
+    margin: 20px auto;
   }
   p{
     font-size:16px;
+    color:${colors.gray.light}
+  }
+  h2{
+    font-size:20px;
+    color:${colors.gray.medium};
   }
 `
 const ParlanteSection = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   margin:auto;
   max-width:800px;
   padding:50px 20px;
   hr{
-    border: 1px solid ${colors.blue[400]};
+    border-top: 1px solid ${colors.blue[400]};
     width: 200px;
+    margin:20px auto;
   }
-  h3{
+  h2{
     font-size:22px;
-    font-weight:200;
+    color:${colors.gray.medium};
+    font-weight:400;
   }
 `
 const OfferSection = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   padding-top:40px;
   padding-bottom:20px;
   h2{
+    font-size:22px;
+    color:${colors.gray.medium};
     font-weight:400;
+    margin-top:20px;
   }
   hr{
-    border: 1px solid ${colors.blue[400]};
+    border-top: 1px solid ${colors.blue[400]};
     width: 200px;
+    margin:20px auto;
   }
 `
 const ClienteSection = styled.section`
@@ -115,7 +145,7 @@ export default function Home(){
       </HacemosSection>
       <ParlanteSection>
         <img src={parlante} alt='imagen'/>
-        <h3>Hacemos posible que tu empresa se diferencie y adelante a la competencia, con soluciones completas.</h3>
+        <h2>Hacemos posible que tu empresa se diferencie y adelante a la competencia, con soluciones completas.</h2>
         <hr/>
       </ParlanteSection>
       <WrapperCard>
