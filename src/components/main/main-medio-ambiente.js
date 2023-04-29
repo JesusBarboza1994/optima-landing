@@ -8,24 +8,29 @@ import Servicios from "../servicios"
 const Wrapper = styled.div`
 
   h3{
-    color: ${colors.blue[500]};
+    color: ${colors.blue[700]};
     font-weight:400;
     text-align:start;
-    margin-bottom:0px;
+    margin-bottom:10px;
     font-size:22px;
   }
   p{
     margin-top:0px;
+    text-align:justify;
   }
 `
 const Img1 = styled.img`
   width: 640px;
+  padding: 20px 0px;
+  margin:auto;
 `
 const Img2 = styled.img`
   width: 820px;
+  margin:auto;
 `
 const Img3 = styled.img`
   width: 1140px;
+  padding: 10px 0px;
 `
 export default function MedioAmbienteMain(){
   return(

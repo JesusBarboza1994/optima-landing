@@ -22,12 +22,7 @@ const Wrapper = styled.div`
   p{
     width:100%;
   }
-  @media(max-width:800px){
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin:auto;
-  }
+  
 `
 const CheckDiv = styled.div`
   display:flex;

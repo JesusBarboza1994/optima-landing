@@ -7,10 +7,16 @@ import Titulo from "./titulo"
 
 const Wrapper = styled.div`
   display:flex;
-  flex-wrap:wrap;
   justify-content: center;
   gap:20px;
   padding-bottom:80px;
+  h2{
+    color:${colors.black};
+  }
+  @media(max-width:990px){
+    flex-direction:column;
+    align-items:center;
+  }
 `
 const Card = styled.div`
   display:flex;
@@ -23,14 +29,33 @@ const Card = styled.div`
     font-size:22px;
     padding:10px 0px;
   }
+  @media(max-width:990px){
+    width:720px;
+    align-items:center;
+  }
+  @media(max-width:768px){
+    width:390px;
+    align-items:center;
+  }
+  @media(max-width:480px){
+    width:240px;
+  }
 `
 const Img = styled.img`
-  max-width:350px;
+  width:350px;
+  @media(max-width:1200px){
+    width:285px;
+  }
+  @media(max-width:990px){
+    width:640px;
+  } 
+`
+const Div = styled.div`
 `
 
 export default function Servicios(){
   return(
-    <>
+    <Div>
       <Titulo titulo={"Otros Servicios"}/>
       <Wrapper>
 
@@ -47,6 +72,6 @@ export default function Servicios(){
           <Img src={servicio3} alt="imagen" />
         </Card>
       </Wrapper>
-    </>
+    </Div>
   )
 }

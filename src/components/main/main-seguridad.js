@@ -8,7 +8,7 @@ import Titulo from "../titulo"
 import Servicios from "../servicios"
 
 const Wrapper = styled.div`
-  margin:50px 0px;
+  // margin:50px 0px;
   img{
     padding: auto 20px;
   }
@@ -20,11 +20,11 @@ const Div1 = styled.div`
   padding-bottom:50px;
   flex-wrap:wrap;
   div{
-    width:50%;
+    width:100%;
   }
   h2{
     font-size:22px;
-    color:${colors.blue[200]};
+    color:${colors.blue[700]};
     text-align:start;
     width:100%;
     font-weight:300;
@@ -45,6 +45,9 @@ const Div2 = styled.div`
   flex-wrap:wrap;
   align-items:center;
   justify-content: center;
+  img{
+    padding: 20px 0 10px 0;
+  }
   div{
     font-size:18px;
     color:${colors.gray.light};
@@ -71,7 +74,7 @@ export default function SeguridadMain(){
       <img src={seguridad2} alt="imagen" style={{width:"100%"}}/>
       <Titulo titulo={"¿Cómo implemento ISO-45001 en mi organización?"}/>
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Seguridad y Salud en su organización, y poder certificarse en ISO-45001, deberá seguir una serie de pasos:</p>
-      <img src={seguridad3} alt="imagen" style={{width:"100%"}}/>
+      <img src={seguridad3} alt="imagen" style={{width:"100%", paddingTop:"40px"}}/>
       <SubTitle>Implementación Ley 29783 - Ley de Seguridad y Salud en el Trabajo</SubTitle>
       <Div2>
         <img src={seguridad4} alt="imagen" style={{width:"100%"}}/>

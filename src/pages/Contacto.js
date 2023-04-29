@@ -7,6 +7,7 @@ const Portada = styled.div`
   background-image: url(${portada});
   height:300px;
   display:flex;
+  width:100%;
   align-items:center;
   justify-content:center;
   color:${colors.white};
@@ -26,7 +27,7 @@ const Wrapper = styled.div`
     justify-content:center;
   }
 `
-const Form = styled.div`
+const Form = styled.form`
   max-width:560px;
   display:flex;
   flex-direction:column;
@@ -44,12 +45,12 @@ const Img = styled.img`
   }
 `
 const Input = styled.input`
-  width:90%;
+  width:100%;
   padding:10px 20px;
   border: 1px solid #dddddd;
 `
 const InputArea = styled.textarea`
-  width:94%;
+  width:100%;
   padding-top:10px;
   padding-left: 20px;
   min-height:80px;
@@ -61,6 +62,10 @@ const Button = styled.button`
   padding: 12px 30px;
   border:none;
   color:${colors.white};
+  cursor: pointer;
+  &:hover{
+    background:${colors.gray.medium};
+  }
 `
 
 

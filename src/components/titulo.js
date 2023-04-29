@@ -9,7 +9,7 @@ const H1 = styled.h1`
   font-weight:600;
 `
 const Hr = styled.hr`
-  width: 20%;
+  width: 200px;
   margin-bottom: 20px;
   margin-top: 20px;
   border:0;

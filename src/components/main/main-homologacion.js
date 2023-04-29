@@ -6,14 +6,16 @@ const Wrapper = styled.div`
   p{
     color:${colors.gray.light};
   }
-
+`
+const Img = styled.img`
+  padding: 40px 0px;
 `
 export default function HomologacionMain(){
   return(
     <Wrapper>
       <p>Es el proceso mediante el cual se valida las actividades, capacidades y recursos de las empresas proveedoras, definiendo quienes están calificadas para suministrar productos o servicios.</p>
       <p>Se consideran los siguientes aspectos:</p>
-      <img src={homologacion} alt="imagen"/>
+      <Img src={homologacion} alt="imagen"/>
       <p>1.- Situación Financiera y Obligaciones Legales, donde se determina la información relevante sobre estados financieros, endeudamiento financiero, cuentas por cobrar y pagar, proveedores, clientes, contratos, sucursales, productos y servicios suministrados, etc.</p>
       <p>2.- Gestión Operativa, donde se solicita organigrama, información sobre locales propios y/o alquilados, maquinarias y equipos, almacenes, existencias, equipamiento de cómputo, software, mantenimiento, etc.</p>
       <p>3.- Seguridad y Salud, en la cual se verifica la prevención de accidentes y enfermedades ocupacionales, procedimiento de trabajo seguro, manuales, matriz IPER y demás cumplimiento de acuerdo a la normativa vigente.</p>
