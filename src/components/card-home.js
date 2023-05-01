@@ -4,11 +4,13 @@ import { colors } from "../styles/colors"
 const Wrapper = styled.div`
   display:flex;
   flex-direction:column;
-  width:510px;
+  max-width:510px;
   align-items:center;
   margin: 0px 20px;
   @media (max-width: 530px) {
     width:100%;
+    padding-left:15px;
+    padding-right:15px;
     justify-content:center;
     margin: 0px 60px;
   }

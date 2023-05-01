@@ -7,11 +7,15 @@ import {TbLock} from "react-icons/tb"
 import {GiPerson} from "react-icons/gi"
 import {MdPeopleAlt} from "react-icons/md"
 import {BsCheckSquareFill} from "react-icons/bs"
+import {FaStreetView} from "react-icons/fa"
 
 const Wrapper = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   p{
     text-align:justify;
-    margin: 20px 40px;
+    margin: 20px 0;
     color:${colors.gray.light};
   }
 `
@@ -50,8 +54,14 @@ const TextDiv = styled.div`
     margin: 20px 0px;
   }
   @media (max-width: 1200px) {
-    position:static;
     width:517px;
+    left:-100px;
+  }
+  @media (max-width: 990px) {
+    position:static;
+    margin:auto;
+    width:100%;
+    padding:25px;
   }
 `
 const DivCard = styled.div`
@@ -59,8 +69,13 @@ const DivCard = styled.div`
   margin-left:300px;
   position:relative;
   top:45px;
-  @media (max-width: 1200px) {
-
+  @media (max-width: 990px) {
+    display:flex;
+    flex-direction:column-reverse;
+    width:100%;
+    margin: 0 0;
+    gap:20px;
+    align-items:center;
   }
 `
 const Img = styled.img`
@@ -69,6 +84,11 @@ const Img = styled.img`
   right:-330px;
   @media (max-width: 1200px) {
     width:470px;
+    right: -90px;
+  }
+  @media (max-width: 990px) {
+    position:static;
+    margin-bottom:30px;
   }
 `
 
@@ -95,10 +115,12 @@ const Section = styled.section`
   }
 `
 const Title = styled.h2`
-  font-size:40px;
+  font-size:35px;
+  color:${colors.black};
   font-weight:300;
   margin-bottom:15px;
   padding-top:60px;
+  line-height:100%;
 `
 const Container = styled.div`
   display:flex;
@@ -106,6 +128,7 @@ const Container = styled.div`
   gap:40px;
   justify-content:center;
   margin-top:60px;
+  padding: auto 12px;
 
 `
 const Hr = styled.hr`
@@ -117,6 +140,7 @@ const Value = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
+  padding: auto 12px;
   color:${props => props.color};
   p{
     color:${colors.gray.light};
@@ -162,8 +186,7 @@ const Div = styled.div`
   width:100%;
   display:flex;
   flex-direction:column;
-  margin:auto;
-  
+  align-items:center;
 `
 
 export default function Nosotros(){
@@ -176,17 +199,19 @@ export default function Nosotros(){
       <Div>
         <SubDiv>
           <Wrapper>
-            {/* <Card title={"Quienes somos"} image={nosotros1} text1={"OPTIMA CONSULTORA es una empresa especializada en la prestación de servicios profesionales de consultoría, asesoría técnica, auditoría y formación en los campos de calidad, seguridad y salud en el trabajo, medio ambiente, responsabilidad social, mejora organizacional, entre otros servicios que incluimos en nuestra cartera."} text2={""}/> */}
+            <Card title={"Quienes somos"} image={nosotros1} text1={"OPTIMA CONSULTORA es una empresa especializada en la prestación de servicios profesionales de consultoría, asesoría técnica, auditoría y formación en los campos de calidad, seguridad y salud en el trabajo, medio ambiente, responsabilidad social, mejora organizacional, entre otros servicios que incluimos en nuestra cartera."} text2={""}/>
             <p>Cualquier empresa que quiera mejorar sus procesos y ser más competitiva encontrará en ÓPTIMA CONSULTORA un socio que le ayudará a implementar mejoras de la forma más eficiente y eficaz, a lograr las certificaciones necesarias, y a mantener y mejorar sus sistemas de gestión.</p>
             <p>Nosotros entendemos como prioritario invertir más tiempo en escuchar al cliente, en conocer y comprender sus necesidades e identificar y garantizar el retorno de la inversión esperado de cada proyecto (reconocimiento, cumplimiento de requisitos legales, mejora de gestión y el control de procesos, diferenciación frente a competidores, etc.).</p>
             <p>Solo de esta manera podemos ofrecer, verdaderamente y con todas garantías, servicios 100% a medida de las necesidades de cada cliente. Este es el reto que perseguimos diariamente y el compromiso que asumimos en cada proyecto.</p>
-            {/* <Card title={"Queremos ofrecer servicios excelentes"} image={nosotros2} text1={"Nos importa la calidad de nuestros servicios y la satisfacción de nuestros clientes, por ello continuamente revisamos y analizamos nuestras metodologías y tratamos de mejorarlas para ampliar nuestra capacidad de respuesta y la calidad de nuestros servicios."} text2={"También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir de este modo el mayor número de necesidades de nuestros clientes."}/> */}
+            <Card title={"Queremos ofrecer servicios excelentes"} image={nosotros2} text1={"Nos importa la calidad de nuestros servicios y la satisfacción de nuestros clientes, por ello continuamente revisamos y analizamos nuestras metodologías y tratamos de mejorarlas para ampliar nuestra capacidad de respuesta y la calidad de nuestros servicios."} text2={"También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir de este modo el mayor número de necesidades de nuestros clientes."}/>
           </Wrapper>
+        </SubDiv>
+      </Div>
           <Section>
             <Title>VALOR DIFERENCIAL</Title>
             <Hr/>
             <Container>
-              <Value color="red">
+              <Value color="#a52a2a">
         
                 <div>
                   <BsCheckSquareFill style={{scale:"1.5"}}/>
@@ -201,6 +226,13 @@ export default function Nosotros(){
                 <h4>ADAPTACIÓN</h4>
                 <p>Capacidad de flexibilidad a las necesidades y requisitos evolutivos de cada cliente y fase de proyecto, garantizando la actualización y aplicabilidad a cada trabajo.</p>
               </Value>
+              <Value color="green">
+                <div>
+                  <FaStreetView style={{scale:"1.5"}}/>
+                </div>
+                <h4>CONFIANZA</h4>
+                <p>No hay nada más importante que la satisfacción del cliente. Por ello trabajamos para ofrecer soluciones ajustadas 100% a sus necesidades y de alto valor a sus empresas. Lo que decimos es lo que hacemos.</p>
+              </Value>
               <Value color="orange">
                 <div>
                   <TbLock style={{scale:"1.5"}}/>
@@ -208,17 +240,9 @@ export default function Nosotros(){
                 <h4>CONFIDENCIALIDAD</h4>
                 <p>La responsabilidad y garantía de seguridad y confidencialidad de la información empleada es un valor prioritario dentro de todos los proyectos y para todos los clientes.</p>
               </Value>
-              <Value color="green">
-                <div>
-                  <GiPerson style={{scale:"1.5"}}/>
-                </div>
-                <h4>CONFIANZA</h4>
-                <p>No hay nada más importante que la satisfacción del cliente. Por ello trabajamos para ofrecer soluciones ajustadas 100% a sus necesidades y de alto valor a sus empresas. Lo que decimos es lo que hacemos.</p>
-              </Value>
             </Container>
           </Section>
-        </SubDiv>
-      </Div>
+        
     </>
   )
 }

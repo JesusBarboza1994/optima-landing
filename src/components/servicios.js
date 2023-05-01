@@ -4,6 +4,7 @@ import servicio2 from "../assets/servicios/servicios2.jpg"
 import servicio3 from "../assets/servicios/servicios3.jpg"
 import { colors } from "../styles/colors"
 import Titulo from "./titulo"
+import { Link } from "react-router-dom"
 
 const Wrapper = styled.div`
   display:flex;
@@ -52,25 +53,33 @@ const Img = styled.img`
 `
 const Div = styled.div`
 `
+const LinkStyle = styled(Link)`
+  text-decoration:none;
+`
 
 export default function Servicios(){
   return(
     <Div>
       <Titulo titulo={"Otros Servicios"}/>
       <Wrapper>
-
-        <Card>
-          <h2>Mantenimiento</h2>
-          <Img src={servicio1} alt="imagen" />
-        </Card>
-        <Card>
-          <h2>Capacitaciones</h2>
-          <Img src={servicio2} alt="imagen" />
-        </Card>
-        <Card>
-          <h2>Auditoría</h2>
-          <Img src={servicio3} alt="imagen" />
-        </Card>
+        <LinkStyle to={"1"}>
+          <Card>
+            <h2>Mantenimiento</h2>
+            <Img src={servicio1} alt="imagen" />
+          </Card>
+        </LinkStyle>
+        <LinkStyle to={"2"}>
+          <Card>
+            <h2>Capacitaciones</h2>
+            <Img src={servicio2} alt="imagen" />
+          </Card>
+        </LinkStyle>
+        <LinkStyle to={"3"}>
+          <Card>
+            <h2>Auditoría</h2>
+            <Img src={servicio3} alt="imagen" />
+          </Card>
+        </LinkStyle>
       </Wrapper>
     </Div>
   )

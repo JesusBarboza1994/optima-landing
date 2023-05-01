@@ -4,9 +4,9 @@ import { colors } from "../styles/colors"
 const Wrapper = styled.div`
   display:flex;
   padding: 30px 15px 0px;
-  width:360px;
+  width:390px;
+  flex-direction:column;
   @media(max-width:1000px){
-    flex-direction:column;
     width:100%;
     align-items:center;
   }
@@ -28,12 +28,12 @@ const MethodText = styled.h3`
   width:100%;
   margin:0px;
   background: ${colors.white};
+  margin-bottom: 15px;
 `
 const ProcessText = styled.h2`
-  font-size: 32px;
+  font-size: 28px;
   margin:0px;
   color:${colors.gray.light};
-  font-size:16px;
 `
 const WrapperText = styled.div`
   display:flex;
@@ -42,6 +42,7 @@ const WrapperText = styled.div`
   margin-top:0px;
   @media(max-width:1000px){
     flex-direction:column;
+    align-items:center;
   }
 `
 const Div = styled.div`

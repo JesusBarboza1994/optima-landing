@@ -50,10 +50,40 @@ const Wrapper = styled.div`
   display: flex;
   gap:30px;
   overflow: hidden;
+  padding-left:15px;
+  padding-right:15px;
   img{
     max-width: 100%;
     height: auto;
     animation: ${moveImages} 15s linear infinite;
+  }
+  @media(max-width:1000px){
+    img{
+      height:180px;
+    }
+  }
+  @media(max-width:725px){
+    img{
+      height:150px;
+    }
+  }
+  @media(max-width:550px){
+    display:grid;
+    width:100%;
+    column-gap:40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    img{
+      animation:none;
+    }
+  }
+  @media(max-width:450px){
+    display:grid;
+    column-gap:40px;
+    grid-template-columns: 1fr 1fr ;
+    img{
+      animation:none;
+      img:100px;
+    }
   }
 `
 

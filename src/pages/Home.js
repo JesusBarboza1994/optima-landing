@@ -42,10 +42,13 @@ const SectionMethod = styled.section`
 `
 const WrapperCard = styled.div`
   display: flex;
-  flex-wrap:wrap;
   gap: 30px;
   justify-content:center;
   gap:20px;
+  @media(max-width:1000px){
+    flex-direction:column;
+    align-items:center;
+  }
 `
 const HacemosSection = styled.section`
   display:flex;
@@ -105,13 +108,22 @@ const OfferSection = styled.section`
   }
 `
 const ClienteSection = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   padding-top: 40px;
   paddig-bottom: 40px;
   margin-bottom:100px;
+  h2{
+    font-size:22px;
+    color:${colors.gray.medium};
+    font-weight:400;
+    margin-top:20px;
+  }
   hr{
-    border: 1px solid ${colors.blue[400]};
+    border-top: 1px solid ${colors.blue[400]};
     width: 200px;
-    margin-bottom: 20px;
+    margin:20px auto;
   }
 `
 const Banner = styled.div`
@@ -125,10 +137,16 @@ const Banner = styled.div`
   }
   p{
     font-size:18px;
+    color:${colors.black};
+    font-weight:700;
+    line-height:200%;
+    padding: 0 20px;
   }
   h3{
     font-size:28px;
+    margin-bottom: 15px;
     font-weight: 400;
+    color:${colors.black};
   }
 `
 
@@ -167,14 +185,16 @@ export default function Home(){
       </SectionMethod>
       <ClienteSection>
         <img src={clientes} alt="imagen"/>
-        <h3>NUESTROS CLIENTES</h3>
+        <h2>NUESTROS CLIENTES</h2>
         <hr/>
         <ListClientes/>
       </ClienteSection>
       <Banner>
         <div>
           <h3>QUEREMOS OFRECER SERVICIOS EXCELENTES</h3>
-          <p><FaQuoteLeft/> También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir de este modo el mayor número de necesidades de nuestros clientes. <FaQuoteRight/></p>
+          <p><FaQuoteLeft style={{scale:"2", marginRight:"6px"}}/> También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir de este modo el mayor número de necesidades de nuestros clientes. 
+             <FaQuoteRight style={{scale:"2", marginLeft:"6px"}}/>
+          </p>
         </div>
       </Banner>
 

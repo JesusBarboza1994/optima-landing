@@ -71,7 +71,7 @@ export default function CalidadMain(){
       <Titulo titulo={"¿Cómo implemento ISO-9001 en mi organización?"}/>
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Calidad en su organización, y poder optar a certificarse en ISO-9001, deberá seguir una serie de pasos:</p>
       <img src={calidad3} alt="imagen"/>
-      <Servicios/>
+      <Servicios />
     </Wrapper>
   )
 }

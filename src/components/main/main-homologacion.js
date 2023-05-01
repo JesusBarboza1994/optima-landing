@@ -5,10 +5,12 @@ const Wrapper = styled.div`
   padding-bottom:50px;
   p{
     color:${colors.gray.light};
+    line-height:200%;
   }
 `
 const Img = styled.img`
   padding: 40px 0px;
+  margin:auto;
 `
 export default function HomologacionMain(){
   return(

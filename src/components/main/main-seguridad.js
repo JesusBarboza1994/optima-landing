@@ -18,10 +18,7 @@ const Div1 = styled.div`
   justify-content:center;
   gap:20px;
   padding-bottom:50px;
-  flex-wrap:wrap;
-  div{
-    width:100%;
-  }
+  align-items:center;
   h2{
     font-size:22px;
     color:${colors.blue[700]};
@@ -31,6 +28,17 @@ const Div1 = styled.div`
   }
   p{
     text-align:justify;
+  }
+  img{
+    max-width:555px;
+  }
+  @media(max-width:1200px){
+    img{
+      max-width:455px;
+    }
+  }
+  @media(max-width:990px){
+    flex-direction:column;
   }
 `
 const SubTitle = styled.h2`
@@ -42,7 +50,6 @@ const SubTitle = styled.h2`
 const Div2 = styled.div`
   display:flex;
   gap:50px;
-  flex-wrap:wrap;
   align-items:center;
   justify-content: center;
   img{
@@ -57,6 +64,18 @@ const Div2 = styled.div`
     text-align:justify;
   }
   margin-bottom:60px;
+  @media(max-width:1200px){
+    img{
+      max-width:455px;
+    }
+  }
+  @media(max-width:990px){
+    flex-direction:column;
+    gap:0;
+    div{
+      padding-top:12px;
+    }
+  }
 `
 
 export default function SeguridadMain(){
@@ -66,6 +85,7 @@ export default function SeguridadMain(){
         <div>
           <h2>Implementación de ISO 45001 - Consultoría en Sistemas de Gestión de Seguridad y Salud en el Trabajo.</h2>
           <p>La norma ISO 45001 está enfocada a la Seguridad y Salud en el trabajo, persiguiendo la mejora continua por parte de la organización, dado que este es uno de los elementos básicos de la gestión empresarial.</p>
+          <br/>
           <p>En el contexto actual se hace necesario contar con un elemento objetivo para comunicar a empleados, clientes, accionistas y otras partes interesadas no sólo el compromiso de la organización con la seguridad y salud de sus empleados sino también que la política de seguridad y salud en el trabajo se está aplicando adecuadamente, con una voluntad de mejora continua.</p>
         </div>
         <img src={seguridad1} alt="imagen" style={{width:"100%"}}/>

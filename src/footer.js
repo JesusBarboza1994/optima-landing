@@ -14,29 +14,20 @@ const Wrapper = styled.div`
     width: 100%;
   }
 `
-const BlueDiv = styled.div`
-  background: ${colors.blue[300]};
-  color:${colors.white};
-  padding:20px 0px;
-  font-size:14px;
-  span{
-    font-weight:800;
-  }
-`
 const DivText = styled.div`
   display:flex;
   gap:10px;
-  padding-bottom:40px;
   justify-content:space-between;
   flex-wrap:wrap;
 `
 const OptimaDiv = styled.div`
   padding-left:30px;
-  max-width:800px;
   padding: 10px 20px;
   background:#28609b;
   display:flex;
-  flex-wrap:wrap;
+  width:100%;
+  justify-content:space-between;
+  gap:8px;
   align-items:center;
   p{
     text-align:justify;
@@ -47,9 +38,6 @@ const OptimaDiv = styled.div`
     display:flex;
     color:${colors.white};
     gap: 20px;
-  }
-  > div{
-    padding: 0px 20px;
   }
   h2{
     width:100%;
@@ -92,25 +80,20 @@ export default function Footer(){
       <hr/>
       <DivText>
         <OptimaDiv>
-          <H2 >OPTIMA CONSULTORA</H2 >
-          {/* <p>Cualquier empresa que quiera mejorar sus procesos y ser más competitiva encontrará en OPTIMA CONSULTORA un socio que le ayudará a implementar mejoras de la forma más eficiente y eficaz, a lograr las certificaciones necesarias y a mantener y mejorar sus sistemas de gestión.</p> */}
-          <a href="https://www.facebook.com/people/%C3%93ptima-Consultora/100055957667113/" target="_blank" rel="noreferrer"> 
-            <Circle><FaFacebookF/></Circle>
-          </a>
-          <a href="https://www.linkedin.com/company/optimaconsultora/?viewAsMember=true" target="_blank" rel="noreferrer"> 
-            <Circle><FaLinkedinIn/></Circle>
-          </a>
           <div>
+            <H2 >OPTIMA CONSULTORA</H2 >
+            <a href="https://www.facebook.com/people/%C3%93ptima-Consultora/100055957667113/" target="_blank" rel="noreferrer"> 
+              <Circle><FaFacebookF/></Circle>
+            </a>
+            <a href="https://www.linkedin.com/company/optimaconsultora/?viewAsMember=true" target="_blank" rel="noreferrer"> 
+              <Circle><FaLinkedinIn/></Circle>
+            </a>
           </div>
+          <p>
+            Copyright© Jbarz 2023. All Right Reserved. <span>Optima</span>
+          </p>
         </OptimaDiv>
-        {/* <ContactDiv>
-         <h2>CONTACTO</h2>
-         <p><RiMapPin2Fill/> Av. José Fausto Sánchez Carrión 930 Magdalena del Mar.</p>
-         <p><AiTwotonePhone/> 993 229 232</p>
-         <p><IoMdMail/>  info@optima-consultora.pe</p>
-        </ContactDiv> */}
       </DivText>
-      <BlueDiv>Copyright© Jbarz 2022. All Right Reserved. <span>Optima</span> </BlueDiv>
     </Wrapper>
   )
 }

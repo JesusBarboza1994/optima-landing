@@ -9,7 +9,8 @@ const Wrapper = styled.div`
   flex-direction:column;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 600px;
+  gap:15px;
   background-size: cover;
   background-position: center;
   background-image: url(${props => images[Number(props.image)]});
@@ -17,6 +18,8 @@ const Wrapper = styled.div`
   h1{
     color:${colors.white};
     font-weight:500;
+    font-size:32px;
+    padding: 0 20px;
   }
   a button{
     background: ${colors.blue[600]};
@@ -25,6 +28,12 @@ const Wrapper = styled.div`
     padding: 8px 28px;
     border-radius:8px;
     cursor:pointer;
+  }
+  @media(max-width:450px){
+    h1{
+      font-size:26px;
+      padding: 0 20px;
+    }
   }
 `;
 
