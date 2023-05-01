@@ -21,8 +21,37 @@ import Seguridad3 from './components/servicios/seguridad3';
 import Medio1 from './components/servicios/medio1';
 import Medio2 from './components/servicios/medio2';
 import Medio3 from './components/servicios/medio3';
+import styled from '@emotion/styled';
+import whatsapp from "./assets/whatsapp.png"
+
+
+const ContainerImage = styled.div`
+  display:flex;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  background:#4fc359;
+  opacity:0.95;
+  position:fixed;
+  bottom: 50px;
+  right: 20px;
+  @media(max-width:650px){
+    right:20px;
+    scale:0.8;
+  }
+`
+const Img = styled.img`
+  height:70px;
+`
 
 function App() {
+  function handleWhatsapp(){
+    window.location.href = `
+    https://api.whatsapp.com/send/?phone=51993229232&text=Hola+Diana%21+Me+gustaria+conversar+sobre+un+proyecto+contigo.&type=phone_number&app_absent=0`
+  }
   return (
     <div className="App">
       <Navbar/>
@@ -47,6 +76,9 @@ function App() {
         <Route path="/contacto" element={<Contacto/>} />
 
       </Routes>
+      <ContainerImage onClick={handleWhatsapp}>
+        <Img src={whatsapp} alt="imagen"/>
+      </ContainerImage>
       <Footer/>
     </div>
   );

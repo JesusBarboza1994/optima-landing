@@ -12,6 +12,21 @@ const Li = styled.li`
     border: 1px solid ${colors.white};
   }
 `
+const StyledLink = styled(Link)`
+  text-decoration:none;
+  color: ${colors.white};
+  font-weight:300;
+  &:hover{
+      color: ${props => props.className === "calidad" ? "red": 
+                        props.className === "seguridad-y-salud" ? "yellow" :
+                        props.className ==="medio-ambiente" ? "green" :
+                        colors.blue[600]};
+    transform: translateY(10px);
+  }
+  @media (max-width: 1250px) {
+    color:${colors.white};
+  }
+`
 const List = styled.ul`
   display:flex;
   flex-wrap:wrap;
@@ -31,27 +46,10 @@ const List = styled.ul`
     background:${colors.black};
     padding: 0px 0px;
   }
-`
-const StyledLink = styled(Link)`
-  text-decoration:none;
-  color: ${colors.white};
-  font-weight:300;
-  &:hover{
-    color:${colors.blue[600]};
-    transform: translateY(10px);
-  }
-  @media (max-width: 1250px) {
-    color:${colors.white};
-  }
-`
-const StyledLinkButton = styled(Link)`
-  text-decoration:none;
-  padding: 6px 18px;
-  border-radius:8px;
-  color: ${colors.white};
-  &:hover{
-    color:${props => ColorStyle(props.dark).textHover};
-    transform: translateY(10px);
+  .calidad:hover{
+    
+      color:red;
+    
   }
 `
 const Nav = styled.nav`
@@ -103,7 +101,7 @@ export function Navbar(){
          
           return(
             <Li>
-              <StyledLink  to={`/${url}`} key={'b'+index}>{mainNav[index]}</StyledLink>
+              <StyledLink className={`${url}`} to={`/${url}`} key={'b'+index}>{mainNav[index]}</StyledLink>
             </Li>
           )
           })

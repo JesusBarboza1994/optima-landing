@@ -25,6 +25,7 @@ const OptimaDiv = styled.div`
   padding: 10px 20px;
   background:#28609b;
   display:flex;
+  flex-wrap:wrap;
   width:100%;
   justify-content:space-between;
   gap:8px;

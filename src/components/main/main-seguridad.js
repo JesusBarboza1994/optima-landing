@@ -54,6 +54,7 @@ const Div2 = styled.div`
   justify-content: center;
   img{
     padding: 20px 0 10px 0;
+    max-width:555px;
   }
   div{
     font-size:18px;
@@ -97,7 +98,7 @@ export default function SeguridadMain(){
       <img src={seguridad3} alt="imagen" style={{width:"100%", paddingTop:"40px"}}/>
       <SubTitle>Implementación Ley 29783 - Ley de Seguridad y Salud en el Trabajo</SubTitle>
       <Div2>
-        <img src={seguridad4} alt="imagen" style={{width:"100%"}}/>
+        <img src={seguridad4} alt="imagen"/>
         <div>
           <p>La Ley 29783 tiene como objetivo promover una cultura de prevención de riesgos en los centros laborales. Se puede aplicar a cualquier empresa, ya sea pública o privada de todos los sectores económicos.</p>
           <p>A partir de esta ley se estableció la obligación de contar con un Sistema de Gestión en Seguridad y Salud en el trabajo.</p>
