@@ -8,7 +8,9 @@ import Titulo from "../titulo"
 import Servicios from "../servicios"
 
 const Wrapper = styled.div`
-  // margin:50px 0px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   img{
     padding: auto 20px;
   }
@@ -17,6 +19,7 @@ const Div1 = styled.div`
   display:flex;
   justify-content:center;
   gap:20px;
+  width:100%;
   padding-bottom:50px;
   align-items:center;
   h2{
@@ -31,6 +34,11 @@ const Div1 = styled.div`
   }
   img{
     max-width:555px;
+  }
+  @media(max-width:1380px){
+    img{
+      max-width:500px;
+    }
   }
   @media(max-width:1200px){
     img{
@@ -49,6 +57,7 @@ const SubTitle = styled.h2`
 `
 const Div2 = styled.div`
   display:flex;
+  width:100%;
   gap:50px;
   align-items:center;
   justify-content: center;
@@ -76,6 +85,11 @@ const Div2 = styled.div`
     div{
       padding-top:12px;
     }
+  @media(max-width:550px){
+    img{
+      max-width:300px;
+    }
+  }
   }
 `
 

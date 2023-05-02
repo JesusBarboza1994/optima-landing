@@ -29,6 +29,9 @@ const Wrapper = styled.div`
     border-radius:8px;
     cursor:pointer;
   }
+  @media(max-width:750px){
+    height: 400px;
+  }
   @media(max-width:450px){
     h1{
       font-size:26px;
