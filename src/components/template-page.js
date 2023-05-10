@@ -69,7 +69,7 @@ export default function Template({title, descrip, Main}){
       </Portada>
       <Container>
         <Presentacion>
-          <img src={conexiones} alt='imagen'/>
+          {/* <img src={conexiones} alt='imagen'/> */}
           <Titulo titulo={descrip}/>
         </Presentacion>
         <Main/>

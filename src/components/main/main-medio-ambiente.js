@@ -35,15 +35,15 @@ const Img3 = styled.img`
 export default function MedioAmbienteMain(){
   return(
     <Wrapper>
-      <h3>Implementación de ISO 14001 - Consultoría en Sistemas de Gestión Ambiental</h3>
+      {/* <h3>Implementación de ISO 14001 - Consultoría en Sistemas de Gestión Ambiental</h3> */}
       <p>Las empresas que implantan la norma ISO 14001 están demostrando que llevan a cabo su actividad conforme a los estándares que dicta esta norma en materia medioambiental, promoviendo la protección ambiental y la prevención de la contaminación que se pudiera generar.</p>
       <p>La sociedad actual posee una alta sensibilidad a los temas ambientales. Los clientes concienciados con el medio ambiente prefieren hacer negocios con empresas que comparten la misma idea. Implantar un Sistema de Gestión Ambiental es el primer paso para satisfacer las demandas de la sociedad.</p>
       <Img1 src={ambiente1}/>
       <Titulo titulo={"Beneficios de un sistema de gestión ISO 14001"}/>
       <Img3 src={ambiente3}/>
-      <Titulo titulo={"¿Cómo puedo implantar ISO-14001 en mi organización?"}/>
+      {/* <Titulo titulo={"¿Cómo puedo implantar ISO-14001 en mi organización?"}/>
       <p>El proceso de implantación de un Sistema de Gestión basado en la norma ISO-14001 consta de varios pasos:</p>
-      <Img2 src={ambiente2}/>
+      <Img2 src={ambiente2}/> */}
       <Servicios/>
     </Wrapper>
     )

@@ -13,6 +13,8 @@ import CardHome from '../components/card-home'
 import ListClientes from '../components/list-clientes'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import Portada from '../components/portada-home'
+import {FiArrowDown, FiArrowUpRight} from "react-icons/fi"
+import { Link } from 'react-router-dom'
 
 
 const Wrapper = styled.div`
@@ -39,6 +41,10 @@ const SectionMethod = styled.section`
   padding:20px 0px;
   color: ${colors.gray.medium};
   width:100%;
+  cursor:pointer;
+  &:hover{
+      scale: 1.1;
+  }
 `
 const WrapperCard = styled.div`
   display: flex;
@@ -156,32 +162,34 @@ export default function Home(){
     <Wrapper>
       <Portada/>
       <HacemosSection>
-        <img src={conexiones} alt='imagen'/>
+        {/* <img src={conexiones} alt='imagen'/>
         <h2>¿QUÉ HACEMOS?</h2>
-        <hr/>
+        <hr/> */}
         <p>En OPTIMA tenemos más de 10 años de experiencia trabajando con empresas de diferentes sectores, facilitando la adecuación a Normas ISO y muchos otros estándares, asesorando en adaptación eficiente a nuevos requisitos legales para empresas y organizaciones que necesitan ser más competitivas y sostenibles.</p>
       </HacemosSection>
-      <ParlanteSection>
+      {/* <ParlanteSection>
         <img src={parlante} alt='imagen'/>
         <h2>Hacemos posible que tu empresa se diferencie y adelante a la competencia, con soluciones completas.</h2>
         <hr/>
-      </ParlanteSection>
+      </ParlanteSection> */}
       <WrapperCard>
         <CardHome img={sitemaiso} title={"Sistemas de Gestión ISO"} text={'"Implementación y mantenimiento de sistemas de gestión basados en estándares internacionales como lo son las normas ISO 9001, ISO 14001, ISO 45001, entre otros."'}/>
-        <CardHome img={sst} title={"Ley de SST"} text={'"Consultoría e implementación en la Ley 29783 Ley de seguridad y salud en el trabajo, su reglamento y modificatorias."'}/>
-        <CardHome img={consultoriaorganizacional} title={"Consultoría Organizacional"} text={'"Asesoría técnica para la mejora de procesos y estructura organizativa de manera que apoyen efectivamente la implementación de su estrategia empresarial."'}/>
+        <CardHome img={sst} title={"Ley de Seguridad y Salud Laboral"} text={'"Consultoría e implementación en la Ley 29783 Ley de seguridad y salud en el trabajo, su reglamento y modificatorias."'}/>
+        <CardHome img={consultoriaorganizacional} title={"Homologación de Proveedores"} text={'"Asesoría técnica y documentaria para aprobar los procesos de análisis, verificación y evaluación de diferentes aspectos de su organización requeridos por sus clientes a través de empresas certificadoras."'}/>
       </WrapperCard>
       <OfferSection>
         <img src={metodo} alt='imagen'/>
-        <h2>EL MÉTODO</h2>
+        <h2>EL MÉTODO </h2>
         <hr/>
       </OfferSection>
       <SectionMethod>
-        <WrapperHome>
-          <MethodHome number={1} process={"Diagnóstico"} method={"Análisis Empresarial"} text={"Porque cuando se desean soluciones reales, verídicas, apropiadas a cada situación, es imprescindible un buen diagnóstico."}/>
-          <MethodHome number={2} process={"Proyectos"} method={"Implementación de proyectos"} text={"Capacitamos y sensibilizamos a su personal, para fijar los objetivos y plan de trabajo."}/>
-          <MethodHome number={3} process={"Seguimiento"} method={"Consolidación"} text={"Proveemos los instrumentos necesarios para garantizar el control continuo y la consolidación plena de los trabajos realizados."}/>
-        </WrapperHome>
+        <Link to={"/metodo"} style={{textDecoration: "none", color:colors.gray.light}}>
+          <WrapperHome>
+            <MethodHome number={1} process={"Diagnóstico"} method={"Análisis Empresarial"} text={"Porque cuando se desean soluciones reales, verídicas, apropiadas a cada situación, es imprescindible un buen diagnóstico."}/>
+            <MethodHome number={2} process={"Proyectos"} method={"Implementación de proyectos"} text={"Capacitamos y sensibilizamos a su personal, para fijar los objetivos y plan de trabajo."}/>
+            <MethodHome number={3} process={"Seguimiento"} method={"Consolidación"} text={"Proveemos los instrumentos necesarios para garantizar el control continuo y la consolidación plena de los trabajos realizados."}/>
+          </WrapperHome>
+        </Link>
       </SectionMethod>
       <ClienteSection>
         <img src={clientes} alt="imagen"/>

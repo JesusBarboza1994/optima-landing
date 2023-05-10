@@ -98,19 +98,19 @@ export default function SeguridadMain(){
     <Wrapper>
       <Div1>
         <div>
-          <h2>Implementación de ISO 45001 - Consultoría en Sistemas de Gestión de Seguridad y Salud en el Trabajo.</h2>
+          
           <p>La norma ISO 45001 está enfocada a la Seguridad y Salud en el trabajo, persiguiendo la mejora continua por parte de la organización, dado que este es uno de los elementos básicos de la gestión empresarial.</p>
           <br/>
           <p>En el contexto actual se hace necesario contar con un elemento objetivo para comunicar a empleados, clientes, accionistas y otras partes interesadas no sólo el compromiso de la organización con la seguridad y salud de sus empleados sino también que la política de seguridad y salud en el trabajo se está aplicando adecuadamente, con una voluntad de mejora continua.</p>
         </div>
-        <img src={seguridad1} alt="imagen" style={{width:"100%"}}/>
+        {/* <img src={seguridad1} alt="imagen" style={{width:"100%"}}/> */}
       </Div1>
       <Titulo titulo={"Beneficios de un sistema de gestión ISO 45001"}/>
       <img src={seguridad2} alt="imagen" style={{width:"100%"}}/>
-      <Titulo titulo={"¿Cómo implemento ISO-45001 en mi organización?"}/>
+      {/* <Titulo titulo={"¿Cómo implemento ISO-45001 en mi organización?"}/>
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Seguridad y Salud en su organización, y poder certificarse en ISO-45001, deberá seguir una serie de pasos:</p>
-      <img src={seguridad3} alt="imagen" style={{width:"100%", paddingTop:"40px"}}/>
-      <SubTitle>Implementación Ley 29783 - Ley de Seguridad y Salud en el Trabajo</SubTitle>
+      <img src={seguridad3} alt="imagen" style={{width:"100%", paddingTop:"40px"}}/> */}
+      {/* <SubTitle>Implementación Ley 29783 - Ley de Seguridad y Salud en el Trabajo</SubTitle>
       <Div2>
         <img src={seguridad4} alt="imagen"/>
         <div>
@@ -119,7 +119,7 @@ export default function SeguridadMain(){
           <p>En ÓPTIMA CONSULTORA nos aseguramos de que cumplas con todos los requisitos previstos en la Ley 29783, su reglamento y modificatorias, de esta forma se previenen las sanciones por incumplimiento impuestas por la SUNAFIL.</p>
           <p>Este sistema permite a las organizaciones a contar con un lugar de trabajo seguro y saludable para sus colaboradores y partes interesadas, contribuyendo en la prevención de lesiones y problemas de salud ocupacional y bajo el enfoque de mejora de manera continua en el desempeño de su sistema de gestión.</p>
         </div>
-      </Div2>
+      </Div2> */}
       <Servicios/>
     </Wrapper>
   )

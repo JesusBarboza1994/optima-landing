@@ -54,17 +54,17 @@ const Wrapper = styled.div`
   padding-right:15px;
   img{
     max-width: 100%;
-    height: auto;
-    animation: ${moveImages} 15s linear infinite;
+    height: 180px;
+    animation: ${moveImages} 50s linear infinite;
   }
   @media(max-width:1000px){
     img{
-      height:180px;
+      height:150px;
     }
   }
   @media(max-width:725px){
     img{
-      height:150px;
+      height:120px;
     }
   }
   @media(max-width:550px){
@@ -82,7 +82,7 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr ;
     img{
       animation:none;
-      img:100px;
+      img:90px;
     }
   }
 `

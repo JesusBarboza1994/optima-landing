@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `
 const Title = styled.div`
   background:${colors.blue[100]};
-  font-size:22px;
+  font-size:20px;
   padding:10px 0px;
   width:100%;
   color:${colors.black};
@@ -27,10 +27,6 @@ const Figure = styled.figure`
   overflow: hidden;
   max-width:350px;
   margin:0px;
-  &:hover img{
-    transform: translateY(-50%);
-    opacity: 0;
-  }
   &:hover figcaption{
     opacity: 1;
   }
@@ -42,7 +38,7 @@ const Figcaption = styled.figcaption`
   left: 0;
   height:100%;
   padding: 30px;
-  background-color: ${colors.blue[700]};
+  background-color: none;
   color: #fff;
   font-size: 16px;
   text-align: center;

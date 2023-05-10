@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   }
   span{
     color: ${props => props.color};
+    font-weight:800;
   }
   @media(max-width:1200px){
     // width: 400px;
@@ -34,6 +35,7 @@ const Img = styled.img`
   width:100px;
   max-height:100px;
   margin-right:10px;
+
   @media(max-width:1200px){
     width: 160px;
   }

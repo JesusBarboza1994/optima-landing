@@ -105,13 +105,12 @@ const Card = ({title, text1, text2, image}) =>{
   )
 }
 const Section = styled.section`
-  margin-top: 300px;
+  margin-top: 20px;
   background: ${colors.stone[100]};
   width:100%;
   padding-bottom:100px;
   @media (max-width: 1200px) {
-  
-    margin-top:20px;
+    margin-top:100px;
   }
 `
 const Title = styled.h2`
@@ -124,27 +123,37 @@ const Title = styled.h2`
 `
 const Container = styled.div`
   display:flex;
-  flex-wrap:wrap;
-  gap:40px;
   justify-content:center;
   margin-top:60px;
   padding: auto 12px;
-
+  @media(max-width:1200px){
+    display:grid;
+    justify-items:center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap:20px;
+  }
+  @media(max-width:720px){
+    display:flex;
+    flex-wrap:wrap;
+  }
 `
 const Hr = styled.hr`
   width:200px;
   border: 1px solid ${colors.blue[400]};
 `
 const Value = styled.div`
-  max-width:360px;
+  width:360px;
   display:flex;
   flex-direction:column;
   align-items:center;
-  padding: auto 12px;
+  padding: auto 20px;
   color:${props => props.color};
   p{
     color:${colors.gray.light};
     align-items:center;
+    text-align:justify;
+    margin: auto 20px;
     margin-top:0px;
   }
   div{
@@ -159,6 +168,10 @@ const Value = styled.div`
   h4{
     margin:20px auto;
   }
+  @media(max-width:1450px){
+    width:300px;
+  }
+  
 `
 const SubDiv = styled.div`
   max-width:1170px;
@@ -212,7 +225,6 @@ export default function Nosotros(){
             <Hr/>
             <Container>
               <Value color="#a52a2a">
-        
                 <div>
                   <BsCheckSquareFill style={{scale:"1.5"}}/>
                 </div>

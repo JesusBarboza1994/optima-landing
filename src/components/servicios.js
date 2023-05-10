@@ -60,7 +60,7 @@ const LinkStyle = styled(Link)`
 export default function Servicios(){
   return(
     <Div>
-      <Titulo titulo={"Otros Servicios"}/>
+      <Titulo titulo={"Nuestros Servicios"}/>
       <Wrapper>
         <LinkStyle to={"1"}>
           <Card>

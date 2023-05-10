@@ -78,7 +78,7 @@ const H2 = styled.h2`
 export default function Footer(){
   return(
     <Wrapper>
-      <hr/>
+      {/* <hr/> */}
       <DivText>
         <OptimaDiv>
           <div>

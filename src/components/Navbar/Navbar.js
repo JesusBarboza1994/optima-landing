@@ -17,10 +17,7 @@ const StyledLink = styled(Link)`
   color: ${colors.white};
   font-weight:300;
   &:hover{
-      color: ${props => props.className === "calidad" ? "red": 
-                        props.className === "seguridad-y-salud" ? "yellow" :
-                        props.className ==="medio-ambiente" ? "green" :
-                        colors.blue[600]};
+      color: ${colors.blue[600]};
     transform: translateY(10px);
   }
   @media (max-width: 1250px) {
@@ -45,11 +42,6 @@ const List = styled.ul`
     top:50px;
     background:${colors.black};
     padding: 0px 0px;
-  }
-  .calidad:hover{
-    
-      color:red;
-    
   }
 `
 const Nav = styled.nav`

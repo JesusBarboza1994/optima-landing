@@ -25,7 +25,8 @@ const Wrapper = styled.div`
     text-align:start;
     margin-bottom:10px;
     font-size:22px;
-    margin-top:40px;
+    margin-top:10px;
+    width:100%;
   }
   p{
     width:100%;
@@ -52,11 +53,11 @@ const ImageContainer = styled.div`
 export default function CalidadMain(){
   return(
     <Wrapper>
-      <h3>Implementación de ISO 9001 - Consultoría en Sistemas de Gestión de Calidad.</h3>
+      <h3>ISO 9001 Sistema de Gestión de Calidad.</h3>
       <p>La norma ISO 9001 es una normativa internacional de gestión de la calidad aplicable a cualquier tipo de organización de cualquier sector o actividad, y perfectamente integrable con las características propias de gestión de cualquier empresa existente dada su gran flexibilidad.</p>
       <p>Un Sistema de Gestión de Calidad basado en la norma ISO 9001:2015 demuestra a los clientes y al mercado que una organización desarrolla sus actividades con el objetivo de garantizar la satisfacción del cliente y el cumplimiento de sus requisitos (contractuales, legales, entre otros), basándose en la aplicación del ciclo de mejora continua y la gestión de sus procesos.</p>
-      <p>La norma ISO 9001 está basada en ocho principios de gestión de calidad:</p>
-      <img src={calidad1} alt="imagen" style={{marginBottom:"60px"}}/>
+      {/* <p>La norma ISO 9001 está basada en ocho principios de gestión de calidad:</p> */}
+      {/* <img src={calidad1} alt="imagen" style={{marginBottom:"60px"}}/> */}
       <Titulo titulo={"Beneficios de un Sistema de Gestión de Calidad ISO 9001"}/>
       {/* <img src={calidad2} alt="imagen" style={{marginBottom:"60px"}}/> */}
       <ImageContainer>

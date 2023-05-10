@@ -21,6 +21,10 @@ const Wrapper = styled.div`
     font-size:32px;
     padding: 0 20px;
   }
+  p{
+    color:${colors.white};
+    padding: 0 20px;
+  }
   a button{
     background: ${colors.blue[600]};
     border:none;
@@ -53,9 +57,7 @@ export default function Portada(){
   return(
     <Wrapper image={currentImage}>
        <h1>Empresas más competitivas y sostenibles</h1>
-       <a href='/contacto'>
-        <button>VER MÁS</button>
-       </a>
+       <p>Hacemos posible que tu empresa se diferencie y adelante a la competencia, con soluciones completas</p>
     </Wrapper>
   )
 }
