@@ -30,6 +30,9 @@ const Figure = styled.figure`
   &:hover figcaption{
     opacity: 1;
   }
+  &:hover img{
+    opacity: 0.3;
+  }
   
 `
 const Figcaption = styled.figcaption`
@@ -39,8 +42,9 @@ const Figcaption = styled.figcaption`
   height:100%;
   padding: 30px;
   background-color: none;
-  color: #fff;
+  color:${colors.black};
   font-size: 16px;
+  font-weight: 600;
   text-align: center;
   transition: opacity 0.3s ease-out;
   opacity: 0;

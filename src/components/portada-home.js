@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   p{
     color:${colors.white};
     padding: 0 20px;
+    font-weight:600;
   }
   a button{
     background: ${colors.blue[600]};

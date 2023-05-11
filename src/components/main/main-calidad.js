@@ -53,12 +53,14 @@ const ImageContainer = styled.div`
 export default function CalidadMain(){
   return(
     <Wrapper>
-      <h3>ISO 9001 Sistema de Gestión de Calidad.</h3>
-      <p>La norma ISO 9001 es una normativa internacional de gestión de la calidad aplicable a cualquier tipo de organización de cualquier sector o actividad, y perfectamente integrable con las características propias de gestión de cualquier empresa existente dada su gran flexibilidad.</p>
-      <p>Un Sistema de Gestión de Calidad basado en la norma ISO 9001:2015 demuestra a los clientes y al mercado que una organización desarrolla sus actividades con el objetivo de garantizar la satisfacción del cliente y el cumplimiento de sus requisitos (contractuales, legales, entre otros), basándose en la aplicación del ciclo de mejora continua y la gestión de sus procesos.</p>
+      {/* <h3>ISO 9001 Sistema de Gestión de Calidad.</h3> */}
+      <div>
+        <p>La norma ISO 9001 es una normativa internacional de gestión de la calidad aplicable a cualquier tipo de organización de cualquier sector o actividad, y perfectamente integrable con las características propias de gestión de cualquier empresa existente dada su gran flexibilidad.</p>
+        <p>Un Sistema de Gestión de Calidad basado en la norma ISO 9001:2015 demuestra a los clientes y al mercado que una organización desarrolla sus actividades con el objetivo de garantizar la satisfacción del cliente y el cumplimiento de sus requisitos (contractuales, legales, entre otros), basándose en la aplicación del ciclo de mejora continua y la gestión de sus procesos.</p>
+      </div>
       {/* <p>La norma ISO 9001 está basada en ocho principios de gestión de calidad:</p> */}
       {/* <img src={calidad1} alt="imagen" style={{marginBottom:"60px"}}/> */}
-      <Titulo titulo={"Beneficios de un Sistema de Gestión de Calidad ISO 9001"}/>
+      <Titulo titulo={"Beneficios de un Sistema de Gestión de la Calidad"}/>
       {/* <img src={calidad2} alt="imagen" style={{marginBottom:"60px"}}/> */}
       <ImageContainer>
         <BeneficiosIso description="Aumento de la rentabilidad:" img={iconoNaranja} color={"#ed7d31"} text={"Optimiza y mejora la ejecución y control de los procesos e identifica y gestiona los riesgos y oportunidades. Todo ello con orientación a la satisfacción del cliente y al cumplimiento de requisitos."}/>
@@ -69,9 +71,9 @@ export default function CalidadMain(){
         <BeneficiosIso description="Diferenciación positiva:" img={iconoRojo} color={"#f94151"} text={"Ofrece mayores garantías en el desarrollo, control y mejora de las actividades, el cumplimiento de los requisitos y la gestión y control de los riesgos derivados de las mismas."}/>
         <BeneficiosIso description="Integrable con otros sistemas:" img={iconoAzver} color={"#136773"} text={"Su estructura y requisitos siguiendo la “Estructura de Alto Nivel – Anexo SL” permite y facilita la integración y optimización con otros sistemas de gestión (ISO 14001, ISO 45001, ISO 50001, etc.)"}/>
       </ImageContainer>
-      <Titulo titulo={"¿Cómo implemento ISO-9001 en mi organización?"}/>
+      {/* <Titulo titulo={"¿Cómo implemento ISO-9001 en mi organización?"}/>
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Calidad en su organización, y poder optar a certificarse en ISO-9001, deberá seguir una serie de pasos:</p>
-      <img src={calidad3} alt="imagen"/>
+      <img src={calidad3} alt="imagen"/> */}
       <Servicios />
     </Wrapper>
   )
