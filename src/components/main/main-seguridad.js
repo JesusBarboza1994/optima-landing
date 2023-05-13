@@ -6,6 +6,21 @@ import seguridad4 from "../../assets/seguridad/seguridad4.jpg"
 import { colors } from "../../styles/colors"
 import Titulo from "../titulo"
 import Servicios from "../servicios"
+import imgSeguridad1 from "../../assets/seguridad/items/seguridad1.png"
+import imgSeguridad2 from "../../assets/seguridad/items/seguridad2.png"
+import imgSeguridad3 from "../../assets/seguridad/items/seguridad3.png"
+import imgSeguridad4 from "../../assets/seguridad/items/seguridad4.png"
+import imgSeguridad5 from "../../assets/seguridad/items/seguridad5.png"
+import imgSeguridad6 from "../../assets/seguridad/items/seguridad6.png"
+import imgSeguridad7 from "../../assets/seguridad/items/seguridad7.png"
+import imgSeguridad8 from "../../assets/seguridad/items/seguridad8.png"
+import imgSeguridad9 from "../../assets/seguridad/items/seguridad9.png"
+import imgSeguridad10 from "../../assets/seguridad/items/seguridad10.png"
+import imgSeguridad11 from "../../assets/seguridad/items/seguridad11.png"
+import imgSeguridad12 from "../../assets/seguridad/items/seguridad12.png"
+import imgSeguridad13 from "../../assets/seguridad/items/seguridad13.png"
+import BeneficiosSeguridad from "../beneficiosSeguridad"
+import { MdLabelImportant } from "react-icons/md"
 
 const Wrapper = styled.div`
   display:flex;
@@ -13,6 +28,29 @@ const Wrapper = styled.div`
   align-items:center;
   img{
     padding: auto 20px;
+  }
+  ul{
+    width:100%;
+    color:${colors.gray.light};
+    padding-left:0px;
+  }
+  li{
+    width:100%;
+    display:flex;
+    align-items:center;
+    text-align:start;
+    color:${colors.gray.light};
+    list-style:none;
+    margin-bottom:15px;
+    p{
+      text-align:start;
+      margin-bottom:0px;
+    }
+  }
+  @media(max-width:750px){
+    li{
+      align-items:flex-start;
+    }
   }
 `
 const Div1 = styled.div`
@@ -35,6 +73,13 @@ const Div1 = styled.div`
   img{
     max-width:555px;
   }
+  div{
+    background:${colors.stone["100"]};
+    padding: 20px;
+    border-radius:8px;
+    height:100%;
+  }
+  
   @media(max-width:1380px){
     img{
       max-width:500px;
@@ -54,6 +99,20 @@ const SubTitle = styled.h2`
   color:${colors.blue[500]};
   font-weight:400;
   margin-top:40px;
+`
+const ImageContainer = styled.div`
+  display:grid;
+  width:100%;
+  column-gap:40px;
+  row-gap:20px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  @media(max-width:990px){
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
 `
 const Div2 = styled.div`
   display:flex;
@@ -94,19 +153,42 @@ const Div2 = styled.div`
 `
 
 export default function SeguridadMain(){
+  const images = [imgSeguridad1, imgSeguridad2, imgSeguridad3, imgSeguridad4, imgSeguridad5, imgSeguridad6, imgSeguridad7, imgSeguridad8, imgSeguridad9, imgSeguridad10, imgSeguridad11, imgSeguridad12, imgSeguridad13]
+  const texts = [
+    "Reduce el índice de siniestralidad de la organización.",
+    "Mejora el clima laboral con la consulta y participación de trabajadores.",
+    "Previene lesiones y el deterioro de la salud.",
+    "Disminuye el absentismo laboral.",
+    "Provee condiciones de trabajo más seguras, lo que genera mayor productividad.",
+    "Mejora de la imagen de la empresa de cara a accionistas e inversores.",
+    "Fomenta la cultura preventiva en la empresa.",
+    "Mejora de la imagen pública de la empresa.",
+    "Facilita el cumplimiento de la legislación aplicable.",
+    "Proporciona un valor añadido a la empresa, diferenciándola respecto a la competencia.",
+    "Implanta la capacidad de identificar, evaluar y controlar los riesgos asociados a cada puesto de trabajo.",
+    "Integrable con otros sistemas ISO.",
+    "Mejora su reputación en relación con la gestión de la Seguridad y Salud en el trabajo."
+  ]
   return(
     <Wrapper>
       <Div1>
-        <div>
-          
+        <div>  
           <p>La norma ISO 45001 está enfocada a la Seguridad y Salud en el trabajo, persiguiendo la mejora continua por parte de la organización, dado que este es uno de los elementos básicos de la gestión empresarial.</p>
           <br/>
           <p>En el contexto actual se hace necesario contar con un elemento objetivo para comunicar a empleados, clientes, accionistas y otras partes interesadas no sólo el compromiso de la organización con la seguridad y salud de sus empleados sino también que la política de seguridad y salud en el trabajo se está aplicando adecuadamente, con una voluntad de mejora continua.</p>
         </div>
-        {/* <img src={seguridad1} alt="imagen" style={{width:"100%"}}/> */}
+        <img src={seguridad1} alt="imagen" style={{width:"100%"}}/>
       </Div1>
       <Titulo titulo={"Beneficios de un sistema de gestión ISO 45001"}/>
-      <img src={seguridad2} alt="imagen" style={{width:"100%"}}/>
+      <ImageContainer>
+        {
+          images.map((image, i) =>{
+            return <BeneficiosSeguridad img={image} text={texts[i]}/>
+          })
+        }
+      </ImageContainer>
+      
+      {/* <img src={seguridad2} alt="imagen" style={{width:"100%"}}/> */}
       {/* <Titulo titulo={"¿Cómo implemento ISO-45001 en mi organización?"}/>
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Seguridad y Salud en su organización, y poder certificarse en ISO-45001, deberá seguir una serie de pasos:</p>
       <img src={seguridad3} alt="imagen" style={{width:"100%", paddingTop:"40px"}}/> */}
@@ -120,7 +202,18 @@ export default function SeguridadMain(){
           <p>Este sistema permite a las organizaciones a contar con un lugar de trabajo seguro y saludable para sus colaboradores y partes interesadas, contribuyendo en la prevención de lesiones y problemas de salud ocupacional y bajo el enfoque de mejora de manera continua en el desempeño de su sistema de gestión.</p>
         </div>
       </Div2> */}
-      <Servicios/>
+      {/* <Servicios/> */}
+      <Titulo titulo={"Nuestros Servicios"}/>
+      <ul>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación ISO 45001:2018</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación de Ley 29783 Ley de seguridad y salud en el trabajo</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Mantenimiento y mejora de sistema de gestión de SST</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías internas ISO 45001.</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías según Ley 29783 (auditor acreditado por MINTRA)</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elaboración, revisión y actualización de matriz IPERC</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span> <p>Levantamiento y actualización de matrices legales de seguridad y salud en el trabajo.</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitaciones inhouse de Seguridad y Salud Laboral.</p></li>
+      </ul>
     </Wrapper>
   )
 }

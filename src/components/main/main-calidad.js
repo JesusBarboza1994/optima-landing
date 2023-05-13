@@ -13,6 +13,7 @@ import iconoAzver from "../../assets/calidad/calidad-icono-azver.png"
 import iconoNaranja from "../../assets/calidad/calidad-icono-naranja.png"
 import iconoRojo from "../../assets/calidad/calidad-icono-rojo.png"
 import iconoVerde from "../../assets/calidad/calidad-icono-verde.png"
+import {MdLabelImportant} from "react-icons/md"
 
 const Wrapper = styled.div`
   display:flex;
@@ -34,6 +35,29 @@ const Wrapper = styled.div`
     text-align:justify;
     color:${colors.gray.light};
   }
+  ul{
+    width:100%;
+    color:${colors.gray.light};
+    padding-left:0px;
+  }
+  li{
+    width:100%;
+    display:flex;
+    align-items:center;
+    text-align:start;
+    color:${colors.gray.light};
+    list-style:none;
+    margin-bottom:15px;
+    p{
+      text-align:start;
+      margin-bottom:0px;
+    }
+  }
+  @media(max-width:750px){
+    li{
+      align-items:flex-start;
+    }
+  }
 `
 const ImageContainer = styled.div`
   display:grid;
@@ -47,17 +71,25 @@ const ImageContainer = styled.div`
     align-items:center;
     gap:30px;
   }
-
+`
+const Background = styled.div`
+  width:100%;
+  background: ${colors.stone[100]};
+  padding: 30px;
+  border-radius: 12px;
+  @media(max-width:480px){
+    padding: 15px;
+  }
 `
 
 export default function CalidadMain(){
   return(
     <Wrapper>
       {/* <h3>ISO 9001 Sistema de Gestión de Calidad.</h3> */}
-      <div>
+      <Background>
         <p>La norma ISO 9001 es una normativa internacional de gestión de la calidad aplicable a cualquier tipo de organización de cualquier sector o actividad, y perfectamente integrable con las características propias de gestión de cualquier empresa existente dada su gran flexibilidad.</p>
         <p>Un Sistema de Gestión de Calidad basado en la norma ISO 9001:2015 demuestra a los clientes y al mercado que una organización desarrolla sus actividades con el objetivo de garantizar la satisfacción del cliente y el cumplimiento de sus requisitos (contractuales, legales, entre otros), basándose en la aplicación del ciclo de mejora continua y la gestión de sus procesos.</p>
-      </div>
+      </Background>
       {/* <p>La norma ISO 9001 está basada en ocho principios de gestión de calidad:</p> */}
       {/* <img src={calidad1} alt="imagen" style={{marginBottom:"60px"}}/> */}
       <Titulo titulo={"Beneficios de un Sistema de Gestión de la Calidad"}/>
@@ -74,7 +106,16 @@ export default function CalidadMain(){
       {/* <Titulo titulo={"¿Cómo implemento ISO-9001 en mi organización?"}/>
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Calidad en su organización, y poder optar a certificarse en ISO-9001, deberá seguir una serie de pasos:</p>
       <img src={calidad3} alt="imagen"/> */}
-      <Servicios />
+      <Titulo titulo={"Nuestros Servicios"}/>
+      <ul>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Consultoría para la Implementación ISO 9001:2015</p> </li>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Mantenimiento y mejora de sistema de gestión de la calidad</p> </li>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Capacitación inhouse interpretación de requisitos ISO 9001</p> </li>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Auditorías internas</p> </li>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Capacitación inhouse interpretación de requisitos ISO 9001</p> </li>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Capacitación inhouse auditor interno ISO 9001:2015</p> </li>
+        <li><MdLabelImportant style={{width:"16px"}}/><p>Consultoría para levantamiento o rediseño de procesos</p> </li>
+      </ul>
     </Wrapper>
   )
 }

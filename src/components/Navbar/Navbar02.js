@@ -152,7 +152,7 @@ export default function NavbarSection(){
               <p>Consultoría <BsChevronCompactDown style={{marginLeft:"10px"}}/></p>
               <SubMenu className="consultoria">
                 <StyledLink to={"/sistema-gestion-iso"}>Sistema de Gestión ISO</StyledLink>
-                <StyledLink>Seguridad y Salud Laboral</StyledLink>
+                <StyledLink to={"/seguridad-y-salud-laboral"}>Seguridad y Salud Laboral</StyledLink>
                 <StyledLink to={`/homologaciones`}>Homologaciones</StyledLink>
                 <StyledLink>Hostigamiento Sexual Laboral</StyledLink>
               </SubMenu>
