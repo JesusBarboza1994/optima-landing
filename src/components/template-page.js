@@ -8,7 +8,7 @@ const Wrapper = styled.div`
  
 `
 const Presentacion = styled.div`
-  margin-top:70px;
+  // margin-top:70px;
   display:flex;
   flex-direction:column;
   align-items:center;

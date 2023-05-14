@@ -154,7 +154,7 @@ export default function NavbarSection(){
                 <StyledLink to={"/sistema-gestion-iso"}>Sistema de Gestión ISO</StyledLink>
                 <StyledLink to={"/seguridad-y-salud-laboral"}>Seguridad y Salud Laboral</StyledLink>
                 <StyledLink to={`/homologaciones`}>Homologaciones</StyledLink>
-                <StyledLink>Hostigamiento Sexual Laboral</StyledLink>
+                <StyledLink to={`/hostigamiento`}>Hostigamiento Sexual Laboral</StyledLink>
               </SubMenu>
             </Li>  
             <Li servicios={servicios} onClick={handleServicios}>

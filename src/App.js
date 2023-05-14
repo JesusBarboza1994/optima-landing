@@ -28,6 +28,7 @@ import SistemaGestionIso from './pages/SistemaGestionIso';
 import Hostigamiento from './pages/Hostigamiento';
 import SeguridadSaludLaboral from './pages/SeguridadSaludLaboral';
 import Banner from './components/banner';
+import Metodo from './pages/Metodo';
 
 
 const ContainerImage = styled.div`
@@ -73,6 +74,7 @@ function App() {
         <Route path="/homologaciones" element={<Homologaciones/>} />
         <Route path="/hostigamiento" element={<Hostigamiento/>} />
         <Route path="/consultoria" element={<Consultoria/>} />
+        <Route path="/metodo" element={<Metodo/>} />
 
 
         <Route path="/blog" element={<Blog/>} />
