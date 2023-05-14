@@ -1,11 +1,36 @@
 import styled from "@emotion/styled"
 import homologacion from "../../assets/homologacion/homologacion.png"
 import { colors } from "../../styles/colors"
+import Titulo from "../titulo"
+import { MdLabelImportant } from "react-icons/md"
 const Wrapper = styled.div`
   padding-bottom:50px;
   p{
     color:${colors.gray.light};
     line-height:200%;
+  }
+  ul{
+    width:100%;
+    color:${colors.gray.light};
+    padding-left:0px;
+  }
+  li{
+    width:100%;
+    display:flex;
+    align-items:center;
+    text-align:start;
+    color:${colors.gray.light};
+    list-style:none;
+    margin-bottom:15px;
+    p{
+      text-align:start;
+      margin-bottom:0px;
+    }
+  }
+  @media(max-width:480px){
+    li{
+      align-items:flex-start;
+    }
   }
 `
 const Img = styled.img`
@@ -27,6 +52,14 @@ export default function HomologacionMain(){
       <p>7.- Responsabilidad Social, donde se revisa todo lo referente a la contribución activa y voluntaria al mejoramiento social, económico y ambiental por parte de la empresa.</p>
       <p>La aprobación es en base a un puntaje de cumplimiento de estos aspectos. Algunas empresas encargadas de llevar a cabo procesos de homologación son: BUREAU VERITAS PERÚ, SGS DEL PERU, ICONTEC, HODELPE, MEGA CERTIFICACIONES, entre otras.</p>
       <p>El final de dicho proceso la empresa encargada de efectuar la auditoría de homologación emite un certificado de homologación, cuyo puntaje está basado según los resultados obtenidos en la evaluación, y cuya vigencia en promedio es de 01 año.</p>
+      <Titulo titulo={"Nuestros Servicios"}/>
+      <ul>
+        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Visita técnica a las instalaciones de la empresa.</p></li>
+        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Desarrollo de toda la documentación exigida.</p></li>
+        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Asesoría en la elaboración de los registros.</p></li>
+        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Capacitaciones al personal.</p></li>
+        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Acompañamiento en la auditoría de homologación.</p></li>
+      </ul>
     </Wrapper>
   )
 }

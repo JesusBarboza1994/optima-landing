@@ -9,8 +9,8 @@ const Div2 = styled.div`
   align-items:center;
   justify-content: center;
   img{
-    padding: 20px 0 10px 0;
     max-width:400px;
+    border-radius:12px;
   }
   div{
     font-size:18px;
