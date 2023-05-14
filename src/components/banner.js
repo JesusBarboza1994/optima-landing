@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import consultoriaorganizacional from "../assets/consultoriaorganizacional.jpg"
+import cotizacion from "../assets/cotizacion.jpg"
 import { colors } from "../styles/colors"
 const Wrapper = styled.div`
   width:100%;
@@ -7,7 +8,7 @@ const Wrapper = styled.div`
   height:300px;
   position:relative;
   img{
-    width:65%;
+    width:55%;
     position: absolute;
     height:300px;
     right:0px;
@@ -34,7 +35,7 @@ const Wrapper = styled.div`
 const TextDiv = styled.div`
   color:${colors.white};
   background:${colors.blue["500"]};
-  width:60%;
+  width:70%;
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);
   display:flex;
   flex-direction:column;
@@ -85,7 +86,7 @@ export default function Banner(){
           <button>Solicitar cotización</button>
         </div>
       </TextDiv>
-      <img src={consultoriaorganizacional} alt="imagen"/>
+      <img src={cotizacion} alt="imagen"/>
     </Wrapper>
   )
 }

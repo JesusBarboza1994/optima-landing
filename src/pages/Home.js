@@ -62,7 +62,7 @@ const HacemosSection = styled.section`
   align-items:center;
   max-width:945px;
   margin:auto;
-  padding: 100px 20px;
+  padding: 50px 20px;
   hr{
     border-top: 1px solid ${colors.blue[400]};
     width: 200px;
@@ -75,6 +75,8 @@ const HacemosSection = styled.section`
   h2{
     font-size:20px;
     color:${colors.gray.medium};
+    font-weight:400;
+    margin-top:20px;
   }
 `
 const ParlanteSection = styled.section`
@@ -162,9 +164,9 @@ export default function Home(){
     <Wrapper>
       <Portada/>
       <HacemosSection>
-        {/* <img src={conexiones} alt='imagen'/>
+        <img src={conexiones} alt='imagen'/>
         <h2>¿QUÉ HACEMOS?</h2>
-        <hr/> */}
+        <hr/>
         <p>En OPTIMA tenemos más de 10 años de experiencia trabajando con empresas de diferentes sectores, facilitando la adecuación a Normas ISO y muchos otros estándares, asesorando en adaptación eficiente a nuevos requisitos legales para empresas y organizaciones que necesitan ser más competitivas y sostenibles.</p>
       </HacemosSection>
       {/* <ParlanteSection>
@@ -179,7 +181,7 @@ export default function Home(){
       </WrapperCard>
       <OfferSection>
         <img src={metodo} alt='imagen'/>
-        <h2>EL MÉTODO </h2>
+        <h2>CÓMO LO HACEMOS </h2>
         <hr/>
       </OfferSection>
       <SectionMethod>

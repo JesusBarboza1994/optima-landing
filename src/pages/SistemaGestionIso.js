@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import Servicios from "../components/servicios";
+import Template from "../components/template-page";
 
 const Wrapper = styled.div`
 `
@@ -7,9 +9,11 @@ const Wrapper = styled.div`
 export default function SistemaGestionIso(){
   return(
     <Wrapper>
-      <Link to={"/calidad"}>Calidad</Link>
-      <Link to={"/seguridad-y-salud"}>SST</Link>
-      <Link to={"/medio-ambiente"}>Medio Ambiente</Link>
+      <Template
+        title={"Sistema de Gestión"}
+        descrip={"Implementación, mantenimiento y mejora de tu sistema de gestión."}
+        Main={Servicios}
+      />
     </Wrapper>
   )
 }

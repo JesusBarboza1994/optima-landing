@@ -38,7 +38,6 @@ const Wrapper = styled.div`
 `
 const Img = styled.img`
   width:80px;
-
   @media(max-width:1200px){
     width: 80px;
   }

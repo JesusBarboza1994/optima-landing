@@ -97,14 +97,13 @@ export default function HostigamientoMain(){
       </Div1>
       <Titulo titulo={"Nuestros Servicios"}/>
       <ul>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación ISO 45001:2018</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación de Ley 29783 Ley de seguridad y salud en el trabajo</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Mantenimiento y mejora de sistema de gestión de SST</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías internas ISO 45001.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías según Ley 29783 (auditor acreditado por MINTRA)</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elaboración, revisión y actualización de matriz IPERC</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span> <p>Levantamiento y actualización de matrices legales de seguridad y salud en el trabajo.</p></li>
-      </ul>
+        
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elección y formación del Comité de intervención frente al Hostigamiento Sexual Laboral</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elaboración de procedimientos y políticas para la prevención del hostigamiento sexual laboral</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Evaluación para identificar las posibles situaciones de Hostigamiento Sexual en la organización</p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitación a todos los trabajadores sobre Hostigamiento Sexual en el trabajo </p></li>
+        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitación a los trabajadores de Gestión Humana y al Comité en sus tareas y funciones frente al Hostigamiento Sexual </p></li>
+     </ul>
     </Wrapper>
   )
 }

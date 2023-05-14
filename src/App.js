@@ -23,13 +23,14 @@ import Medio2 from './components/servicios/medio2';
 import Medio3 from './components/servicios/medio3';
 import styled from '@emotion/styled';
 import whatsapp from "./assets/whatsapp.png"
+import wsp from "./assets/wsp.png"
 import NavbarSection from './components/Navbar/Navbar02';
 import SistemaGestionIso from './pages/SistemaGestionIso';
 import Hostigamiento from './pages/Hostigamiento';
 import SeguridadSaludLaboral from './pages/SeguridadSaludLaboral';
 import Banner from './components/banner';
 import Metodo from './pages/Metodo';
-
+import Antisoborno from './pages/Antisoborno';
 
 const ContainerImage = styled.div`
   display:flex;
@@ -40,6 +41,22 @@ const ContainerImage = styled.div`
   height:75px;
   border-radius:50%;
   background:#4fc359;
+  opacity:0.95;
+  position:fixed;
+  bottom: 50px;
+  right: 20px;
+  @media(max-width:650px){
+    right:20px;
+    scale:0.8;
+  }
+`
+const ContainerImage2 = styled.div`
+  display:flex;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  width:200px;
+  height:75px;
   opacity:0.95;
   position:fixed;
   bottom: 50px;
@@ -69,6 +86,7 @@ function App() {
         <Route path="/calidad" element={<Calidad/>} />
         <Route path="/seguridad-y-salud" element={<SeguridadSalud/>} />
         <Route path="/medio-ambiente" element={<MedioAmbiente/>} />
+        <Route path="/anti-soborno" element={<Antisoborno/>} />
         
         <Route path="/seguridad-y-salud-laboral" element={<SeguridadSaludLaboral/>} />
         <Route path="/homologaciones" element={<Homologaciones/>} />
@@ -90,9 +108,9 @@ function App() {
         <Route path="/medio-ambiente/2" element={<Template title={"Medio Ambiente"} descrip={"Capacitaciones"} Main={Medio2} />} />
         <Route path="/medio-ambiente/3" element={<Template title={"Medio Ambiente"} descrip={"Auditoría"} Main={Medio3} />} /> */}
       </Routes>
-      <ContainerImage onClick={handleWhatsapp}>
-        <Img src={whatsapp} alt="imagen"/>
-      </ContainerImage>
+      <ContainerImage2 onClick={handleWhatsapp}>
+        <Img src={wsp} alt="imagen"/>
+      </ContainerImage2>
       <Banner/>
       <Footer/>
     </div>
