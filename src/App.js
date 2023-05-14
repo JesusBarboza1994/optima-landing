@@ -31,22 +31,28 @@ import SeguridadSaludLaboral from './pages/SeguridadSaludLaboral';
 import Banner from './components/banner';
 import Metodo from './pages/Metodo';
 import Antisoborno from './pages/Antisoborno';
+import { colors } from './styles/colors';
 
 const ContainerImage = styled.div`
   display:flex;
   cursor:pointer;
   align-items:center;
   justify-content:center;
-  width:75px;
-  height:75px;
-  border-radius:50%;
+  // width:200px;
+  padding: 4px 10px 4px 15px;
+  // height:75px;
+  border-radius:36px 0 0 36px;
   background:#4fc359;
   opacity:0.95;
   position:fixed;
   bottom: 50px;
   right: 20px;
+  h2{
+    color:${colors.white};
+    font-size:20px;
+  }
   @media(max-width:650px){
-    right:20px;
+    right:-10px;
     scale:0.8;
   }
 `
@@ -67,7 +73,7 @@ const ContainerImage2 = styled.div`
   }
 `
 const Img = styled.img`
-  height:70px;
+  height:50px;
 `
 
 function App() {
@@ -108,9 +114,10 @@ function App() {
         <Route path="/medio-ambiente/2" element={<Template title={"Medio Ambiente"} descrip={"Capacitaciones"} Main={Medio2} />} />
         <Route path="/medio-ambiente/3" element={<Template title={"Medio Ambiente"} descrip={"Auditoría"} Main={Medio3} />} /> */}
       </Routes>
-      <ContainerImage2 onClick={handleWhatsapp}>
-        <Img src={wsp} alt="imagen"/>
-      </ContainerImage2>
+      <ContainerImage onClick={handleWhatsapp}>
+        <Img src={whatsapp} alt="imagen"/>
+        <h2>CONTACTAR</h2>
+      </ContainerImage>
       <Banner/>
       <Footer/>
     </div>

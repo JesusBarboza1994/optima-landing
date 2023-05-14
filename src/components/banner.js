@@ -2,6 +2,7 @@ import styled from "@emotion/styled"
 import consultoriaorganizacional from "../assets/consultoriaorganizacional.jpg"
 import cotizacion from "../assets/cotizacion.jpg"
 import { colors } from "../styles/colors"
+import { Link } from "react-router-dom"
 const Wrapper = styled.div`
   width:100%;
   display:flex;
@@ -82,8 +83,10 @@ export default function Banner(){
       <TextDiv>
         <div>
           <h1>¿Qué esperas para certificarte?</h1>
-          <h3>Consigue una cotización con nosotros.</h3>
-          <button>Solicitar cotización</button>
+          <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
+          <Link to={"/contacto"}>
+            <button>Solicitar cotización</button>
+          </Link>
         </div>
       </TextDiv>
       <img src={cotizacion} alt="imagen"/>

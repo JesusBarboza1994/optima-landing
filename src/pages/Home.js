@@ -48,12 +48,12 @@ const SectionMethod = styled.section`
 `
 const WrapperCard = styled.div`
   display: flex;
-  gap: 30px;
   justify-content:center;
   gap:20px;
   @media(max-width:1000px){
     flex-direction:column;
     align-items:center;
+    gap:20px;
   }
 `
 const HacemosSection = styled.section`
@@ -175,9 +175,15 @@ export default function Home(){
         <hr/>
       </ParlanteSection> */}
       <WrapperCard>
-        <CardHome img={sitemaiso} title={"Sistemas de Gestión ISO"} text={'"Implementación y mantenimiento de sistemas de gestión basados en estándares internacionales como lo son las normas ISO 9001, ISO 14001, ISO 45001, entre otros."'}/>
-        <CardHome img={sst} title={"Ley de Seguridad y Salud Laboral"} text={'"Consultoría e implementación en la Ley 29783 Ley de seguridad y salud en el trabajo, su reglamento y modificatorias."'}/>
-        <CardHome img={consultoriaorganizacional} title={"Homologación de Proveedores"} text={'"Asesoría técnica y documentaria para aprobar los procesos de análisis, verificación y evaluación de diferentes aspectos de su organización requeridos por sus clientes a través de empresas certificadoras."'}/>
+        <Link style={{textDecoration:"none"}} to={"/sistema-gestion-iso"}>
+          <CardHome img={sitemaiso} title={"Sistemas de Gestión ISO"} text={'"Implementación y mantenimiento de sistemas de gestión basados en estándares internacionales como lo son las normas ISO 9001, ISO 14001, ISO 45001, entre otros."'}/>
+        </Link>
+        <Link style={{textDecoration:"none"}} to={"seguridad-y-salud-laboral"}>
+          <CardHome img={sst} title={"Ley de Seguridad y Salud Laboral"} text={'"Consultoría e implementación en la Ley 29783 Ley de seguridad y salud en el trabajo, su reglamento y modificatorias."'}/>
+        </Link>
+        <Link style={{textDecoration:"none"}} to={"/homologaciones"}>
+          <CardHome img={consultoriaorganizacional} title={"Homologación de Proveedores"} text={'"Asesoría técnica y documentaria para aprobar los procesos de análisis, verificación y evaluación de diferentes aspectos de su organización requeridos por sus clientes a través de empresas certificadoras."'}/>
+        </Link>
       </WrapperCard>
       <OfferSection>
         <img src={metodo} alt='imagen'/>

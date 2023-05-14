@@ -6,13 +6,11 @@ const Wrapper = styled.div`
   flex-direction:column;
   max-width:510px;
   align-items:center;
-  margin: 0px 20px;
   @media (max-width: 530px) {
     width:100%;
     padding-left:15px;
     padding-right:15px;
     justify-content:center;
-    margin: 0px 60px;
   }
 `
 const Title = styled.div`
@@ -21,6 +19,9 @@ const Title = styled.div`
   padding:10px 0px;
   width:100%;
   color:${colors.black};
+  @media(max-width:1400px){
+    font-size:18px;
+  }
 `
 const Figure = styled.figure`
   position: relative;
@@ -33,7 +34,12 @@ const Figure = styled.figure`
   &:hover img{
     opacity: 0.3;
   }
-  
+  @media(max-width:1200px){
+    max-width:300px;
+  }
+  // @media(max-width:1150px){
+  //   max-width:270px;
+  // }
 `
 const Figcaption = styled.figcaption`
   position: absolute;

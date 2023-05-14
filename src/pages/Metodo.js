@@ -3,14 +3,14 @@ import { colors } from "../styles/colors"
 import metodo from "../assets/metodo/metodo.png"
 import MethodCard from "../components/method-card"
 const Container = styled.div`
+
   display: flex;
   flex-direction:column;
   width:100%;
   align-items:center;
   max-width:1170px;
   margin:auto;
-  padding-left:15px;
-  padding-right:15px;
+  padding: 50px 15px;
   p{
     font-size:16px;
     color:${colors.gray.light};
@@ -92,6 +92,16 @@ const Div2 = styled.div`
     width:33%;
   }
 `
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap:20px;
+  @media(max-width:750px){
+    display:flex;
+    flex-direction:column;
+  }
+`
 export default function Metodo(){
   return(
     <Container>
@@ -103,21 +113,11 @@ export default function Metodo(){
         </Background>
         <img src={metodo} alt="imagen" style={{width:"100%"}}/>
       </Div1>
-      <Div2>
-        <MethodCard number={1} title={"Análisis Empresarial"} text={"Nuestros servicios parten con un diagnóstico y análisis de situación y funcionamiento del cliente. Se analizan las características de la empresa/organización y las particularidades de sus procesos. Este diagnóstico nos ayudará a definir, conjuntamente con el cliente, las bases del proyecto a realizar, sea cual sea su envergadura. Luego, podremos definir los objetivos y plan de trabajo del proyecto, además de designar al Consultor más idóneo según las características del mismo."}/>
-        <div></div>
-        <div></div>
-      </Div2>
-      <Div2>
-        <div></div>
-        <MethodCard number={2} title={"Implementación de Proyectos"} text={"La parte inicial de esta etapa consiste en la capacitación y sensibilización de su personal. Nuestros consultores se caracterizan por la capacidad de potenciar la labor del equipo en cada empresa a través de capacitación continua. Luego, se fijan los objetivos y plan de trabajo por proceso, se desarrollan los documentos asociados mientras se aportan las herramientas, técnicas y soluciones necesarias para cada caso en la implementación. Los consultores de ÓPTIMA analizan los resultados de cada etapa y valoran la consecución de los objetivos iniciales."}/>    
-        <div></div>
-      </Div2>
-      <Div2>
-        <div></div>
-        <div></div>
-        <MethodCard number={3} title={"Consolidación"} text={"Somos conscientes de que todo proceso de cambio que afecte a estrategias requiere un esfuerzo adicional para que realmente consolide su eficacia más allá de la fase de implementación liderada por nuestros consultores. A través del acompañamiento continuo, y la absolución de dudas y consultas bajo el enfoque de mejora continua, ÓPTIMA CONSULTORA provee los instrumentos necesarios para garantizar la consolidación plena de los trabajos realizados, así como la certificación correspondiente."}/>
-      </Div2>
+      <Grid>
+          <MethodCard col={1} row={1} number={"1."} title={"ANÁLISIS EMPRESARIAL"} text={"Nuestros servicios parten con un diagnóstico y análisis de situación y funcionamiento del cliente. Se analizan las características de la empresa/organización y las particularidades de sus procesos. Este diagnóstico nos ayudará a definir, conjuntamente con el cliente, las bases del proyecto a realizar, sea cual sea su envergadura. Luego, podremos definir los objetivos y plan de trabajo del proyecto, además de designar al Consultor más idóneo según las características del mismo."}/>
+          <MethodCard col={2} row={2} number={"2."} title={"IMPLEMENTACIÓN DE PROYECTOS"} text={"La parte inicial de esta etapa consiste en la capacitación y sensibilización de su personal. Nuestros consultores se caracterizan por la capacidad de potenciar la labor del equipo en cada empresa a través de capacitación continua. Luego, se fijan los objetivos y plan de trabajo por proceso, se desarrollan los documentos asociados mientras se aportan las herramientas, técnicas y soluciones necesarias para cada caso en la implementación. Los consultores de ÓPTIMA analizan los resultados de cada etapa y valoran la consecución de los objetivos iniciales."}/>    
+          <MethodCard col={3} row={3} number={"3."} title={"CONSOLIDACIÓN"} text={"Somos conscientes de que todo proceso de cambio que afecte a estrategias requiere un esfuerzo adicional para que realmente consolide su eficacia más allá de la fase de implementación liderada por nuestros consultores. A través del acompañamiento continuo, y la absolución de dudas y consultas bajo el enfoque de mejora continua, ÓPTIMA CONSULTORA provee los instrumentos necesarios para garantizar la consolidación plena de los trabajos realizados, así como la certificación correspondiente."}/>
+      </Grid>
     </Container>
   )
 }
