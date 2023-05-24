@@ -19,7 +19,7 @@ import imgSeguridad10 from "../../assets/seguridad/items/seguridad10.png"
 import imgSeguridad11 from "../../assets/seguridad/items/seguridad11.png"
 import imgSeguridad12 from "../../assets/seguridad/items/seguridad12.png"
 import imgSeguridad13 from "../../assets/seguridad/items/seguridad13.png"
-import BeneficiosSeguridad from "../beneficiosSeguridad"
+import BeneficiosSeguridad from "../beneficios/beneficiosSeguridad"
 import { MdLabelImportant } from "react-icons/md"
 
 const Wrapper = styled.div`

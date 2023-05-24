@@ -1,6 +1,15 @@
 import imagen from "./assets/medioambiente/ambiente4.jpg"
-
+import articulo1 from "./assets/articles/articulo1.png"
 export const Articles = [
+  {
+    title:"Artículo 1",
+    description: "Registro de seguridad y salud laboral para mypes",
+    etiqueta: "Seguridad",
+    keywords: "seguridad, salud, trabajo, 29783, iso, 45001, stakeholders",
+    image: articulo1,
+    url:"/articulo1",
+    date: new Date("05-24-2023")
+  },
   {
     title:"Titulo1",
     description: "Esta es una breve descripción del artículo 1",

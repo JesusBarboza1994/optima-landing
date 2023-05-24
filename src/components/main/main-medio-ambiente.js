@@ -13,7 +13,7 @@ import imgAmbiente5 from "../../assets/medioambiente/items/ambiente5.png"
 import imgAmbiente6 from "../../assets/medioambiente/items/ambiente6.png"
 import imgAmbiente7 from "../../assets/medioambiente/items/ambiente7.png"
 import imgAmbiente8 from "../../assets/medioambiente/items/ambiente8.png"
-import BeneficiosAmbiente from "../beneficiosAmbiente"
+import BeneficiosAmbiente from "../beneficios/beneficiosAmbiente"
 import { MdLabelImportant } from "react-icons/md"
 
 const Wrapper = styled.div`

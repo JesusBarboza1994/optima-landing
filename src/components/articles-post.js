@@ -23,6 +23,8 @@ const Wrapper = styled.div`
   }
   img{
     border-radius:12px;
+    height:250px;
+    object-fit:cover;
   }
   h1{
     color:${colors.blue[300]};

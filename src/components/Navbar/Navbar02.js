@@ -160,8 +160,8 @@ export default function NavbarSection(){
             <Li servicios={servicios} onClick={handleServicios}>
               <p>Servicios <BsChevronCompactDown style={{marginLeft:"10px"}}/></p>
               <SubMenu className="servicios">
-                <StyledLink>Capacitación</StyledLink>
-                <StyledLink>Auditorías</StyledLink>
+                <StyledLink to={"/capacitaciones"}>Capacitación</StyledLink>
+                <StyledLink to={"/auditorias"}>Auditorías</StyledLink>
               </SubMenu>
               {/* <StyledLink className={`consultoria`} to={`/consultoria`}>Servicios</StyledLink> */}
             </Li>  

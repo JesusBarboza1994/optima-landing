@@ -5,6 +5,7 @@ import { colors } from "../styles/colors"
 import { useEffect, useState } from "react"
 import { Articles } from "../articles"
 import ArticlePost from "../components/articles-post"
+import { Link } from "react-router-dom"
 
 const SearchDiv = styled.div`
   display:flex;
@@ -66,9 +67,17 @@ export default function Blog(){
       </SearchDiv>
       <Div>
         {filterArticles.map(article=>{
-          return(
-            <ArticlePost article={article} />
-          )
+          if(article.url){
+            return(
+              <Link to={article.url} style={{textDecoration:"none"}}>
+                <ArticlePost article={article} />
+              </Link>
+            )
+          }else{
+            return(
+              <ArticlePost article={article} />
+            )
+          }
         })}
       </Div>
     </Wrapper>

@@ -32,6 +32,9 @@ import Banner from './components/banner';
 import Metodo from './pages/Metodo';
 import Antisoborno from './pages/Antisoborno';
 import { colors } from './styles/colors';
+import Capacitaciones from './pages/Capacitaciones';
+import Auditorias from './pages/Auditorias';
+import Articulo1 from './components/articles/articulo1';
 
 const ContainerImage = styled.div`
   display:flex;
@@ -88,6 +91,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/nosotros" element={<Nosotros/>} />
+
         <Route path="/sistema-gestion-iso" element={<SistemaGestionIso/>} />
         <Route path="/calidad" element={<Calidad/>} />
         <Route path="/seguridad-y-salud" element={<SeguridadSalud/>} />
@@ -100,9 +104,16 @@ function App() {
         <Route path="/consultoria" element={<Consultoria/>} />
         <Route path="/metodo" element={<Metodo/>} />
 
+        {/* Servicios */}
+        <Route path="/capacitaciones" element={<Capacitaciones/>} />
+        <Route path="/auditorias" element={<Auditorias/>} />
 
         <Route path="/blog" element={<Blog/>} />
+        {/* Articulos */}
+        <Route path="/articulo1" element={<Articulo1/>}/>
+
         <Route path="/contacto" element={<Contacto/>} />
+
 
         {/* <Route path="/calidad/1" element={<Template title={"Calidad"} descrip={"Mantenimiento"} Main={Calidad1} />} />
         <Route path="/calidad/2" element={<Template title={"Calidad"} descrip={"Capacitaciones"} Main={Calidad2} />} />
