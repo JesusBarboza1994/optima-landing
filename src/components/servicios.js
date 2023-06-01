@@ -9,6 +9,7 @@ import iso37001 from "../assets/sistemaGestion/37001.jpg"
 import { colors } from "../styles/colors"
 import Titulo from "./titulo"
 import { Link } from "react-router-dom"
+import CardHome from "./card-home"
 
 const Wrapper = styled.div`
   p{
@@ -24,7 +25,8 @@ const Container = styled.div`
   grid-template-rows:1fr 1fr;
   grid-template-columns:1fr 1fr;
   justify-content: center;
-  gap:20px;
+  gap:40px;
+  margin-top:40px;
   padding-bottom:80px;
   @media(max-width:750px){
     grid-template-rows:1fr 1fr 1fr 1fr;
@@ -34,7 +36,7 @@ const Container = styled.div`
 const Card = styled.div`
   display:flex;
   flex-direction:column;
-  max-width:350px;
+  width:420px;
   h2{
     width:100%;
     margin-bottom:0px;
@@ -60,7 +62,7 @@ const Card = styled.div`
   }
 `
 const Img = styled.img`
-  width:350px;
+  width:100%;
   height:220px;
   @media(max-width:1200px){
     width:350px;

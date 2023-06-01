@@ -65,7 +65,7 @@ const Background = styled.div`
 const ImageContainer = styled.div`
   display:grid;
   width:100%;
-  column-gap:40px;
+  column-gap:60px;
   row-gap:20px;
   margin-top: 10px;
   grid-template-rows: 1fr 1fr 1fr;

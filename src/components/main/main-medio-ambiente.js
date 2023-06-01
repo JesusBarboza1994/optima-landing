@@ -110,7 +110,7 @@ const Div1 = styled.div`
 const ImageContainer = styled.div`
   display:grid;
   width:100%;
-  column-gap:40px;
+  column-gap:60px;
   row-gap:20px;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;

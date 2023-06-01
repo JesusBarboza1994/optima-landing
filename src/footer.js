@@ -84,6 +84,7 @@ export default function Footer(){
             <a href="https://www.linkedin.com/company/optimaconsultora/?viewAsMember=true" target="_blank" rel="noreferrer"> 
               <Circle><FaLinkedinIn/></Circle>
             </a>
+            <p>info@optima-consultora.pe</p>
           </div>
           <p>
             Copyright© Jbarz 2023. All Right Reserved. <span>Optima</span>
