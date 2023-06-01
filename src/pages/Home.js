@@ -168,6 +168,7 @@ export default function Home(){
         <h2>¿QUÉ HACEMOS?</h2>
         <hr/>
         <p>En OPTIMA tenemos más de 10 años de experiencia trabajando con empresas de diferentes sectores, facilitando la adecuación a Normas ISO y muchos otros estándares, asesorando en adaptación eficiente a nuevos requisitos legales para empresas y organizaciones que necesitan ser más competitivas y sostenibles.</p>
+        <br/>
       </HacemosSection>
       {/* <ParlanteSection>
         <img src={parlante} alt='imagen'/>
@@ -185,6 +186,7 @@ export default function Home(){
           <CardHome img={consultoriaorganizacional} title={"Homologación de Proveedores"} text={'"Asesoría técnica y documentaria para aprobar los procesos de análisis, verificación y evaluación de diferentes aspectos de su organización requeridos por sus clientes a través de empresas certificadoras."'}/>
         </Link>
       </WrapperCard>
+      <br/>
       <OfferSection>
         <img src={metodo} alt='imagen'/>
         <h2>CÓMO LO HACEMOS </h2>

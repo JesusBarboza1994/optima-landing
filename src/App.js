@@ -23,7 +23,7 @@ import Medio2 from './components/servicios/medio2';
 import Medio3 from './components/servicios/medio3';
 import styled from '@emotion/styled';
 import whatsapp from "./assets/whatsapp.png"
-import wsp from "./assets/wsp.png"
+// import wsp from "./assets/wsp.png"
 import NavbarSection from './components/Navbar/Navbar02';
 import SistemaGestionIso from './pages/SistemaGestionIso';
 import Hostigamiento from './pages/Hostigamiento';
@@ -41,15 +41,11 @@ const ContainerImage = styled.div`
   cursor:pointer;
   align-items:center;
   justify-content:center;
-  // width:200px;
-  padding: 4px 10px 4px 15px;
-  // height:75px;
-  border-radius:36px 0 0 36px;
+  border-radius:50%;
   background:#4fc359;
   opacity:0.95;
-  position:fixed;
-  bottom: 50px;
-  right: 20px;
+  // position:fixed;
+  
   h2{
     color:${colors.white};
     font-size:20px;
@@ -64,8 +60,9 @@ const ContainerImage2 = styled.div`
   cursor:pointer;
   align-items:center;
   justify-content:center;
-  width:200px;
-  height:75px;
+  // width:200px;
+  // height:75px;
+  padding: 10px;
   opacity:0.95;
   position:fixed;
   bottom: 50px;
@@ -76,13 +73,33 @@ const ContainerImage2 = styled.div`
   }
 `
 const Img = styled.img`
-  height:50px;
+  height:65px;
+`
+const WspText = styled.h1`
+  opacity:0;
+  font-size:16px;
+  background:${colors.white};
+  padding:6px 12px;
+  border-radius:12px;
+  color:${colors.gray.light};
+  box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+`
+const WhatsappContainer = styled.div`
+  position:fixed;
+  bottom: 50px;
+  right: 20px;
+  h1{
+    transition: opacity 0.3s ease-out;
+  }
+  &:hover h1, .triangulo{
+    opacity:1;
+  }
 `
 
 function App() {
   function handleWhatsapp(){
     window.location.href = `
-    https://api.whatsapp.com/send/?phone=51993229232&text=Hola+Diana%21+Me+gustaria+conversar+sobre+un+proyecto+contigo.&type=phone_number&app_absent=0`
+    https://api.whatsapp.com/send/?phone=51993229232&text=Hola%21+Me+gustaria+solicitar+mayor+informacion.&type=phone_number&app_absent=0`
   }
   return (
     <div className="App">
@@ -125,10 +142,17 @@ function App() {
         <Route path="/medio-ambiente/2" element={<Template title={"Medio Ambiente"} descrip={"Capacitaciones"} Main={Medio2} />} />
         <Route path="/medio-ambiente/3" element={<Template title={"Medio Ambiente"} descrip={"Auditoría"} Main={Medio3} />} /> */}
       </Routes>
-      <ContainerImage onClick={handleWhatsapp}>
-        <Img src={whatsapp} alt="imagen"/>
-        <h2>CONTACTAR</h2>
-      </ContainerImage>
+      <WhatsappContainer>
+        <div style={{display:"flex", alignItems:"center", gap:"8px"}}>
+          <div>
+            <WspText>¡Contáctanos!</WspText>
+          </div>
+          <ContainerImage onClick={handleWhatsapp}>
+            <Img src={whatsapp} alt="imagen"/>
+          </ContainerImage>
+        </div>
+      </WhatsappContainer>
+
       <Banner/>
       <Footer/>
     </div>

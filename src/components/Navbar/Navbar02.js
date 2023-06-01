@@ -151,9 +151,10 @@ export default function NavbarSection(){
             <Li consultoria={consultoria} onClick={handleConsultoria}>
               <p>Consultoría <BsChevronCompactDown style={{marginLeft:"10px"}}/></p>
               <SubMenu className="consultoria">
-                <StyledLink to={"/sistema-gestion-iso"}>Sistema de Gestión ISO</StyledLink>
+                <StyledLink to={"/sistema-gestion-iso"}>Sistemas de Gestión ISO</StyledLink>
                 <StyledLink to={"/seguridad-y-salud-laboral"}>Seguridad y Salud Laboral</StyledLink>
                 <StyledLink to={`/homologaciones`}>Homologaciones</StyledLink>
+                <StyledLink to={`/consultoria`}>Consultoria Organizacional</StyledLink>
                 <StyledLink to={`/hostigamiento`}>Hostigamiento Sexual Laboral</StyledLink>
               </SubMenu>
             </Li>  

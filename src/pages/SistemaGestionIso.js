@@ -10,8 +10,8 @@ export default function SistemaGestionIso(){
   return(
     <Wrapper>
       <Template
-        title={"Sistema de Gestión"}
-        descrip={"Implementación, mantenimiento y mejora de tu sistema de gestión."}
+        title={"Sistemas de Gestión"}
+        descrip={"Lo que ofrecemos"}
         Main={Servicios}
       />
     </Wrapper>

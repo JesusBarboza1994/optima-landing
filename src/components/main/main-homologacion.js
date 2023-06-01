@@ -19,8 +19,9 @@ const Wrapper = styled.div`
   }
   ul{
     width:100%;
-    color:${colors.gray.light};
-    padding-left:0px;
+    color:${colors.white};
+    padding-left:10px;
+    
   }
   li{
     width:100%;
@@ -29,10 +30,13 @@ const Wrapper = styled.div`
     text-align:start;
     color:${colors.gray.light};
     list-style:none;
+    padding-top:12px;
     margin-bottom:15px;
     p{
       text-align:start;
       margin-bottom:0px;
+      font-size:20px;
+      color:${colors.gray.light}
     }
   }
   @media(max-width:480px){
@@ -40,6 +44,12 @@ const Wrapper = styled.div`
       align-items:flex-start;
     }
   }
+`
+const Vineta = styled(MdLabelImportant)`
+  width:16px;
+  margin-right:10px; 
+  color:${colors.blue["500"]};
+  scale:2;
 `
 const ImageContainer = styled.div`
   display:grid;
@@ -60,6 +70,14 @@ const ImageContainer = styled.div`
 const Img = styled.img`
   padding: 40px 0px;
   margin:auto;
+`
+const UlContainer = styled.div`
+  display:flex;
+  // flex-wrap:wrap;
+  border-radius:16px;
+  background: ${colors.stone[100]};
+  padding-left:16px;
+  justify-content:center;
 `
 export default function HomologacionMain(){
   const images = [imgHomologacion1, imgHomologacion2, imgHomologacion3, imgHomologacion4, imgHomologacion5, imgHomologacion6, imgHomologacion7]
@@ -84,7 +102,10 @@ export default function HomologacionMain(){
   const colors = ["#ed7d31", "#a5a5a5", "#ffc000", "#4472c4", "#70ad47", "#5b9bd5", "#ed7d31"]
   return(
     <Wrapper>
-      <p style={{textAlign:"justify"}}>La aprobación es en base a un puntaje de cumplimiento de estos aspectos. Algunas empresas encargadas de llevar a cabo procesos de homologación son: BUREAU VERITAS PERÚ, SGS DEL PERU, ICONTEC, HODELPE, MEGA CERTIFICACIONES, entre otras. El final de dicho proceso la empresa encargada de efectuar la auditoría de homologación emite un certificado de homologación, cuyo puntaje está basado según los resultados obtenidos en la evaluación, y cuya vigencia en promedio es de 01 año.</p>
+      <p style={{textAlign:"justify"}}>La aprobación es en base a un puntaje de cumplimiento de estos aspectos. Algunas empresas encargadas de llevar a cabo procesos de homologación son: BUREAU VERITAS PERÚ, SGS DEL PERU, ICONTEC, HODELPE, MEGA CERTIFICACIONES, entre otras.</p>
+      <br/>
+      <p>El final de dicho proceso la empresa encargada de efectuar la auditoría de homologación emite un certificado de homologación, cuyo puntaje está basado según los resultados obtenidos en la evaluación, y cuya vigencia en promedio es de 01 año.</p>
+      <Titulo titulo={"¿Qué aspectos se evalúan en un proceso de homologación?"}/>
       <ImageContainer>
         {
           images.map((image, i) =>{
@@ -94,13 +115,18 @@ export default function HomologacionMain(){
       </ImageContainer>
       {/* <Img src={homologacion} alt="imagen"/> */}
      <Titulo titulo={"Nuestros Servicios"}/>
-      <ul>
-        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Visita técnica a las instalaciones de la empresa.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Desarrollo de toda la documentación exigida.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Asesoría en la elaboración de los registros.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Capacitaciones al personal.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px"}}/></span><p>Acompañamiento en la auditoría de homologación.</p></li>
-      </ul>
+      <UlContainer>
+        <ul>
+          <li><span><Vineta/></span><p>Visita técnica a las instalaciones de la empresa.</p></li>
+          <li><span><Vineta/></span><p>Desarrollo de toda la documentación exigida.</p></li>
+          <li><span><Vineta/></span><p>Asesoría en la elaboración de los registros.</p></li>
+        </ul>
+        <ul>
+          <li><span><Vineta/></span><p>Capacitaciones al personal.</p></li>
+          <li><span><Vineta/></span><p>Acompañamiento en la auditoría de homologación.</p></li>
+        </ul>
+      </UlContainer>
+      
     </Wrapper>
   )
 }

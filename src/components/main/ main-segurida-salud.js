@@ -60,6 +60,9 @@ const Div2 = styled.div`
     div{
       padding-top:12px;
     }
+    img{
+      margin-top:16px;
+    }
   }
   @media(max-width:475px){
     img{
@@ -82,8 +85,11 @@ export default function mainSeguridad(){
       <Div2>
         <Background>
           <p>La Ley 29783 tiene como objetivo promover una cultura de prevención de riesgos en los centros laborales. Se puede aplicar a cualquier empresa, ya sea pública o privada de todos los sectores económicos.</p>
+          <br/>
           <p>A partir de esta ley se estableció la obligación de contar con un Sistema de Gestión en Seguridad y Salud en el trabajo.</p>
+          <br/>
           <p>En ÓPTIMA CONSULTORA nos aseguramos de que cumplas con todos los requisitos previstos en la Ley 29783, su reglamento y modificatorias, de esta forma se previenen las sanciones por incumplimiento impuestas por la SUNAFIL.</p>
+          <br/>
           <p>Este sistema permite a las organizaciones a contar con un lugar de trabajo seguro y saludable para sus colaboradores y partes interesadas, contribuyendo en la prevención de lesiones y problemas de salud ocupacional y bajo el enfoque de mejora de manera continua en el desempeño de su sistema de gestión.</p>
         </Background>
         <img src={seguridad} alt="imagen"/>

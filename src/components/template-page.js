@@ -13,6 +13,21 @@ const Presentacion = styled.div`
   flex-direction:column;
   align-items:center;
 `
+const DivRelative = styled.div`
+  position:absolute; 
+  width:100%;
+  padding: 20px;
+  opacity:0.2;
+  height:100px;
+  background:${colors.stone[100]};
+ 
+`
+const DivText = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:16px;
+`
 const Portada = styled.div`
   background-image: url(${portada});
   height:300px;
@@ -20,10 +35,18 @@ const Portada = styled.div`
   width:100%;
   align-items:center;
   justify-content:center;
+  position:relative;
   color:${colors.white};
   h1{
+    font-size: 36px;
+    font-weight:600;
+
+    color:${colors.white};
+  }
+  h2{
     font-size: 28px;
-    font-weight:400;
+    font-weight:500;
+    color:${colors.white};
   }
 `
 const Container = styled.div`
@@ -61,16 +84,22 @@ const Container = styled.div`
   }
 
 `
-export default function Template({title, descrip, Main}){
+export default function Template({title, descrip, Main, tit, subtitulo}){
   return(
     <Wrapper>
       <Portada>
-        <h1>{title}</h1>
+        <DivRelative>
+        </DivRelative>
+        <DivText>
+          <h1>{title}</h1>
+          {subtitulo ? <h2>{subtitulo}</h2> : null}
+        </DivText>
       </Portada>
       <Container>
         <Presentacion>
           {/* <img src={conexiones} alt='imagen'/> */}
-          <Titulo titulo={descrip}/>
+          {tit ? null : <Titulo titulo={descrip}/>}
+          
         </Presentacion>
         <Main/>
       </Container>

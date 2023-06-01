@@ -56,7 +56,7 @@ const Wrapper = styled.div`
 const Div1 = styled.div`
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:60px;
   width:100%;
   padding-bottom:50px;
   align-items:center;
@@ -71,7 +71,9 @@ const Div1 = styled.div`
     text-align:justify;
   }
   img{
-    max-width:555px;
+    max-width:450px;
+    border-radius:8px;
+    border-shadow:0px 4px 4px rgba(0, 0, 0, 0.7);
   }
   div{
     background:${colors.stone["100"]};
@@ -122,7 +124,7 @@ const Div2 = styled.div`
   justify-content: center;
   img{
     padding: 20px 0 10px 0;
-    max-width:555px;
+    max-width:500px;
   }
   div{
     font-size:18px;
@@ -177,7 +179,7 @@ export default function SeguridadMain(){
           <br/>
           <p>En el contexto actual se hace necesario contar con un elemento objetivo para comunicar a empleados, clientes, accionistas y otras partes interesadas no sólo el compromiso de la organización con la seguridad y salud de sus empleados sino también que la política de seguridad y salud en el trabajo se está aplicando adecuadamente, con una voluntad de mejora continua.</p>
         </div>
-        <img src={seguridad1} alt="imagen" style={{width:"100%"}}/>
+        <img src={seguridad1} alt="imagen"/>
       </Div1>
       <Titulo titulo={"Beneficios de un sistema de gestión ISO 45001"}/>
       <ImageContainer>

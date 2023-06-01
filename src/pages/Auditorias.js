@@ -7,6 +7,7 @@ export default function Auditorias(){
       title={"Auditorías"}
       descrip={"Auditorias"}
       Main={AuditoriasMain}
+      tit={true}
     />
   )
 }

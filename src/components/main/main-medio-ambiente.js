@@ -139,6 +139,7 @@ export default function MedioAmbienteMain(){
       <Div1>
         <div>  
         <p>Las empresas que implantan la norma ISO 14001 están demostrando que llevan a cabo su actividad conforme a los estándares que dicta esta norma en materia medioambiental, promoviendo la protección ambiental y la prevención de la contaminación que se pudiera generar.</p>
+        <br/>
         <p>La sociedad actual posee una alta sensibilidad a los temas ambientales. Los clientes concienciados con el medio ambiente prefieren hacer negocios con empresas que comparten la misma idea. Implantar un Sistema de Gestión Ambiental es el primer paso para satisfacer las demandas de la sociedad.</p>
         </div>
         <img src={ambiente1} alt="imagen" style={{width:"100%"}}/>

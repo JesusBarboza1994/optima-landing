@@ -7,12 +7,7 @@ import {FaFacebookF, FaLinkedinIn} from 'react-icons/fa'
 
 const Wrapper = styled.div`
   width:100%;
-  background: #28609b;
-  hr{
-    margin-top:0px;
-    border: 1px solid ${colors.blue[400]};
-    width: 100%;
-  }
+  background: ${colors.blue["500"]};
 `
 const DivText = styled.div`
   display:flex;

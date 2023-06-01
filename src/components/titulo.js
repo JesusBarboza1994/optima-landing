@@ -10,7 +10,7 @@ const H1 = styled.h1`
 `
 const Hr = styled.hr`
   width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-top: 20px;
   border:0;
   border-top: 1px solid ${colors.blue[200]};

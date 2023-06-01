@@ -37,15 +37,15 @@ const Wrapper = styled.div`
   }
 `
 const Img = styled.img`
-  width:80px;
+  width:60px;
   @media(max-width:1200px){
-    width: 80px;
+    width: 60px;
   }
   @media(max-width:990px){
-    height:80px;
+    height:60px;
   }
   @media(max-width:500px){
-    width:80px;
+    width:60px;
   }
   
 `

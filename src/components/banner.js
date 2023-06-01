@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 `
 const TextDiv = styled.div`
   color:${colors.white};
-  background:${colors.blue["500"]};
+  background: ${colors.blue[500]};
   width:70%;
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);
   display:flex;
@@ -82,10 +82,10 @@ export default function Banner(){
     <Wrapper>
       <TextDiv>
         <div>
-          <h1>¿Qué esperas para certificarte?</h1>
+          <h1>Te asesoramos</h1>
           <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
           <Link to={"/contacto"}>
-            <button>Solicitar cotización</button>
+            <button>Contáctanos</button>
           </Link>
         </div>
       </TextDiv>

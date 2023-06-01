@@ -1,18 +1,23 @@
 import styled from "@emotion/styled"
 import { colors } from "../../styles/colors"
 import capacitacion from "../../assets/capacitacion.png"
+import calidad from "../../assets/calidad.jpg"
 const Div1 = styled.div`
   display:flex;
-  flex-direction:column-reverse;
   gap:20px;
   width:100%;
-  align-items:center;
+  align-items:flex-start;
   img{
-    width:100%;
+    width:50%;
     margin-top:25px;
   }
+  @media(max-width:750px){
+    img{
+      width:100%;
+    }
+  }
   div{
-    background:${colors.stone["100"]};
+    // background:${colors.stone["100"]};
     padding: 20px;
     border-radius:8px;
     height:100%;
@@ -20,14 +25,17 @@ const Div1 = styled.div`
 `
 const Background = styled.div`
   width:100%;
-  background: ${colors.stone[100]};
+  // background: ${colors.stone[100]};
   padding: 30px;
   border-radius: 12px;
-  
+  ul{
+    padding-left:20px;
+  }
   li{
     text-align:start;
   }
   h2{
+    color:${colors.blue[500]};
     font-size:22px;
     text-align:start;
     width:100%;
@@ -42,6 +50,7 @@ const Wrapper = styled.div`
   margin-bottom: 30px;
   p{
     text-align:center;
+    margin-top:30px;
   }
 `
 export default function CapacitacionesMain(){
@@ -62,6 +71,12 @@ export default function CapacitacionesMain(){
             <li>Prevención de riesgos psicosociales</li>
             <li>Prevención de Emergencias: capacitación a Brigadas de lucha contra incendios, primeros auxilios, señalización y evacuación.</li>
           </ul>
+        </Background>
+        <img src={capacitacion} alt="imagen"/>
+      </Div1>
+      <Div1>
+        <img src={calidad} alt="imagen"/>
+        <Background>
           <h2>CAPACITACIONES RELACIONADAS A CERTIFICACIONES ISO</h2>
           <ul>
             <li>Interpretación de normas ISO 9001, 14001, 45001.</li>
@@ -75,7 +90,7 @@ export default function CapacitacionesMain(){
             <li>Gestión integral de residuos sólidos según DL N° 1278</li>
           </ul>
         </Background>
-        <img src={capacitacion} alt="imagen"/>
+        
       </Div1>
     </Wrapper>
   )

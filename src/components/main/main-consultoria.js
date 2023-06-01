@@ -46,7 +46,7 @@ const Img1 = styled.img`
   }
 `
 const Img2 = styled.img`
-  width:100%;
+  width:80%;
   padding-bottom:10px;
 `
 export default function ConsultoriaMain(){
@@ -71,7 +71,9 @@ export default function ConsultoriaMain(){
           </ul>
           <Img1 src={consultoria1} alt="imagen"/>
         </CheckDiv>
-        <Img2 src={consultoria2} alt="imagen"/>
+        <div style={{display:"flex", justifyContent:"center"}}>
+          <Img2 src={consultoria2} alt="imagen"/>
+        </div>
       </div>
     </Wrapper>
   )

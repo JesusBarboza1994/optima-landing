@@ -3,7 +3,8 @@ import Template from "../components/template-page";
 
 export default function MedioAmbiente(){
   return(
-      <Template title={"Implementación de ISO 14001"}
+      <Template title={"Norma ISO 14001"}
+        subtitulo={"Sistema de Gestión Ambiental"}
         descrip={"Consultoría en Sistemas de Gestión Ambiental"}
         Main={MedioAmbienteMain}
         />
