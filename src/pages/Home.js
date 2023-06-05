@@ -140,6 +140,10 @@ const Banner = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
+  overflow: auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
   div{
     max-width:1170px;
   }
@@ -160,6 +164,16 @@ const Banner = styled.div`
 
 
 export default function Home(){
+  function moverImagen() {
+    const contenedor = document.querySelector('.contenedor');
+    const desplazamiento = contenedor.scrollTop;
+  
+    contenedor.style.backgroundPositionY = -desplazamiento + 'px';
+  }
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0); // Volver al principio de la página al hacer clic en un enlace
+  };
+
   return(
     <Wrapper>
       <Portada/>
@@ -193,7 +207,7 @@ export default function Home(){
         <hr/>
       </OfferSection>
       <SectionMethod>
-        <Link to={"/metodo"} style={{textDecoration: "none", color:colors.gray.light}}>
+        <Link to={"/metodo"} style={{textDecoration: "none", color:colors.gray.light}} onClick={handleLinkClick}>
           <WrapperHome>
             <MethodHome number={1} process={"Diagnóstico"} method={"Análisis Empresarial"} text={"Porque cuando se desean soluciones reales, verídicas, apropiadas a cada situación, es imprescindible un buen diagnóstico."}/>
             <MethodHome number={2} process={"Proyectos"} method={"Implementación de proyectos"} text={"Capacitamos y sensibilizamos a su personal, para fijar los objetivos y plan de trabajo."}/>
@@ -207,7 +221,7 @@ export default function Home(){
         <hr/>
         <ListClientes/>
       </ClienteSection>
-      <Banner>
+      <Banner onScroll={moverImagen}>
         <div>
           <h3>QUEREMOS OFRECER SERVICIOS EXCELENTES</h3>
           <p><FaQuoteLeft style={{scale:"2", marginRight:"6px"}}/> También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir de este modo el mayor número de necesidades de nuestros clientes. 

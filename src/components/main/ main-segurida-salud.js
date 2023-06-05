@@ -3,6 +3,7 @@ import { colors } from "../../styles/colors"
 import seguridad from "../../assets/seguridad/seguridad4.jpg"
 import Titulo from "../titulo"
 import { MdLabelImportant } from "react-icons/md"
+import NuestrosServicios from "../nuestros-servicios"
 
 const Wrapper = styled.div`
   display:flex;
@@ -80,6 +81,8 @@ const Background = styled.div`
   }
 `
 export default function mainSeguridad(){
+  const list1 = ["Consultoría para implementación de Ley 29783 Ley de seguridad y salud en el trabajo", "Mantenimiento y mejora de sistema de gestión de SST", "Auditorías según Ley 29783 (auditor acreditado por MINTRA)"]
+  const list2 = ["Elaboración, revisión y actualización de matriz IPERC", "Levantamiento y actualización de matrices legales de seguridad y salud en el trabajo.", "Capacitaciones inhouse de Seguridad y Salud Laboral."  ]
   return(
     <Wrapper>
       <Div2>
@@ -95,15 +98,7 @@ export default function mainSeguridad(){
         <img src={seguridad} alt="imagen"/>
       </Div2>
       <Titulo titulo={"Nuestros Servicios"}/>
-      <ul>
-        
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación de Ley 29783 Ley de seguridad y salud en el trabajo</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Mantenimiento y mejora de sistema de gestión de SST</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías según Ley 29783 (auditor acreditado por MINTRA)</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elaboración, revisión y actualización de matriz IPERC</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Levantamiento y actualización de matrices legales de seguridad y salud en el trabajo.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitaciones inhouse de Seguridad y Salud Laboral.</p></li>
-      </ul>
+      <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
   )
 }

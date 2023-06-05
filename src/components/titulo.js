@@ -18,7 +18,7 @@ const Hr = styled.hr`
 `
 
 
-export default function Titulo({titulo, hr}){
+export default function Titulo({titulo}){
 
   return(
     <>

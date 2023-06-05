@@ -152,8 +152,6 @@ function App() {
           </ContainerImage>
         </div>
       </WhatsappContainer>
-
-      <Banner/>
       <Footer/>
     </div>
   );

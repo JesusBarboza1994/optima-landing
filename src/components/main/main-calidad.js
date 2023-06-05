@@ -14,6 +14,7 @@ import iconoNaranja from "../../assets/calidad/calidad-icono-naranja.png"
 import iconoRojo from "../../assets/calidad/calidad-icono-rojo.png"
 import iconoVerde from "../../assets/calidad/calidad-icono-verde.png"
 import {MdLabelImportant} from "react-icons/md"
+import NuestrosServicios from "../nuestros-servicios"
 
 const Wrapper = styled.div`
   display:flex;
@@ -83,6 +84,16 @@ const Background = styled.div`
 `
 
 export default function CalidadMain(){
+  const list1 = [
+    "Consultoría para la Implementación ISO 9001:2015.",
+    "Mantenimiento y mejora de sistema de gestión de la calidad.",
+    "Capacitación inhouse interpretación de requisitos ISO 9001.",
+  ]
+  const list2 = [
+    "Auditorías internas.",
+    "Capacitación inhouse auditor interno ISO 9001:2015.",
+    "Consultoría para levantamiento o rediseño de procesos.",
+  ]
   return(
     <Wrapper>
       {/* <h3>ISO 9001 Sistema de Gestión de Calidad.</h3> */}
@@ -107,15 +118,7 @@ export default function CalidadMain(){
       <p>Para llevar a cabo la implementación de un Sistema de Gestión de la Calidad en su organización, y poder optar a certificarse en ISO-9001, deberá seguir una serie de pasos:</p>
       <img src={calidad3} alt="imagen"/> */}
       <Titulo titulo={"Nuestros Servicios"}/>
-      <ul>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Consultoría para la Implementación ISO 9001:2015</p> </li>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Mantenimiento y mejora de sistema de gestión de la calidad</p> </li>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Capacitación inhouse interpretación de requisitos ISO 9001</p> </li>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Auditorías internas</p> </li>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Capacitación inhouse interpretación de requisitos ISO 9001</p> </li>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Capacitación inhouse auditor interno ISO 9001:2015</p> </li>
-        <li><MdLabelImportant style={{width:"16px"}}/><p>Consultoría para levantamiento o rediseño de procesos</p> </li>
-      </ul>
+      <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
   )
 }

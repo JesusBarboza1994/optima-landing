@@ -26,34 +26,14 @@ const OptimaDiv = styled.div`
   gap:8px;
   align-items:center;
   p{
-    text-align:justify;
+    // text-align:justify;
+    width:365px;
     font-size:14px;
-    padding: 0px 20px;
+    padding: 0px 0px;
   }
-  div{
-    display:flex;
-    color:${colors.white};
-    gap: 20px;
-  }
-  h2{
-    width:100%;
-    text-align:start;
-    font-size:18px;
-    padding: 10px 20px;
-    color:${colors.white};
-  }
-`
-const ContactDiv = styled.div`
-  padding:0 30px;
-  h2{
-    text-align:start;
-    font-size:18px;
-    padding: 0px 20px;
-  }
-  p{
-    text-align:start;
-    font-size:14px;
-    padding: 0px 20px;
+  @media(max-width:500px){
+    padding: 10px 5px;
+    align-items:flex-start;
   }
 `
 const Circle = styled.div`
@@ -68,6 +48,35 @@ const Circle = styled.div`
 `
 const H2 = styled.h2`
   font-size:20px;
+  width:250px;
+`
+const SocialDiv = styled.div`
+  display:flex;
+  gap:8px;
+  text-decoration:none;
+  align-items:center;
+  a{
+    color:${colors.white};
+  }
+  @media(max-width:500px){
+    gap:4px;
+  }
+`
+const SubDiv = styled.div`
+  display:flex;
+  color:${colors.white};
+  gap: 20px;
+  align-items:center;
+  p{
+    width:250px;
+    text-align:start;
+    padding-left:16px;
+  }
+  @media(max-width:750px){
+    flex-direction:column;
+    gap:10px;
+    align-items:flex-start;
+  }
 `
 
 export default function Footer(){
@@ -76,16 +85,18 @@ export default function Footer(){
       {/* <hr/> */}
       <DivText>
         <OptimaDiv>
-          <div>
-            <H2 >OPTIMA CONSULTORA</H2 >
-            <a href="https://www.facebook.com/people/%C3%93ptima-Consultora/100055957667113/" target="_blank" rel="noreferrer"> 
-              <Circle><FaFacebookF/></Circle>
-            </a>
-            <a href="https://www.linkedin.com/company/optimaconsultora/?viewAsMember=true" target="_blank" rel="noreferrer"> 
-              <Circle><FaLinkedinIn/></Circle>
-            </a>
+          <SubDiv>
+            <SocialDiv>
+              <H2 >OPTIMA CONSULTORA</H2 >
+              <a href="https://www.facebook.com/people/%C3%93ptima-Consultora/100055957667113/" target="_blank" rel="noreferrer"> 
+                <Circle><FaFacebookF/></Circle>
+              </a>
+              <a href="https://www.linkedin.com/company/optimaconsultora/?viewAsMember=true" target="_blank" rel="noreferrer"> 
+                <Circle><FaLinkedinIn/></Circle>
+              </a>
+            </SocialDiv>
             <p>info@optima-consultora.pe</p>
-          </div>
+          </SubDiv>
           <p>
             Copyright© Jbarz 2023. All Right Reserved. <span>Optima</span>
           </p>

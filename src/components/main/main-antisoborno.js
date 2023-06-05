@@ -9,6 +9,7 @@ import imgAntisoborno4 from "../../assets/antisoborno/antisoborno4.png"
 import imgAntisoborno5 from "../../assets/antisoborno/antisoborno5.png"
 import imgAntisoborno6 from "../../assets/antisoborno/antisoborno6.png"
 import BeneficiosAntisoborno from "../beneficios/beneficiosAntisoborno"
+import NuestrosServicios from "../nuestros-servicios"
 const Wrapper = styled.div`
   display:flex;
   flex-direction:column;
@@ -88,6 +89,12 @@ export default function AntisobornoMain(){
     "Establece una cultura que promueve la integridad, transparencia y el cumplimiento normativo.",
     "Integrable con otros sistemas ISO."
   ]
+  const list1 =[
+    "Consultoría para implementación ISO 37001",
+  ]
+  const list2 = [
+    "Auditorías internas"
+  ]
   return(
     <Wrapper>
       <Background>
@@ -103,10 +110,7 @@ export default function AntisobornoMain(){
         }
       </ImageContainer>
       <Titulo titulo={"Nuestros Servicios"}/>
-      <ul>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación ISO 37001</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías internas</p></li>
-      </ul>
+      <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
   )
 }

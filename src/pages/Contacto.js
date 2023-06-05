@@ -36,6 +36,9 @@ const Form = styled.form`
   p{
     width:100%;
     text-align:start;
+    font-size:22px;
+    font-weight:600;
+    colors:${colors.blue[700]};
   }
 `
 const Img = styled.img`

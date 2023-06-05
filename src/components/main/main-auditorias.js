@@ -9,11 +9,12 @@ const Wrapper = styled.div`
   gap:20px;
   color:${colors.gray.light};
   p{
-    text-align:center;
+    text-align:justify;
     margin-top:30px;
   }
   img{
     width:50%;
+    border-radius:12px;
   }
   align-items:center;
   margin-bottom: 40px;

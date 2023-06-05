@@ -2,7 +2,6 @@ import styled from "@emotion/styled"
 import homologacion from "../../assets/homologacion/homologacion.png"
 import { colors } from "../../styles/colors"
 import Titulo from "../titulo"
-import { MdLabelImportant } from "react-icons/md"
 import imgHomologacion1 from "../../assets/homologacion/items/homologación1.png"
 import imgHomologacion2 from "../../assets/homologacion/items/homologación2.png"
 import imgHomologacion3 from "../../assets/homologacion/items/homologación3.png"
@@ -11,45 +10,13 @@ import imgHomologacion5 from "../../assets/homologacion/items/homologación5.png
 import imgHomologacion6 from "../../assets/homologacion/items/homologación6.png"
 import imgHomologacion7 from "../../assets/homologacion/items/homologación7.png"
 import BeneficiosHomologacion from "../beneficios/beneficiosHomologacion"
+import NuestrosServicios from "../nuestros-servicios"
 const Wrapper = styled.div`
   padding-bottom:50px;
   p{
     color:${colors.gray.light};
     line-height:150%;
   }
-  ul{
-    width:100%;
-    color:${colors.white};
-    padding-left:10px;
-    
-  }
-  li{
-    width:100%;
-    display:flex;
-    align-items:center;
-    text-align:start;
-    color:${colors.gray.light};
-    list-style:none;
-    padding-top:12px;
-    margin-bottom:15px;
-    p{
-      text-align:start;
-      margin-bottom:0px;
-      font-size:20px;
-      color:${colors.gray.light}
-    }
-  }
-  @media(max-width:480px){
-    li{
-      align-items:flex-start;
-    }
-  }
-`
-const Vineta = styled(MdLabelImportant)`
-  width:16px;
-  margin-right:10px; 
-  color:${colors.blue["500"]};
-  scale:2;
 `
 const ImageContainer = styled.div`
   display:grid;
@@ -71,14 +38,7 @@ const Img = styled.img`
   padding: 40px 0px;
   margin:auto;
 `
-const UlContainer = styled.div`
-  display:flex;
-  // flex-wrap:wrap;
-  border-radius:16px;
-  background: ${colors.stone[100]};
-  padding-left:16px;
-  justify-content:center;
-`
+
 export default function HomologacionMain(){
   const images = [imgHomologacion1, imgHomologacion2, imgHomologacion3, imgHomologacion4, imgHomologacion5, imgHomologacion6, imgHomologacion7]
   const texts = [
@@ -100,6 +60,8 @@ export default function HomologacionMain(){
     "Situación Financiera y Obligaciones Legales"
   ]
   const colors = ["#ed7d31", "#a5a5a5", "#ffc000", "#4472c4", "#70ad47", "#5b9bd5", "#ed7d31"]
+  const list1 = ["Visita técnica a las instalaciones de la empresa.", "Desarrollo de toda la documentación exigida.", "Asesoría en la elaboración de los registros." ]
+  const list2 = ["Capacitaciones al personal.", "Acompañamiento en la auditoría de homologación."]
   return(
     <Wrapper>
       <p style={{textAlign:"justify"}}>La aprobación es en base a un puntaje de cumplimiento de estos aspectos. Algunas empresas encargadas de llevar a cabo procesos de homologación son: BUREAU VERITAS PERÚ, SGS DEL PERU, ICONTEC, HODELPE, MEGA CERTIFICACIONES, entre otras.</p>
@@ -115,18 +77,7 @@ export default function HomologacionMain(){
       </ImageContainer>
       {/* <Img src={homologacion} alt="imagen"/> */}
      <Titulo titulo={"Nuestros Servicios"}/>
-      <UlContainer>
-        <ul>
-          <li><span><Vineta/></span><p>Visita técnica a las instalaciones de la empresa.</p></li>
-          <li><span><Vineta/></span><p>Desarrollo de toda la documentación exigida.</p></li>
-          <li><span><Vineta/></span><p>Asesoría en la elaboración de los registros.</p></li>
-        </ul>
-        <ul>
-          <li><span><Vineta/></span><p>Capacitaciones al personal.</p></li>
-          <li><span><Vineta/></span><p>Acompañamiento en la auditoría de homologación.</p></li>
-        </ul>
-      </UlContainer>
-      
+     <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
   )
 }

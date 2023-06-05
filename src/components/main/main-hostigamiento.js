@@ -3,6 +3,7 @@ import { colors } from "../../styles/colors"
 import { MdLabelImportant } from "react-icons/md"
 import Titulo from "../titulo"
 import hostigamiento from "../../assets/hostigamiento/hostigamiento.png"
+import NuestrosServicios from "../nuestros-servicios"
 
 const Wrapper = styled.div`
   display:flex;
@@ -10,29 +11,6 @@ const Wrapper = styled.div`
   align-items:center;
   img{
     padding: auto 20px;
-  }
-  ul{
-    width:100%;
-    color:${colors.gray.light};
-    padding-left:0px;
-  }
-  li{
-    width:100%;
-    display:flex;
-    align-items:flex-start;
-    text-align:start;
-    color:${colors.gray.light};
-    list-style:none;
-    margin-bottom:15px;
-    p{
-      text-align:start;
-      margin-bottom:0px;
-    }
-  }
-  @media(max-width:750px){
-    li{
-      align-items:flex-start;
-    }
   }
 `
 const Div1 = styled.div`
@@ -54,6 +32,7 @@ const Div1 = styled.div`
   }
   img{
     max-width:570px;
+    border-radius:12px;
   }
   div{
     background:${colors.stone["100"]};
@@ -85,33 +64,10 @@ const Background = styled.div`
     padding: 15px;
   }
 `
-const Vineta = styled(MdLabelImportant)`
-  width:16px;
-  margin-right:10px; 
-  color:${colors.blue["500"]};
-  scale:2;
-`
-const UlContainer = styled.div`
-  display:flex;
-  // flex-wrap:wrap;
-  border-radius:16px;
-  gap:48px;
-  background: ${colors.stone[100]};
-  padding-left:16px;
-  padding-right:16px;
-  justify-content:center;
-  margin-bottom:48px;
-  @media(max-width:750px){
-    flex-direction:column;
-    gap:0;
-    padding-top:30px;
-    ul{
-      margin-top:0;
-      margin-bottom:0;
-    }
-  }
-`
+
 export default function HostigamientoMain(){
+  const list1 = ["Elección y formación del Comité de intervención frente al Hostigamiento Sexual Laboral.", "Elaboración de procedimientos y políticas para la prevención del hostigamiento sexual laboral.", "Evaluación para identificar las posibles situaciones de Hostigamiento Sexual en la organización."]
+  const list2 = ["Capacitación a todos los trabajadores sobre Hostigamiento Sexual en el trabajo", "Capacitación a los trabajadores de Gestión Humana y al Comité en sus tareas y funciones frente al Hostigamiento Sexual."]
   return(
     <Wrapper>
       <Div1>
@@ -125,17 +81,7 @@ export default function HostigamientoMain(){
         <img src={hostigamiento} alt="imagen" />
       </Div1>
       <Titulo titulo={"Nuestros Servicios"}/>
-      <UlContainer>
-        <ul>
-          <li><span><Vineta/></span><p>Elección y formación del Comité de intervención frente al Hostigamiento Sexual Laboral</p></li>
-          <li><span><Vineta/></span><p>Elaboración de procedimientos y políticas para la prevención del hostigamiento sexual laboral</p></li>
-          <li><span><Vineta/></span><p>Evaluación para identificar las posibles situaciones de Hostigamiento Sexual en la organización</p></li>
-        </ul>
-        <ul>
-          <li><span><Vineta/></span><p>Capacitación a todos los trabajadores sobre Hostigamiento Sexual en el trabajo </p></li>
-          <li><span><Vineta/></span><p>Capacitación a los trabajadores de Gestión Humana y al Comité en sus tareas y funciones frente al Hostigamiento Sexual </p></li>
-        </ul>
-      </UlContainer>
+      <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
   )
 }

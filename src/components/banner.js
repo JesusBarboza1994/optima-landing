@@ -77,19 +77,36 @@ const TextDiv = styled.div`
   }
 `
 
-export default function Banner(){
-  return(
-    <Wrapper>
-      <TextDiv>
-        <div>
-          <h1>Te asesoramos</h1>
-          <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
-          <Link to={"/contacto"}>
-            <button>Contáctanos</button>
-          </Link>
-        </div>
-      </TextDiv>
-      <img src={cotizacion} alt="imagen"/>
-    </Wrapper>
-  )
+export default function Banner({ question, show }){
+  if(show){
+    return(
+      <Wrapper>
+        <TextDiv>
+          {
+            question ?
+            <div>
+              <h1>¿Qué esperas para certificarte?</h1>
+              <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
+              <Link to={"/contacto"}>
+                <button>Solicitar Cotización</button>
+              </Link>
+            </div>
+          :
+            <div>
+              <h1>Te asesoramos</h1>
+              <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
+              <Link to={"/contacto"}>
+                <button>Contáctanos</button>
+              </Link>
+            </div>
+          }
+          
+        </TextDiv>
+        <img src={cotizacion} alt="imagen"/>
+      </Wrapper>
+    )
+  }
+  else{
+    return null
+  }
 }

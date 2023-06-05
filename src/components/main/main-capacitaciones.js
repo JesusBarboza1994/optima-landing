@@ -47,10 +47,13 @@ const Background = styled.div`
 `
 const Wrapper = styled.div`
   color: ${colors.gray.light};
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   p{
     text-align:center;
     margin-top:30px;
+  }
+  img{
+    border-radius:12px;
   }
 `
 export default function CapacitacionesMain(){

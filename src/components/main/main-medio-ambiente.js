@@ -15,6 +15,7 @@ import imgAmbiente7 from "../../assets/medioambiente/items/ambiente7.png"
 import imgAmbiente8 from "../../assets/medioambiente/items/ambiente8.png"
 import BeneficiosAmbiente from "../beneficios/beneficiosAmbiente"
 import { MdLabelImportant } from "react-icons/md"
+import NuestrosServicios from "../nuestros-servicios"
 
 const Wrapper = styled.div`
 
@@ -134,6 +135,17 @@ export default function MedioAmbienteMain(){
     "Posibilidad de acceder a subvenciones ambientales y concursos públicos.",
     "Integrable con otros sistemas ISO."
   ]
+  const list1 = [
+    "Consultoría para implementación ISO 14001:2015",
+    "Mantenimiento y mejora de sistema de gestión medio ambiental",
+    "Auditorías internas.",
+    "Elaboración, revisión y actualización de matriz de identificación de aspectos e impactos ambientales",
+  ]
+  const list2 = [
+    "Levantamiento y actualización de matriz legal medio ambiental.",
+    "Capacitaciones inhouse de interpretación de requisitos ISO 14001:2015",
+    "Capacitación inhouse de auditor interno ISO 14001"
+  ]
   return(
     <Wrapper>
       <Div1>
@@ -157,15 +169,7 @@ export default function MedioAmbienteMain(){
       <p>El proceso de implantación de un Sistema de Gestión basado en la norma ISO-14001 consta de varios pasos:</p>
       <Img2 src={ambiente2}/> */}
       <Titulo titulo={"Nuestros Servicios"}/>
-      <ul>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación ISO 14001:2015</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Mantenimiento y mejora de sistema de gestión medio ambiental</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías internas.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elaboración, revisión y actualización de matriz de identificación de aspectos e impactos ambientales</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Levantamiento y actualización de matriz legal medio ambiental.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitaciones inhouse de interpretación de requisitos ISO 14001:2015</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitación inhouse de auditor interno ISO 14001</p></li>
-      </ul>
+      <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
     )
 }

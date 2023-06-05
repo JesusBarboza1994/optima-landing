@@ -33,6 +33,7 @@ const Portada = styled.div`
 `
 const TextDiv = styled.div`
   padding:50px;
+  border-radius:12px;
   background:${colors.stone[100]};
   position:absolute;
   display:flex;
@@ -68,6 +69,7 @@ const TextDiv2 = styled.div`
   padding:50px;
   background:${colors.stone[100]};
   position:absolute;
+  border-radius:12px;
   display:flex;
   flex-direction:column;
   // margin:-50px -250px;
@@ -116,6 +118,7 @@ const DivCard = styled.div`
 const Img = styled.img`
   width:60%;
   position:relative;
+  border-radius:12px;
   left:-260px;
   // @media (max-width: 1200px) {
   //   width:470px;
@@ -128,6 +131,7 @@ const Img = styled.img`
 `
 const Img2 = styled.img`
   width:60%;
+  border-radius:12px;
   position:relative;
   right:-320px;
   // @media (max-width: 1200px) {
@@ -261,13 +265,32 @@ const Div = styled.div`
   flex-direction:column;
   align-items:center;
 `
+const DivRelative = styled.div`
+  position:absolute; 
+  width:100%;
+  padding: 20px;
+  opacity:0.2;
+  height:100px;
+  background:${colors.stone[100]};
+ 
+`
+const DivText = styled.div`
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:16px;
+`
 
 export default function Nosotros(){
 
   return(
     <>
       <Portada>
-        <h1>Nosotros</h1>
+        <DivRelative>
+        </DivRelative>
+        <DivText>
+          <h1>Nosotros</h1>
+        </DivText>
       </Portada>
       <Div>
         <SubDiv>

@@ -17,6 +17,12 @@ import cliente15 from "../assets/clientes/cliente15.png"
 import cliente16 from "../assets/clientes/cliente16.png"
 import cliente17 from "../assets/clientes/cliente17.png"
 import cliente18 from "../assets/clientes/cliente18.png"
+// import cliente19 from "../assets/clientes/cliente19.png"
+// import cliente20 from "../assets/clientes/cliente20.jpg"
+// import cliente21 from "../assets/clientes/cliente21.png"
+// import cliente22 from "../assets/clientes/cliente22.png"
+// import cliente23 from "../assets/clientes/cliente23.png"
+// import cliente24 from "../assets/clientes/cliente24.jpg"
 import { keyframes } from "@emotion/react"
 
 const moveImages = keyframes`

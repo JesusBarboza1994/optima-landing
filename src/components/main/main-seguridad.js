@@ -21,6 +21,7 @@ import imgSeguridad12 from "../../assets/seguridad/items/seguridad12.png"
 import imgSeguridad13 from "../../assets/seguridad/items/seguridad13.png"
 import BeneficiosSeguridad from "../beneficios/beneficiosSeguridad"
 import { MdLabelImportant } from "react-icons/md"
+import NuestrosServicios from "../nuestros-servicios"
 
 const Wrapper = styled.div`
   display:flex;
@@ -171,6 +172,17 @@ export default function SeguridadMain(){
     "Integrable con otros sistemas ISO.",
     "Mejora su reputación en relación con la gestión de la Seguridad y Salud en el trabajo."
   ]
+  const list1 = [
+    "Consultoría para implementación ISO 45001:2018.",
+    "Consultoría para implementación de Ley 29783 Ley de seguridad y salud en el trabajo.",
+    "Mantenimiento y mejora de sistema de gestión de SST.",
+    "Auditorías internas ISO 45001.",
+  ]
+  const list2 = [
+    "Auditorías según Ley 29783 (auditor acreditado por MINTRA).",
+    "Elaboración, revisión y actualización de matriz IPERC.",
+    "Capacitaciones inhouse de Seguridad y Salud Laboral."
+  ]
   return(
     <Wrapper>
       <Div1>
@@ -206,16 +218,7 @@ export default function SeguridadMain(){
       </Div2> */}
       {/* <Servicios/> */}
       <Titulo titulo={"Nuestros Servicios"}/>
-      <ul>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación ISO 45001:2018</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Consultoría para implementación de Ley 29783 Ley de seguridad y salud en el trabajo</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Mantenimiento y mejora de sistema de gestión de SST</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías internas ISO 45001.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Auditorías según Ley 29783 (auditor acreditado por MINTRA)</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Elaboración, revisión y actualización de matriz IPERC</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span> <p>Levantamiento y actualización de matrices legales de seguridad y salud en el trabajo.</p></li>
-        <li><span><MdLabelImportant style={{width:"16px", height:"16px"}}/></span><p>Capacitaciones inhouse de Seguridad y Salud Laboral.</p></li>
-      </ul>
+      <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>
   )
 }

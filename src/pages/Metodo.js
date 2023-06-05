@@ -105,13 +105,13 @@ const Grid = styled.div`
 export default function Metodo(){
   return(
     <Container>
-      <Div1>
+      <Div1 >
         {/* <Background>
           <p>Desde la publicación de la Ley 27942, DS 014-2019-MIMP y modificatorias, las empresas tienen la obligación de implementar dentro de sus organizaciones, las acciones legales pertinentes para evitar y prevenir el hostigamiento sexual laboral.</p>
           <p>Las obligaciones en materia de prevención y procesamiento de los actos de hostigamiento sexual son exigibles a todos los empleadores del sector privado y público, sin distinción de la conformación, de la actividad económica, del régimen laboral, ni del objeto social.</p>
           <p>Además, esta normativa tiene el objetivo de mejorar el clima laboral en sus empresas y minimizar las contingencias y posibles sanciones en materia inspectiva por la SUNAFIL.</p>
         </Background> */}
-        <img src={metodo} alt="imagen" style={{width:"80%"}}/>
+        <img id="metodo" src={metodo} alt="imagen" style={{width:"80%"}}/>
       </Div1>
       <Grid>
           <MethodCard col={1} row={1} number={"1."} title={"ANÁLISIS EMPRESARIAL"} text={"Nuestros servicios parten con un diagnóstico y análisis de situación y funcionamiento del cliente. Se analizan las características de la empresa/organización y las particularidades de sus procesos. Este diagnóstico nos ayudará a definir, conjuntamente con el cliente, las bases del proyecto a realizar, sea cual sea su envergadura. Luego, podremos definir los objetivos y plan de trabajo del proyecto, además de designar al Consultor más idóneo según las características del mismo."}/>
