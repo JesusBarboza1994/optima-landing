@@ -10,7 +10,8 @@ const Wrapper = styled.div`
   color:${colors.gray.light};
   p{
     text-align:justify;
-    margin-top:30px;
+    margin-top:40px;
+    
   }
   img{
     width:50%;
@@ -23,13 +24,13 @@ const Div1 = styled.div`
   display:flex;
   gap:20px;
   width:100%;
-  align-items:center;
+  align-items:flex-start;
   p{
     text-align:justify;
     margin-top:10px;
   }
   img{
-    width:50%;
+    width:40%;
     margin-top:25px;
   }
   @media(max-width:750px){
@@ -44,12 +45,14 @@ const Div1 = styled.div`
     padding: 20px;
     border-radius:8px;
     height:100%;
+    padding-left:0;
   }
 `
 const Background = styled.div`
   width:100%;
   // background: ${colors.stone[100]};
   padding: 30px;
+  
   border-radius: 12px;
   ul{
     padding-left:20px;
@@ -85,10 +88,11 @@ export default function AuditoriasMain(){
         <img src={auditorias}/>
       </Div1>
       <Div1>
-        <img src={auditoria} alt="imagen"/>
+        {/* <img src={auditoria} alt="imagen"/> */}
         <Background>
           <h2>AUDITORÍA DE DIAGNÓSTICO O ESTUDIO DE LÍNEA BASE EN SST</h2>
           <p>Con ella se determina la brecha existente entre lo ya implementado y lo que resta por implementar para cumplir con la normativa nacional vigente (Ley 29783, reglamento y modificatorias). Es a partir de este primer paso que se planifican todas las actividades necesarias para implementar un SGSST en su organización.</p>
+          <br/>
           <br/>
           <h2>AUDITORÍAS OBLIGATORIAS POR MINTRA</h2>
           <p>Según la DS 014-2013-TR deben ejecutarse auditorías que permitan verificar la adecuación y eficacia del Sistema de Gestión de la Seguridad y Salud en el Trabajo implementado en su organización. Este servicio es realizado por un auditor registrado y acreditado en el MINTRA.</p>

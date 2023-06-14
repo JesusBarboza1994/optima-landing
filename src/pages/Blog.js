@@ -36,6 +36,7 @@ const Div = styled.div`
   grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
   padding: 20px;
   gap:20px;
+  row-gap:80px;
   @media(max-width:1200px){
   }
 `

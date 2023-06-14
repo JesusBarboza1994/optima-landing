@@ -33,6 +33,7 @@ const Portada = styled.div`
 `
 const TextDiv = styled.div`
   padding:50px;
+  padding-left:60px;
   border-radius:12px;
   background:${colors.stone[100]};
   position:absolute;
@@ -128,19 +129,21 @@ const Img = styled.img`
     position:static;
     // margin-bottom:30px;
   }
+  @media (max-width: 480px) {
+    width:100%;
+  }
 `
 const Img2 = styled.img`
   width:60%;
   border-radius:12px;
   position:relative;
   right:-320px;
-  // @media (max-width: 1200px) {
-  //   width:470px;
-  //   right:-320px;
-  // }
   @media (max-width: 1200px) {
     position:static;
     // margin-bottom:30px;
+  }
+  @media (max-width: 480px) {
+    width:100%;
   }
 `
 const Card = ({title, text1, text2, image}) =>{

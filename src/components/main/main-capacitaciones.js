@@ -41,6 +41,7 @@ const Background = styled.div`
   }
   li{
     text-align:start;
+    margin-bottom:6px;
   }
   h2{
     color:${colors.blue[500]};
@@ -48,6 +49,7 @@ const Background = styled.div`
     text-align:start;
     width:100%;
     font-weight:600;
+    margin-top:10px;
   }
   @media(max-width:480px){
     padding: 15px;
@@ -57,8 +59,10 @@ const Wrapper = styled.div`
   color: ${colors.gray.light};
   margin-bottom: 50px;
   p{
-    text-align:center;
-    margin-top:30px;
+    text-align:justify;
+    margin-top:40px;
+    margin-bottom:40px;
+    padding-left:20px;
   }
   img{
     border-radius:12px;
@@ -100,6 +104,7 @@ export default function CapacitacionesMain(){
             <li>Gestión de riesgos y oportunidades</li>
             <li>Gestión de no conformidad y análisis de causa raíz</li>
           </ul>
+          <br/>
           <h2>CAPACITACIONES RELACIONADAS A GESTIÓN MEDIO AMBIENTAL</h2>
           <ul>
             <li>Identificación de Aspectos y Evaluación de Impactos Ambientales.</li>

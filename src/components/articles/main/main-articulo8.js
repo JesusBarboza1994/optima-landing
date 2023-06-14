@@ -15,7 +15,7 @@ export default function MainArticulo8(){
         </Styled.CardColumn>
         <Styled.CardColumn>
           <CardIso45001 number={"05"} text={"Desarrollar planes de actuación y contingencia para situaciones de emergencia."} color={colors.yellow}/>
-          <CardIso45001 number={"06"} text={"Desarrollar un Sistema de Gestión de Seguridad y Salud de acuerdo a la complejidad de la empresa."} color={colors.yellow}/>
+          <CardIso45001 number={"06"} text={"Desarrollar un Sistema de Gestión Medio Ambiental de acuerdo a la complejidad de la empresa."} color={colors.yellow}/>
           <CardIso45001 number={"07"} text={"Documentar todos aquellos requisitos exigidos por norma o legislación vigente."} color={colors.yellow}/>
           <CardIso45001 number={"08"} text={"Realizar la formación necesaria y sensibilizar a los empleados sobre ser responsables con el medio ambiente."} color={colors.yellow}/>
         </Styled.CardColumn>

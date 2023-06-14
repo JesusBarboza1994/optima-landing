@@ -97,7 +97,7 @@ const WhatsappContainer = styled.div`
 function App() {
   function handleWhatsapp(){
     window.location.href = `
-    https://api.whatsapp.com/send/?phone=51993229232&text=Hola%21+Me+gustaria+solicitar+mayor+informacion.&type=phone_number&app_absent=0`
+    https://api.whatsapp.com/send/?phone=51993229232&text=Hola.+Me+gustaría+solicitar+mayor+información.&type=phone_number&app_absent=0`
   }
   return (
     <div className="App">

@@ -181,7 +181,7 @@ export default function Home(){
         <img src={conexiones} alt='imagen'/>
         <h2>¿QUÉ HACEMOS?</h2>
         <hr/>
-        <p>En OPTIMA tenemos más de 10 años de experiencia trabajando con empresas de diferentes sectores, facilitando la adecuación a Normas ISO y muchos otros estándares, asesorando en adaptación eficiente a nuevos requisitos legales para empresas y organizaciones que necesitan ser más competitivas y sostenibles.</p>
+        <p>En ÓPTIMA tenemos más de 10 años de experiencia trabajando con empresas de diferentes sectores, facilitando la adecuación a Normas ISO y muchos otros estándares, asesorando en adaptación eficiente a nuevos requisitos legales para empresas y organizaciones que necesitan ser más competitivas y sostenibles.</p>
         <br/>
       </HacemosSection>
       {/* <ParlanteSection>
@@ -203,7 +203,7 @@ export default function Home(){
       <br/>
       <OfferSection>
         <img src={metodo} alt='imagen'/>
-        <h2>CÓMO LO HACEMOS </h2>
+        <h2>¿CÓMO LO HACEMOS?</h2>
         <hr/>
       </OfferSection>
       <SectionMethod>
@@ -224,7 +224,7 @@ export default function Home(){
       <Banner onScroll={moverImagen}>
         <div>
           <h3>QUEREMOS OFRECER SERVICIOS EXCELENTES</h3>
-          <p><FaQuoteLeft style={{scale:"2", marginRight:"6px"}}/> También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir de este modo el mayor número de necesidades de nuestros clientes. 
+          <p><FaQuoteLeft style={{scale:"2", marginRight:"6px"}}/> También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir las necesidades de nuestros clientes. 
              <FaQuoteRight style={{scale:"2", marginLeft:"6px"}}/>
           </p>
         </div>

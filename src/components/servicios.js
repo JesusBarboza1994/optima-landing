@@ -50,16 +50,11 @@ const Card = styled.div`
     background: ${colors.blue[100]};
     padding: 10px 15px;
   }
-  // @media(max-width:950px){
-  //   width:720px;
-  //   align-items:center;
-  // }
-  // @media(max-width:768px){
-  //   width:500px;
-  //   align-items:center;
-  // }
   @media(max-width:480px){
-    width:240px;
+    width:300px;
+    h2{
+      font-size:18px;
+    }
   }
 `
 const Img = styled.img`

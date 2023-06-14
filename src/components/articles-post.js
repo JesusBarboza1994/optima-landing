@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     color:${colors.gray.light};
     margin-top:8px;
     font-size:16px;
+    font-weight:500;
   }
   div{
     display:flex;
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
     object-fit:cover;
   }
   h1{
-    color:${colors.blue[300]};
+    color:${colors.blue[500]};
     font-size:20px;
   }
   p{

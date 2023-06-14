@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height:300px;
   position:relative;
   img{
-    width:55%;
+    width:40%;
     position: absolute;
     height:100%;
     right:0px;
@@ -18,13 +18,18 @@ const Wrapper = styled.div`
     opacity: 0.9;
     z-index:-2;
   }
-  @media(max-width:1200px){
+  @media(max-width:1350px){
     height:250px;
     img{
       height:250px;
     }
   }
-  @media(max-width:630px){
+  @media(max-width:1500px){
+    img{
+      width:45%;
+    }
+  }
+  @media(max-width:1000px){
     position:static;
     flex-direction:column;
     img{
@@ -36,7 +41,7 @@ const Wrapper = styled.div`
 const TextDiv = styled.div`
   color:${colors.white};
   background: ${colors.blue[500]};
-  width:70%;
+  width:80%;
   height:101%;
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);
   display:flex;
@@ -53,6 +58,7 @@ const TextDiv = styled.div`
     align-items:flex-start;
   }
   button{
+    cursor:pointer;
     width:200px;
     padding: 6px 16px;
     border-radius:12px;
@@ -65,7 +71,10 @@ const TextDiv = styled.div`
     margin-bottom:30px;
     margin-top:10px;
   }
-  @media(max-width:630px){
+  @media(max-width:1500px){
+    width:70%;
+  }
+  @media(max-width:1000px){
     clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
     width:100%;
     height:100%;

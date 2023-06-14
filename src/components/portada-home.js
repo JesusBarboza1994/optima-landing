@@ -58,7 +58,7 @@ export default function Portada(){
   return(
     <Wrapper image={currentImage}>
        <h1>Empresas más competitivas y sostenibles</h1>
-       <p>Hacemos posible que tu empresa se diferencie y adelante a la competencia, con soluciones completas</p>
+       <p>Hacemos posible que tu empresa se diferencie y esté  a la vanguardia con soluciones completas y personalizadas</p>
     </Wrapper>
   )
 }
