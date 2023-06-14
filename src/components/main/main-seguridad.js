@@ -96,6 +96,11 @@ const Div1 = styled.div`
   @media(max-width:990px){
     flex-direction:column;
   }
+  @media(max-width:500px){
+    img{
+      max-width:350px;
+    }
+  }
 `
 const SubTitle = styled.h2`
   font-size:22px;

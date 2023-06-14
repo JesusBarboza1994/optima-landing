@@ -27,6 +27,11 @@ const DivText = styled.div`
   flex-direction:column;
   justify-content:flex-start;
   gap:16px;
+  @media(max-width:990px){
+    h1{
+      font-size:24px;
+    }
+  }
 `
 const Portada = styled.div`
   background-image: url(${portada});
