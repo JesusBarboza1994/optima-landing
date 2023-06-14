@@ -15,11 +15,12 @@ const Wrapper = styled.div`
     : props.label === "Ambiente" ? "#62E596"
     : "white"};
     color:${colors.gray.light};
-    // color: ${colors.white};
+    margin-top:8px;
+    font-size:16px;
   }
   div{
     display:flex;
-    justify-content:space-between;
+    align-items:center;
   }
   img{
     border-radius:12px;
@@ -28,10 +29,16 @@ const Wrapper = styled.div`
   }
   h1{
     color:${colors.blue[300]};
+    font-size:20px;
+  }
+  p{
+    width:100%;
+    text-align:start;
   }
 `
 
 export default function ArticlePost({article}){
+  const labels = article.etiquetas.split(", ")
   function formatFecha(fecha){
     const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
     const formatoFecha = new Intl.DateTimeFormat('es-ES', opcionesFecha);
@@ -43,13 +50,13 @@ export default function ArticlePost({article}){
   return(
     <Wrapper label={article.etiqueta}>
       <div>
-        <h3>{article.etiqueta}</h3>
-        <p>{formatFecha(article.date)}</p>
+        {labels.map(etiqueta => (
+         <h3 key={etiqueta}>{etiqueta}</h3>
+        ))}
       </div>
       <img src={article.image}/>
+      <p>{formatFecha(article.date)}</p>
       <h1>{article.title}</h1>
-      <p>{article.description}</p>
-
     </Wrapper>
   )
 }

@@ -20,7 +20,9 @@ export const colors = {
   },
   black: "#363636",
   white: "#FFFFFF",
-  background: "#171717"
+  background: "#171717",
+  yellow:"#f4a300",
+  green:"#36b04b"
 };
 
 export const ColorStyle = (dark) =>{

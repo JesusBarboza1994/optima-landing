@@ -19,7 +19,7 @@ const Portada = styled.div`
 const Wrapper = styled.div`
   display:flex;
   flex-wrap:wrap;
-  justify-content:flex-end;
+  justify-content:center;
   gap:30px;
   margin: 40px auto;
   padding: 0px 20px;
@@ -38,13 +38,21 @@ const Form = styled.form`
     text-align:start;
     font-size:22px;
     font-weight:600;
-    colors:${colors.blue[700]};
+    color:${colors.black};
   }
 `
 const Img = styled.img`
-  width:50%;  
+  width:460px;  
+  border-radius:24px;
   @media (max-width: 1200px) {
-    width:100%;
+    max-width:460px; 
+    margin-right:20px;
+    margin-left:20px;
+  }
+  @media (max-width: 500px) {
+    max-width:360px; 
+    margin-right:20px;
+    margin-left:20px;
   }
 `
 const Input = styled.input`
@@ -70,8 +78,6 @@ const Button = styled.button`
     background:${colors.gray.medium};
   }
 `
-
-
 
 export default function Contacto(){
   return(

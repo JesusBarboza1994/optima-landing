@@ -11,10 +11,10 @@ const Wrapper = styled.div`
   img{
     width:55%;
     position: absolute;
-    height:300px;
+    height:100%;
     right:0px;
     bottom:0px;
-    filter: brightness(0.6);
+    filter: brightness(0.9);
     opacity: 0.9;
     z-index:-2;
   }
@@ -37,6 +37,7 @@ const TextDiv = styled.div`
   color:${colors.white};
   background: ${colors.blue[500]};
   width:70%;
+  height:101%;
   clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);
   display:flex;
   flex-direction:column;

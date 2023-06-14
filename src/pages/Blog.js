@@ -31,14 +31,12 @@ const Wrapper = styled.div`
   padding: 24px;
 `
 const Div = styled.div`
-  display:flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
+  display:grid;
+  column-gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
   padding: 20px;
   gap:20px;
   @media(max-width:1200px){
-    flex-direction:column;
-    align-items:center;
   }
 `
 export default function Blog(){
@@ -47,9 +45,8 @@ export default function Blog(){
   
   useEffect(() => {
     setFilterArticles(Articles.filter(article => article.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()) || 
-                                                 article.description.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
                                                  article.keywords.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
-                                                 article.etiqueta.toLocaleLowerCase().includes(search.toLocaleLowerCase()) 
+                                                 article.etiquetas.toLocaleLowerCase().includes(search.toLocaleLowerCase()) 
                                      )
                      )
   }, [search])

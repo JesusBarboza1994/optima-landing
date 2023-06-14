@@ -23,7 +23,7 @@ const Div1 = styled.div`
   display:flex;
   gap:20px;
   width:100%;
-  align-items:flex-start;
+  align-items:center;
   p{
     text-align:justify;
     margin-top:10px;
@@ -33,8 +33,10 @@ const Div1 = styled.div`
     margin-top:25px;
   }
   @media(max-width:750px){
+    flex-direction:column-reverse;
     img{
       width:100%;
+      margin-top:0px;
     }
   }
   div{
@@ -75,9 +77,9 @@ export default function AuditoriasMain(){
         <Background>
           <h2>AUDITORÍAS ISO</h2>
           <p>Los procesos de Auditoria Interna tratan de demostrar mediante evidencias objetivas la eficacia de su Sistema de Gestión implementado en base al cumplimiento de los requisitos de las norma ISO; y, además, es un requisito indispensable para optar por la Certificación del sistema de gestión.</p>
-          <br/>
+          {/* <br/> */}
           <p>En ÓPTIMA CONSULTORA ofrecemos este servicio a toda Organización que desee conocer el grado de cumplimiento del Sistema de Gestión implantado, comprobar la eficacia o madurez del Sistema y cumplir con los requisitos de la propia norma de referencia.</p>
-          <br/>
+          {/* <br/> */}
           <p>Realizamos auditorías ISO 9001, 14001, 45001, entre otras.</p>
         </Background>
         <img src={auditorias}/>

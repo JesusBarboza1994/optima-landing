@@ -11,16 +11,6 @@ import Blog from './pages/Blog';
 import Contacto from './pages/Contacto';
 import Home from './pages/Home';
 import Footer from './footer';
-import Template from './components/template-page';
-import Calidad1 from './components/servicios/calidad1';
-import Calidad2 from './components/servicios/calidad2';
-import Calidad3 from './components/servicios/calidad3';
-import Seguridad1 from './components/servicios/seguridad1';
-import Seguridad2 from './components/servicios/seguridad2';
-import Seguridad3 from './components/servicios/seguridad3';
-import Medio1 from './components/servicios/medio1';
-import Medio2 from './components/servicios/medio2';
-import Medio3 from './components/servicios/medio3';
 import styled from '@emotion/styled';
 import whatsapp from "./assets/whatsapp.png"
 // import wsp from "./assets/wsp.png"
@@ -35,6 +25,14 @@ import { colors } from './styles/colors';
 import Capacitaciones from './pages/Capacitaciones';
 import Auditorias from './pages/Auditorias';
 import Articulo1 from './components/articles/articulo1';
+import Articulo2 from './components/articles/articulo2';
+import Articulo3 from './components/articles/articulo3';
+import Articulo4 from './components/articles/articulo4';
+import Articulo5 from './components/articles/articulo5';
+import Articulo6 from './components/articles/articulo6';
+import Articulo7 from './components/articles/articulo7';
+import Articulo8 from './components/articles/articulo8';
+import Articulo9 from './components/articles/articulo9';
 
 const ContainerImage = styled.div`
   display:flex;
@@ -125,12 +123,21 @@ function App() {
         <Route path="/capacitaciones" element={<Capacitaciones/>} />
         <Route path="/auditorias" element={<Auditorias/>} />
 
-        <Route path="/blog" element={<Blog/>} />
-        {/* Articulos */}
-        <Route path="/articulo1" element={<Articulo1/>}/>
-
         <Route path="/contacto" element={<Contacto/>} />
 
+        <Route path="/blog" element={<Blog/>} />
+        {/* Articulos */}
+        <Route path="/registros-de-seguridad-y-salud-laboral-para-mypes" element={<Articulo1/>}/>
+        <Route path="/partes-interesadas-o-stakeholders-en-normas-iso" element={<Articulo2/>}/>
+        <Route path="/como-implemento-iso-45001-en-mi-organizacion" element={<Articulo3/>}/>
+        <Route path="/seguridad-y-salud-laboral-en-condominios-y-edificios" element={<Articulo4/>}/>
+        <Route path="/conoces-la-estructura-de-alto-nivel-HLS-de-los-estándares-ISO" element={<Articulo5/>}/>
+        <Route path="/como-proceder-ante-una-inspección-de-sunafil" element={<Articulo6/>}/>
+        <Route path="/como-implemento-iso-9001-en-mi-organizacion" element={<Articulo7/>}/>
+        <Route path="/como-implemento-iso-14001-en-mi-organizacion" element={<Articulo8/>}/>
+        <Route path="/seguridad-y-salud-en-el-teletrabajo" element={<Articulo9/>}/>
+        
+        
 
         {/* <Route path="/calidad/1" element={<Template title={"Calidad"} descrip={"Mantenimiento"} Main={Calidad1} />} />
         <Route path="/calidad/2" element={<Template title={"Calidad"} descrip={"Capacitaciones"} Main={Calidad2} />} />

@@ -14,6 +14,7 @@ import CardHome from "./card-home"
 const Wrapper = styled.div`
   p{
     margin-bottom:16px;
+    text-align:center;
   }
   h2{
     color:${colors.black};
@@ -28,7 +29,7 @@ const Container = styled.div`
   gap:40px;
   margin-top:40px;
   padding-bottom:80px;
-  @media(max-width:750px){
+  @media(max-width:920px){
     grid-template-rows:1fr 1fr 1fr 1fr;
     grid-template-columns:1fr;
   }
@@ -49,14 +50,14 @@ const Card = styled.div`
     background: ${colors.blue[100]};
     padding: 10px 15px;
   }
-  @media(max-width:990px){
-    width:720px;
-    align-items:center;
-  }
-  @media(max-width:768px){
-    width:390px;
-    align-items:center;
-  }
+  // @media(max-width:950px){
+  //   width:720px;
+  //   align-items:center;
+  // }
+  // @media(max-width:768px){
+  //   width:500px;
+  //   align-items:center;
+  // }
   @media(max-width:480px){
     width:240px;
   }
@@ -64,12 +65,12 @@ const Card = styled.div`
 const Img = styled.img`
   width:100%;
   height:220px;
-  @media(max-width:1200px){
-    width:350px;
-  }
-  @media(max-width:990px){
-    width:640px;
-  }
+  // @media(max-width:1200px){
+  //   width:350px;
+  // }
+  // @media(max-width:990px){
+  //   width:640px;
+  // }
   @media(max-width:480px){
     height:200px;
   }

@@ -22,6 +22,14 @@ const Div1 = styled.div`
     border-radius:8px;
     height:100%;
   }
+  @media(max-width:1000px){
+    flex-direction:column-reverse;
+    gap:0px;
+    align-items:center;
+    img{
+      margin-top:0px;
+    }
+  }
 `
 const Background = styled.div`
   width:100%;
@@ -54,6 +62,11 @@ const Wrapper = styled.div`
   }
   img{
     border-radius:12px;
+  }
+  @media(max-width:1000px){
+    p{
+      margin-bottom:30px;
+    }
   }
 `
 export default function CapacitacionesMain(){
