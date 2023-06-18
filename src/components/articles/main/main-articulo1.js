@@ -13,7 +13,12 @@ export default function MainArticulo1(){
         <li>Registro de estadísticas de seguridad y salud.</li>
       </ul>
       <h3>Registros para Micro Empresa</h3>
-
+      <ul>
+        <li>Registro de accidentes de trabajo, enfermedades ocupacionales, incidentes peligrosos y otros incidentes.</li>
+        <li>Registro de exámenes médicos ocupacionales.</li>
+        <li>Registro de inspecciones internas de seguridad y salud en el trabajo.</li>
+      </ul>
+    
       
     </Styled.Wrapper>
   )

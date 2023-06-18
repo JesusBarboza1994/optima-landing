@@ -3,6 +3,7 @@ import { colors } from "../../../styles/colors";
 
 export const Wrapper = styled.div`
   margin-bottom:30px;
+  min-height:100%;
   color:${colors.gray.light};
   p{
     text-align:justify;
@@ -11,7 +12,8 @@ export const Wrapper = styled.div`
   h3{
     widht:100%;
     text-align:start;
-    margin-top:15px;
+    margin-top:30px;
+    margin-bottom:15px;
   }
   ul{
     width:100%;
@@ -27,7 +29,7 @@ export const Wrapper = styled.div`
     margin-top:10px;
   }
   img{
-    margin: 0px auto;
+    margin: 0px 0;
     margin-bottom:20px;
     width:350px;
   }
@@ -38,6 +40,8 @@ export const Wrapper = styled.div`
   }
   div{
     text-align:start;
+    width:100%;
+
   }
 `
 export const CardGrid = styled.div`

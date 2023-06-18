@@ -87,7 +87,7 @@ const TextDiv = styled.div`
   }
 `
 
-export default function Banner({ question, show }){
+export default function Banner({ question, show, blog }){
   if(show){
     return(
       <Wrapper>
@@ -102,6 +102,15 @@ export default function Banner({ question, show }){
               </Link>
             </section>
           :
+            blog ?
+              <section>
+                <h1>¿Requieres mayor información?</h1>
+                <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
+                <Link to={"/contacto"} style={{textDecoration:"none"}}>
+                  <Button>Contáctanos</Button>
+                </Link>
+              </section>
+            :
             <section>
               <h1>Te asesoramos</h1>
               <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { Articles } from "../articles"
 import ArticlePost from "../components/articles-post"
 import { Link } from "react-router-dom"
+import Banner from "../components/banner"
 
 const SearchDiv = styled.div`
   display:flex;
@@ -58,30 +59,33 @@ export default function Blog(){
   
   
   return(
-    <Wrapper>
-      <SearchDiv>
-        {search ==="" ? 
-          <RiSearchLine style={{color: `${colors.gray.light}`}}/> 
-        : 
-          <IoIosArrowBack style={{color: `${colors.gray.light}`}}/>
-        }
-        <StyledInput type="text" value={search} onChange={(e)=>setSearch(e.target.value)} placeholder={"Search"}/>
-      </SearchDiv>
-      <Div>
-        {filterArticles.map(article=>{
-          if(article.url){
-            return(
-              <Link to={article.url} style={{textDecoration:"none", width:"300px" }}>
-                <ArticlePost article={article} />
-              </Link>
-            )
-          }else{
-            return(
-              <ArticlePost article={article} />
-            )
+    <>
+      <Wrapper>
+        <SearchDiv>
+          {search ==="" ? 
+            <RiSearchLine style={{color: `${colors.gray.light}`}}/> 
+          : 
+            <IoIosArrowBack style={{color: `${colors.gray.light}`}}/>
           }
-        })}
-      </Div>
-    </Wrapper>
+          <StyledInput type="text" value={search} onChange={(e)=>setSearch(e.target.value)} placeholder={"Search"}/>
+        </SearchDiv>
+        <Div>
+          {filterArticles.map(article=>{
+            if(article.url){
+              return(
+                <Link to={article.url} style={{textDecoration:"none", width:"300px" }}>
+                  <ArticlePost article={article} />
+                </Link>
+              )
+            }else{
+              return(
+                <ArticlePost article={article} />
+              )
+            }
+          })}
+        </Div>
+      </Wrapper>
+      <Banner show={true} blog={true}/>
+    </>
   )
 }

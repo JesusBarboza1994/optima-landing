@@ -14,7 +14,7 @@ export default function MainArticulo6(){
           sindical de la empresa, un trabajador o cualquier persona que conozca algún incumplimiento
           laboral.</li>
       </ul>
-      <h3>Consideraciones para enfrentar una inspección</h3>
+      <h3>1. Consideraciones para enfrentar una inspección</h3>
       <ul>
         <li>Se debe otorgar todas las facilidades: No hacer esperar a los inspectores, el trato siempre
             debe ser cordial.</li>
@@ -34,10 +34,10 @@ export default function MainArticulo6(){
         <li>Y si no pudiste llevar toda la documentación requerida, justifica las razones y solicita un
             plazo adicional al inspector. Pueden decidir si lo otorgan o no.</li>
       </ul>
-      <h3>Tipificación de las infracciones en materia de seguridad y salud en el trabajo</h3>
+      <h3>2. Tipificación de las infracciones en materia de seguridad y salud en el trabajo</h3>
       <p>En el artículo 26 del Reglamento de la Ley General de Inspección de Trabajo promulgado por el DS
           Nº 019-2006-TR se detallan las infracciones en materia de seguridad y salud laboral:</p>
-      <h3>Infracciones leves</h3>
+      <h4>2.1 Infracciones leves</h4>
       <ul style={{listStyleType:"decimal"}}>
         <li>La falta de orden y limpieza del centro de trabajo que no implique riesgo para la integridad
             física y salud de los trabajadores.</li>
@@ -51,7 +51,7 @@ export default function MainArticulo6(){
         <li>Cualquier otro incumplimiento que afecte a obligaciones de carácter formal o documental,
             exigidas en la normativa de prevención de riesgos y no estén tipificados como graves.</li>
       </ul>
-      <h3>Infracciones graves</h3>
+      <h4>2.2 Infracciones graves</h4>
       <ul style={{listStyleType:"decimal"}}>
         <li>La falta de orden y limpieza del centro de trabajo que implique riesgos para la integridad
             física y salud de los trabajadores.</li>
@@ -104,7 +104,7 @@ export default function MainArticulo6(){
             o cooperativas de trabajadores que desarrollen obras o servicios en el centro de trabajo o
             con ocasión del trabajo realizado por encargo de la principal.</li>
       </ul>
-      <h3>Infracciones muy graves</h3>
+      <h4>2.3 Infracciones muy graves</h4>
       <ul style={{listStyleType:"decimal"}}>
         <li>No observar las normas específicas en materia de protección de la seguridad y salud de las
             trabajadoras durante los periodos de embarazo y lactancia y de los trabajadores con
@@ -141,7 +141,7 @@ export default function MainArticulo6(){
         <li>No cumplir con realizar los exámenes médicos ocupacionales y/o no cumplir con realizar la
             vigilancia de la salud de sus trabajadores.</li>
       </ul>
-      <h3>Escala de multas expresada en soles</h3>
+      <h3>3. Escala de multas expresada en soles</h3>
       <p>A continuación, presentamos la escala de multas expresada en soles, considerando el valor de la UIT
          en S/ 4,950 (año 2023):</p>
       <img style={{width:"100%",height:"auto"}} src={imagen} alt='imagen'/>

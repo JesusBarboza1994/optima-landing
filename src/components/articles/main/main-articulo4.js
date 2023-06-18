@@ -5,15 +5,14 @@ export default function MainArticulo4(){
       <p>Los condominios, edificios o conjuntos residenciales forman parte de lo que se define como
         “Propiedad Horizontal”. Dentro de este grupo también vamos a tener a los centros comerciales,
         consultorios médicos, centros empresariales, etc.</p>
-      <p>La más comunes son: clientes, proveedores, trabajadores, accionistas, organismos estatales, competidores, entidades financieras, entre otros.</p>
-      
+
       <p>Estas propiedades tienen la obligación de implementar un sistema de gestión de SST basado en la
         Ley 29783, Ley de seguridad y salud en el trabajo, su reglamento y modificatorias, así no cuenten
         con trabajadores directos, dado que ello no los exime de la responsabilidad ante un accidente
-        laboral o un accidente enlaboral o una enfermedad ocupacional.</p>
+        laboral o una enfermedad ocupacional.</p>
       
       <p>En los edificios residenciales o condominios, el administrador o la junta de propietarios deben
-        contemplar que de suscitare un accidente de trabajo en sus instalaciones, no contar con un sistema
+        contemplar que de suscitarse un accidente de trabajo en sus instalaciones, no contar con un sistema
         de gestión implementado es un agravante legal.</p>
       <p>Los principales puntos a considerarse como parte de la implementación de un sistema de gestión de
         seguridad y salud laboral deben ser:</p>

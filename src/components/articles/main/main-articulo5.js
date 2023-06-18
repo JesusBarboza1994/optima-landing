@@ -10,7 +10,9 @@ export default function MainArticulo5(){
         <li>Fomenta la certificación.</li>
         <li>Facilita la integración de los sistemas de gestión.</li>
       </ul>
-      <img src={articulo5} alt='imagen'/>
+      <div>
+        <img src={articulo5} alt='imagen'/>
+      </div>
       <p>Estas son algunas de las normas ISO más implementadas en las empresas y que cuentan con la
         estructura de alto nivel:</p>
       <ul>
