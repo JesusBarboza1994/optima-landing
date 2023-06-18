@@ -40,7 +40,6 @@ export const Wrapper = styled.div`
   }
   div{
     text-align:start;
-    width:100%;
 
   }
 `
@@ -49,7 +48,7 @@ export const CardGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   column-gap:20px;
   padding: 20px 10px;
-  @media(max-width:700px){
+  @media(max-width:750px){
     grid-template-columns: 1fr;
     row-gap:20px;
   }
@@ -61,4 +60,38 @@ export const CardColumn = styled.div`
   display:flex;
   flex-direction:column;
   gap: 20px;
+`
+export const Div2 = styled.div`
+  display:flex;
+  gap:30px;
+  align-items:center;
+  justify-content: center;
+  img{
+    width:500px;
+    border-radius:12px;
+  }
+  div{
+    font-size:18px;
+    color:${colors.gray.light};
+    padding-right:20px;
+  }
+  p{
+    text-align:justify;
+  }
+
+  @media(max-width:1200px){
+    flex-direction:column;
+    gap:0;
+    div{
+      padding-top:12px;
+    }
+    img{
+      margin-top:16px;
+    }
+  }
+  @media(max-width:475px){
+    img{
+      max-width:300px;
+    }
+  }
 `

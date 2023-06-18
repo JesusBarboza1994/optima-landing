@@ -2,6 +2,7 @@ import styled from "@emotion/styled"
 import portada from "../assets/template.jpg"
 import { colors } from "../styles/colors"
 import contacto from "../assets/contacto.jpg"
+import { useState } from "react"
 
 const Portada = styled.div`
   background-image: url(${portada});
@@ -80,19 +81,48 @@ const Button = styled.button`
 `
 
 export default function Contacto(){
+  const [form, setForm] = useState({
+    Nombre: "",
+    Empresa: "",
+    Telefono: "",
+    Email: "",
+    Mensaje: ""
+  })
+
+  function handleChange(e){
+    setForm({...form, [e.target.name]: e.target.value})
+    console.log(form)
+  }
+  function handleTextArea(e){
+    setForm({...form, Message: e.target.value})
+    console.log(form)
+  }
+  function handleSubmit(e){
+    e.preventDefault()
+    const formEle = document.querySelector("form")
+    console.log("Submitted")
+    const formData = new FormData(formEle)
+    fetch("https://script.google.com/macros/s/AKfycby2JYwHZ1vnaYFBk9QUeGJiVJIOV45DVOVux_VoOtU5CcWp-p9IsoBMDOHsFCSApI3o/exec",{
+      method:"POST",
+      body:formData
+    })
+    console.log(formData)
+  }
+
   return(
     <>
       <Portada>
         <h1>Contacto</h1>
       </Portada>
       <Wrapper>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <p>Escríbanos:</p>
-          <Input placeholder={"Nombre"}/>
-          <Input placeholder={"Empresa"}/>
-          <Input placeholder={"Email"}/>
-          <Input placeholder={"Teléfono"}/>
-          <InputArea placeholder={"Mensaje"}/>
+          <Input value={form.Nombre} onChange={handleChange} placeholder={"Nombre"}/>
+          <Input value={form.Empresa} onChange={handleChange} placeholder={"Empresa"}/>
+          <Input value={form.Email} onChange={handleChange} placeholder={"Email"}/>
+          <Input value={form.Telefono} onChange={handleChange} placeholder={"Teléfono"}/>
+          <InputArea value={form.Mensaje} onChange={handleTextArea} placeholder={"Mensaje"}/>
+          <input value={form.Mensaje} style={{display:"none"}}/>
           <Button>ENVIAR</Button>
 
         </Form>

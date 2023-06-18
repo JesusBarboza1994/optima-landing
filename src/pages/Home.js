@@ -1,6 +1,5 @@
 import clientes from '../assets/clientes.png'
 import conexiones from '../assets/conexiones.png'
-import parlante from '../assets/parlante.png'
 import metodo from '../assets/metodo.png'
 import banner from '../assets/banner.jpg'
 import styled from '@emotion/styled'
@@ -13,8 +12,8 @@ import CardHome from '../components/card-home'
 import ListClientes from '../components/list-clientes'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import Portada from '../components/portada-home'
-import {FiArrowDown, FiArrowUpRight} from "react-icons/fi"
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 const Wrapper = styled.div`
@@ -136,14 +135,14 @@ const ClienteSection = styled.section`
 `
 const Banner = styled.div`
   background-image: url(${banner});
-  height: 460px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-position 0.3s ease-in-out;
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow: auto;
-  position: relative;
-  background-size: cover;
-  background-position: center;
   div{
     max-width:1170px;
   }
@@ -164,12 +163,22 @@ const Banner = styled.div`
 
 
 export default function Home(){
-  function moverImagen() {
-    const contenedor = document.querySelector('.contenedor');
-    const desplazamiento = contenedor.scrollTop;
-  
-    contenedor.style.backgroundPositionY = -desplazamiento + 'px';
-  }
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollSpeed = 0.06; // Ajusta la velocidad del desplazamiento
+
+    const sectionContainer = document.getElementById('section-container');
+    const yPos = -scrollTop * scrollSpeed;
+
+    sectionContainer.style.backgroundPosition = `center ${yPos}px`;
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const handleLinkClick = () => {
     window.scrollTo(0, 0); // Volver al principio de la página al hacer clic en un enlace
   };
@@ -221,7 +230,7 @@ export default function Home(){
         <hr/>
         <ListClientes/>
       </ClienteSection>
-      <Banner onScroll={moverImagen}>
+      <Banner id="section-container">
         <div>
           <h3>QUEREMOS OFRECER SERVICIOS EXCELENTES</h3>
           <p><FaQuoteLeft style={{scale:"2", marginRight:"6px"}}/> También nos preocupamos por establecer alianzas con otras empresas y de formarnos en nuevos campos de actividad para poder crecer continuamente y cubrir las necesidades de nuestros clientes. 

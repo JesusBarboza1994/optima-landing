@@ -2,46 +2,12 @@ import styled from "@emotion/styled"
 import * as Styled from "./styles"
 import { colors } from "../../../styles/colors"
 import imagen from "../../../assets/articles/articulo2.jpg"
-const Div2 = styled.div`
-  display:flex;
-  width:100%;
-  gap:30px;
-  align-items:center;
-  justify-content: center;
-  img{
-    width:500px;
-    border-radius:12px;
-  }
-  div{
-    font-size:18px;
-    color:${colors.gray.light};
-    padding-right:20px;
-  }
-  p{
-    text-align:justify;
-  }
 
-  @media(max-width:1200px){
-    flex-direction:column;
-    gap:0;
-    div{
-      padding-top:12px;
-    }
-    img{
-      margin-top:16px;
-    }
-  }
-  @media(max-width:475px){
-    img{
-      max-width:300px;
-    }
-  }
-`
 
 export default function MainArticulo2(){
   return(
     <Styled.Wrapper>
-       <Div2>
+       <Styled.Div2>
         <div>
           <h3>¿Qué son las Partes Interesadas?</h3>
           <p>Las personas u organizaciones internas/externas que pueden afectar o verse afectadas por una
@@ -57,7 +23,7 @@ export default function MainArticulo2(){
         </div>
           
         <img src={imagen} alt="imagen"/>
-      </Div2>
+      </Styled.Div2>
 
     </Styled.Wrapper>
   )
