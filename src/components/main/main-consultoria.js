@@ -112,13 +112,11 @@ export default function ConsultoriaMain(){
         <Background>
           <p>Toda empresa atraviesa diferentes etapas a lo largo de su ciclo de vida. Etapas en las que las necesidades de la empresa van cambiando y la aplicación de medidas concretas y toma de decisiones se vuelven fundamentales para su futuro.</p>
           <br/>
-          <p>En ÓPTIMA CONSULTORA trabajamos estrechamente con nuestros clientes para adecuar los procesos y estructura organizativa de manera que apoyen efectivamente en la implementación de la estrategia.</p>
+          <p>En ÓPTIMA CONSULTORA trabajamos estrechamente con nuestros clientes para adecuar los procesos y estructura organizativa de manera que apoyen efectivamente el logro de sus objetivos.
+              Sea su necesidad de rediseño, mejora o reingeniería de sus procesos o estructura, nuestro equipo siempre sugerirá lo mejor para su empresa en términos de tiempo y costos.</p>
           </Background>
           <img src={consultoria1} alt="imagen"/>
       </Div2>
-        {/* <div style={{display:"flex", justifyContent:"center"}}>
-          <Img2 src={consultoria2} alt="imagen"/>
-        </div> */}
       <Titulo titulo={"Nuestros Servicios"}/>
       <NuestrosServicios list1={list1} list2={list2}/>
     </Wrapper>

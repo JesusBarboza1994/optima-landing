@@ -29,6 +29,9 @@ const StyledInput = styled.input`
 const Wrapper = styled.div`
   min-height:800px;
   padding: 24px;
+  @media(max-width:400px){
+    padding:12px;
+  }
 `
 const Div = styled.div`
   display:grid;
@@ -37,7 +40,8 @@ const Div = styled.div`
   padding: 20px;
   gap:20px;
   row-gap:80px;
-  @media(max-width:1200px){
+  @media(max-width:500px){
+    padding: 0;
   }
 `
 export default function Blog(){
@@ -67,7 +71,7 @@ export default function Blog(){
         {filterArticles.map(article=>{
           if(article.url){
             return(
-              <Link to={article.url} style={{textDecoration:"none"}}>
+              <Link to={article.url} style={{textDecoration:"none", width:"300px" }}>
                 <ArticlePost article={article} />
               </Link>
             )

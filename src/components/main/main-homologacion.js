@@ -38,6 +38,15 @@ const Img = styled.img`
   padding: 40px 0px;
   margin:auto;
 `
+const Background = styled.div`
+  width:100%;
+  background: ${colors.stone[100]};
+  padding: 30px;
+  border-radius: 12px;
+  @media(max-width:480px){
+    padding: 15px;
+  }
+`
 
 export default function HomologacionMain(){
   const images = [imgHomologacion1, imgHomologacion2, imgHomologacion3, imgHomologacion4, imgHomologacion5, imgHomologacion6, imgHomologacion7]
@@ -64,9 +73,15 @@ export default function HomologacionMain(){
   const list2 = ["Capacitaciones al personal.", "Acompañamiento en la auditoría de homologación."]
   return(
     <Wrapper>
-      <p style={{textAlign:"justify"}}>La aprobación es en base a un puntaje de cumplimiento de estos aspectos. Algunas empresas encargadas de llevar a cabo procesos de homologación son: BUREAU VERITAS PERÚ, SGS DEL PERU, ICONTEC, HODELPE, MEGA CERTIFICACIONES, entre otras.</p>
-      <br/>
-      <p>El final de dicho proceso la empresa encargada de efectuar la auditoría de homologación emite un certificado de homologación, cuyo puntaje está basado según los resultados obtenidos en la evaluación, y cuya vigencia en promedio es de 01 año.</p>
+      <Background>
+        <p style={{textAlign:"justify"}}>La homologación de proveedores es una metodología que emplean algunas organizaciones para verificar si sus proveedores de servicios o productos cumplen con una serie de estándares que garanticen un servicio óptimo.</p>
+        <br/>
+        <p style={{textAlign:"justify"}}>Los parámetros de homologación son definidos por la propia organización que es quien establece en base a qué variables quiere estandarizar la homologación.</p>
+        <br/>
+        <p style={{textAlign:"justify"}}>La aprobación es en base a un puntaje de cumplimiento de estos aspectos. Algunas empresas encargadas de llevar a cabo procesos de homologación son: BUREAU VERITAS PERÚ, SGS DEL PERU, ICONTEC, HODELPE, MEGA CERTIFICACIONES, entre otras.</p>
+        <br/>
+        <p>El final de dicho proceso la empresa encargada de efectuar la auditoría de homologación emite un certificado de homologación, cuyo puntaje está basado según los resultados obtenidos en la evaluación, y cuya vigencia en promedio es de 01 año.</p>
+      </Background>
       <Titulo titulo={"¿Qué aspectos se evalúan en un proceso de homologación?"}/>
       <ImageContainer>
         {

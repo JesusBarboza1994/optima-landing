@@ -6,7 +6,7 @@ export default function Homologaciones(){
   return(
     <>
       <Template title={"Homologación de Proveedores"}
-        descrip={"¿Qué es homologación de proveedores?"}
+        descrip={"¿En qué consiste una homologación de proveedores?"}
         Main={HomologacionMain}
       />
       <Banner show={true}/>

@@ -123,9 +123,9 @@ export default function NavbarSection(){
     menu==="none" ? setMenu("block") : setMenu("none");    
   }
 
-  // function handleCloseMenu(){
-  //   setMenu("none");
-  // }
+  function handleCloseMenu(){
+    setMenu("none");
+  }
 
   function handleConsultoria(){
     if(window.innerWidth <= 1250){
@@ -146,31 +146,31 @@ export default function NavbarSection(){
       </div>
       <List menu={menu} >
             <Li>
-              <StyledLink className={`nosotros`} to={`/nosotros`}>Nosotros</StyledLink>
+              <StyledLink className={`nosotros`} to={`/nosotros`} onClick={handleCloseMenu}>Nosotros</StyledLink>
             </Li>  
             <Li consultoria={consultoria} onClick={handleConsultoria}>
               <p>Consultoría <BsChevronCompactDown style={{marginLeft:"10px"}}/></p>
               <SubMenu className="consultoria">
-                <StyledLink to={"/sistema-gestion-iso"}>Sistemas de Gestión ISO</StyledLink>
-                <StyledLink to={"/seguridad-y-salud-laboral"}>Seguridad y Salud Laboral</StyledLink>
-                <StyledLink to={`/homologaciones`}>Homologaciones</StyledLink>
-                <StyledLink to={`/consultoria`}>Consultoria Organizacional</StyledLink>
-                <StyledLink to={`/hostigamiento`}>Hostigamiento Sexual Laboral</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={"/sistema-gestion-iso"}>Sistemas de Gestión ISO</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={"/seguridad-y-salud-laboral"}>Seguridad y Salud Laboral</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={`/homologaciones`}>Homologaciones</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={`/consultoria`}>Consultoria Organizacional</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={`/hostigamiento`}>Hostigamiento Sexual Laboral</StyledLink>
               </SubMenu>
             </Li>  
             <Li servicios={servicios} onClick={handleServicios}>
               <p>Servicios <BsChevronCompactDown style={{marginLeft:"10px"}}/></p>
               <SubMenu className="servicios">
-                <StyledLink to={"/capacitaciones"}>Capacitación</StyledLink>
-                <StyledLink to={"/auditorias"}>Auditorías</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={"/capacitaciones"}>Capacitación</StyledLink>
+                <StyledLink onClick={handleCloseMenu} to={"/auditorias"}>Auditorías</StyledLink>
               </SubMenu>
               {/* <StyledLink className={`consultoria`} to={`/consultoria`}>Servicios</StyledLink> */}
             </Li>  
             <Li>
-              <StyledLink className={`blog`} to={`/blog`}>Blog</StyledLink>
+              <StyledLink onClick={handleCloseMenu} className={`blog`} to={`/blog`}>Blog</StyledLink>
             </Li>
             <Li>
-              <StyledLink className={`contacto`} to={`/contacto`}>Contacto</StyledLink>
+              <StyledLink onClick={handleCloseMenu} className={`contacto`} to={`/contacto`}>Contacto</StyledLink>
             </Li>
       
       </List>

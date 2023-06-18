@@ -84,6 +84,7 @@ const WspText = styled.h1`
 `
 const WhatsappContainer = styled.div`
   position:fixed;
+  z-index:2;
   bottom: 50px;
   right: 20px;
   h1{

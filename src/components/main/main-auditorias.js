@@ -75,7 +75,7 @@ const Background = styled.div`
 export default function AuditoriasMain(){
   return(
     <Wrapper>
-      <p>Nuestro servicio de auditoría consiste en una revisión de su Sistema de Gestión a través de la verificación de la información documentada y su nivel de implementación para determinar el grado de cumplimiento de los estándares.</p>
+      <p>Nuestro servicio de auditoría consiste en una revisión de su Sistema de Gestión a través de la verificación de la información documentada y su nivel de implementación para determinar el grado de cumplimiento de los estándares y/o requisitos legales aplicables.</p>
       <Div1>
         <Background>
           <h2>AUDITORÍAS ISO</h2>

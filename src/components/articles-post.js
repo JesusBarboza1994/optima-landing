@@ -36,6 +36,9 @@ const Wrapper = styled.div`
     width:100%;
     text-align:start;
   }
+  @media(max-width:500px){
+    width:330px;
+  }
 `
 
 export default function ArticlePost({article}){

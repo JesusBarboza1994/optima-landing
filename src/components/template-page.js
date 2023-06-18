@@ -18,7 +18,7 @@ const DivRelative = styled.div`
   width:100%;
   padding: 20px;
   opacity:0.2;
-  height:100px;
+  height:120px;
   background:${colors.stone[100]};
  
 `
@@ -27,9 +27,17 @@ const DivText = styled.div`
   flex-direction:column;
   justify-content:flex-start;
   gap:16px;
+  padding: auto 30px;
   @media(max-width:990px){
     h1{
       font-size:24px;
+    }
+  }@media(max-width:500px){
+    h1{
+      font-size:22px;
+    }
+    h2{
+      font-size:20px;
     }
   }
 `

@@ -38,6 +38,16 @@ const Wrapper = styled.div`
   }
  
 `
+const Button = styled.div`
+  cursor:pointer;
+  padding: 6px 16px;
+  border-radius:12px;
+  background: ${colors.blue["700"]};
+  border:none;
+  color:${colors.white};
+  font-weight:700;
+  width:100%;
+`
 const TextDiv = styled.div`
   color:${colors.white};
   background: ${colors.blue[500]};
@@ -50,22 +60,12 @@ const TextDiv = styled.div`
   h1{
     line-height: 100%;
   }
-  div{
+  section{
     width:70%;
     margin:auto;
     display:flex;
     flex-direction:column;
     align-items:flex-start;
-  }
-  button{
-    cursor:pointer;
-    width:200px;
-    padding: 6px 16px;
-    border-radius:12px;
-    background: ${colors.blue["700"]};
-    border:none;
-    color:${colors.white};
-    font-weight:700;
   }
   h3{
     margin-bottom:30px;
@@ -78,8 +78,8 @@ const TextDiv = styled.div`
     clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
     width:100%;
     height:100%;
-    z-index:-1;
-    div{
+    z-index:1;
+    section{
       align-items:center;
       margin: 20px auto;
     }
@@ -94,21 +94,21 @@ export default function Banner({ question, show }){
         <TextDiv>
           {
             question ?
-            <div>
+            <section>
               <h1>¿Qué esperas para certificarte?</h1>
               <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
-              <Link to={"/contacto"}>
-                <button>Solicitar Cotización</button>
+              <Link to={"/contacto"} style={{textDecoration:"none"}}>
+                <Button>Solicitar Cotización</Button>
               </Link>
-            </div>
+            </section>
           :
-            <div>
+            <section>
               <h1>Te asesoramos</h1>
               <h3>Conozcámonos e iniciemos nuevos proyectos juntos</h3>
-              <Link to={"/contacto"}>
-                <button>Contáctanos</button>
+              <Link to={"/contacto"} style={{textDecoration:"none"}}>
+                <Button>Contáctanos</Button>
               </Link>
-            </div>
+            </section>
           }
           
         </TextDiv>

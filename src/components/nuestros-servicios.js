@@ -3,8 +3,8 @@ import { colors } from "../styles/colors"
 import { MdLabelImportant } from "react-icons/md"
 
 const UlContainer = styled.div`
-  display:flex;
-  // flex-wrap:wrap;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
   border-radius:16px;
   background: ${colors.stone[100]};
   padding:20px;
@@ -39,33 +39,33 @@ const UlContainer = styled.div`
     }
   }
   @media(max-width:750px){
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap:0;
     ul{
       margin-bottom:0px;
+    }
+    li p{
+      font-size:16px;
     }
   }
 `
 const Vineta = styled(MdLabelImportant)`
   width:16px;
   margin-right:10px; 
-  margin-top:8px;
+  margin-top:4px;
   color:${colors.blue["500"]};
   scale:2;
+  @media(max-width:750px){
+    scale:1.5;
+  }
 `
 export default function NuestrosServicios({list1, list2}){
+  const list3 = list1.concat(list2);
   return(
     <UlContainer>
-      <ul>
-        {list1.map( item =>{
+        {list3.map( item =>{
           return <li><span><Vineta/></span><p>{item}</p></li>
         })}
-      </ul>
-      <ul>
-        {list2.map( item =>{
-          return <li><span><Vineta/></span><p>{item}</p></li>
-        })}
-      </ul>
     </UlContainer>
   )
 }

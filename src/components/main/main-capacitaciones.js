@@ -76,7 +76,7 @@ const Wrapper = styled.div`
 export default function CapacitacionesMain(){
   return(
     <Wrapper>
-      <p>Todas las empresas a nivel nacional públicas o privadas deben brindar como mínimo 4 capacitaciones al año, en materia de SST a todos sus trabajadores.</p>
+      <p>Todas las empresas, a nivel nacional, públicas o privadas deben brindar como mínimo 4 capacitaciones al año, en materia de SST a todos sus trabajadores.</p>
       <Div1>
         <Background>
           <h2>CAPACITACIONES RELACIONADAS A SEGURIDAD Y SALUD LABORAL</h2>
