@@ -1,12 +1,13 @@
 import styled from "@emotion/styled"
 import { colors } from "../styles/colors"
 import Titulo from "./titulo"
+import Banner from "./banner"
 
 const Container = styled.div`
   display: flex;
   flex-direction:column;
   width:100%;
-  min-height:${window.innerHeight}px;
+  // min-height:${window.innerHeight}px;
   align-items:center;
   max-width:1170px;
   margin:auto;
@@ -46,11 +47,14 @@ const Presentacion = styled.div`
 
 export default function TemplateBlog({descrip, Main}){
   return(
-    <Container>
-      <Presentacion>
-        <Titulo titulo={descrip}/>
-      </Presentacion>
-      <Main/>
-    </Container>
+    <>
+      <Container>
+        <Presentacion>
+          <Titulo titulo={descrip}/>
+        </Presentacion>
+        <Main/>
+      </Container>
+      <Banner show={true} blog={true}/>
+    </>
   )
 }

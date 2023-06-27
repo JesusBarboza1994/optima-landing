@@ -7,7 +7,7 @@ export default function MainArticulo9(){
         corresponda.</p>
       <p>A continuación, puntualizamos algunos puntos a tomar en cuenta en la implementación de la
         normativa asociada:</p>
-      <h3>Derechos del teletrabajador</h3>
+      <h3>1. Derechos del teletrabajador</h3>
       <p>El teletrabajador tiene los mismos derechos que los establecidos para los trabajadores que laboran
         bajo la modalidad presencial, de acuerdo al tipo de régimen laboral al que pertenezca cada
         teletrabajador.</p>
@@ -18,7 +18,7 @@ export default function MainArticulo9(){
           labores.</li>
         <li>A la desconexión digital.</li>
       </ul>
-      <h3>Obligaciones del teletrabajador</h3>
+      <h3>2. Obligaciones del teletrabajador</h3>
       <p>El teletrabajador tiene las mismas obligaciones que las establecidas para los trabajadores que
         laboran bajo la modalidad presencial, de acuerdo al tipo de régimen laboral al que pertenezca cada
         teletrabajador, salvo en lo referido a la asistencia al centro de labores.</p>
@@ -27,7 +27,7 @@ export default function MainArticulo9(){
         <li>Cumplir las medidas, condiciones y recomendaciones de seguridad y salud en el teletrabajo.</li>
         <li>Participar de los programas de capacitación que disponga el empleador.</li>
       </ul>
-      <h3>Obligaciones del empleador</h3>
+      <h3>3. Obligaciones del empleador</h3>
       <ul>
         <li>Se deben entregar las recomendaciones en materia de SST, precisando las condiciones y
             recomendaciones que le atañe a cada teletrabajador.</li>

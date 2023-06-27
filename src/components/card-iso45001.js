@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   padding: 12px 12px;
   width:350px;
   display:flex;
+  color:${colors.white};
   background:${props => props.color};
   h1{
     color:${colors.white};

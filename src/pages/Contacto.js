@@ -89,24 +89,30 @@ export default function Contacto(){
     Mensaje: ""
   })
 
+  const [response, setResponse] = useState("")
+
   function handleChange(e){
     setForm({...form, [e.target.name]: e.target.value})
-    console.log(form)
   }
   function handleTextArea(e){
-    setForm({...form, Message: e.target.value})
-    console.log(form)
+    setForm({...form, Mensaje: e.target.value})
   }
   function handleSubmit(e){
+    if(form.Telefono ==="" && form.Email ==="") return
     e.preventDefault()
     const formEle = document.querySelector("form")
     console.log("Submitted")
     const formData = new FormData(formEle)
-    fetch("https://script.google.com/macros/s/AKfycby2JYwHZ1vnaYFBk9QUeGJiVJIOV45DVOVux_VoOtU5CcWp-p9IsoBMDOHsFCSApI3o/exec",{
+    fetch("https://script.google.com/macros/s/AKfycbxwuQxj3pYB8Au7geeDcadVbCUKKH1dM61UMV095A_qrtywnoHFbwNw7ug-PjWdw9M5dQ/exec ",{
+      
       method:"POST",
       body:formData
-    })
-    console.log(formData)
+    }).then(response =>{
+      if(response.ok){
+        setResponse("Mensaje enviado con éxito!")
+      }
+    }
+    )
   }
 
   return(
@@ -117,11 +123,12 @@ export default function Contacto(){
       <Wrapper>
         <Form onSubmit={handleSubmit}>
           <p>Escríbanos:</p>
-          <Input value={form.Nombre} onChange={handleChange} placeholder={"Nombre"}/>
-          <Input value={form.Empresa} onChange={handleChange} placeholder={"Empresa"}/>
-          <Input value={form.Email} onChange={handleChange} placeholder={"Email"}/>
-          <Input value={form.Telefono} onChange={handleChange} placeholder={"Teléfono"}/>
-          <InputArea value={form.Mensaje} onChange={handleTextArea} placeholder={"Mensaje"}/>
+          { response === "" ? null : <p style={{color:"green", fontSize:"16px"}}>{response}</p> }
+          <Input value={form.Nombre} onChange={handleChange} placeholder={"Nombre"} name={"Nombre"}/>
+          <Input value={form.Empresa} onChange={handleChange} placeholder={"Empresa"} name={"Empresa"}/>
+          <Input value={form.Email} onChange={handleChange} placeholder={"Email"} name={"Email"}/>
+          <Input value={form.Telefono} onChange={handleChange} placeholder={"Teléfono"} name={"Telefono"}/>
+          <InputArea value={form.Mensaje} onChange={handleTextArea} placeholder={"Mensaje"} name={"Mensaje"}/>
           <input value={form.Mensaje} style={{display:"none"}}/>
           <Button>ENVIAR</Button>
 
