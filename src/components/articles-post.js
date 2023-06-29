@@ -43,14 +43,14 @@ const Wrapper = styled.div`
 
 export default function ArticlePost({article}){
   const labels = article.etiquetas.split(", ")
-  function formatFecha(fecha){
-    const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formatoFecha = new Intl.DateTimeFormat('es-ES', opcionesFecha);
-    const fechaString = formatoFecha.format(fecha);
+  // function formatFecha(fecha){
+  //   const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+  //   const formatoFecha = new Intl.DateTimeFormat('es-ES', opcionesFecha);
+  //   const fechaString = formatoFecha.format(fecha);
 
-    const partes = fechaString.split(' de ');
-    return `${partes[0].padStart(2, '0')} ${partes[1]}, ${partes[2]}`;
-  }
+  //   const partes = fechaString.split(' de ');
+  //   return `${partes[0].padStart(2, '0')} ${partes[1]}, ${partes[2]}`;
+  // }
   return(
     <Wrapper label={article.etiqueta}>
       <div>
@@ -58,8 +58,8 @@ export default function ArticlePost({article}){
          <h3 key={etiqueta}>{etiqueta}</h3>
         ))}
       </div>
-      <img src={article.image}/>
-      <p>{formatFecha(article.date)}</p>
+      <img src={article.image} alt="imagen"/>
+      <p>{article.date}</p>
       <h1>{article.title}</h1>
     </Wrapper>
   )
