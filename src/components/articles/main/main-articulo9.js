@@ -42,7 +42,7 @@ export default function MainArticulo9(){
         <li>De denegar el teletrabajo deberá informar las causas objetivas y presentar los medios
             probatorios pertinentes.</li>
       </ul>
-      <h3>Identificación de peligros y riesgos</h3>
+      <h3>4. Identificación de peligros y riesgos</h3>
       <p>El empleador debe identificar los peligros y evaluar los riesgos a los que se encuentra expuesto el
         teletrabajador, e implementa las medidas correctivas.</p>
       <p>Para ello el teletrabajador debe brindar las facilidades de acceso al empleador en el lugar habitual
@@ -56,7 +56,7 @@ export default function MainArticulo9(){
         ergonómicos y factores de riesgos psicosociales. Para esto último se puede tomar como referencia el
         Anexo 4 del D.S. 002-2023-TR, “Lineamientos generales de seguridad y salud que deben considerar
         los empleadores y los teletrabajadores”.</p>
-      <h3>Investigación de accidentes</h3>
+      <h3>5. Investigación de accidentes</h3>
       <p>El teletrabajador debe conocer el procedimiento de actuación ante accidentes y debe comunicar al
         empleador de acuerdo a siguiente:</p>
       <ul style={{listStyleType:"decimal"}}>
@@ -71,7 +71,7 @@ export default function MainArticulo9(){
       </ul>
       <p>El teletrabajador debe <u>demostrar que la lesión o daño a la salud, se produjo en el lugar de trabajo,
          en el horario laboral y con las herramientas de trabajo</u> utilizadas para su labor.</p>
-      <h3>Desconexión digital</h3>
+      <h3>6. Desconexión digital</h3>
       <p>El tiempo de desconexión será mínimo 12 horas continuas en un periodo de 24 horas. Durante este
          periodo:</p>
       <ul>
