@@ -135,14 +135,14 @@ const ClienteSection = styled.section`
 `
 const Banner = styled.div`
   background-image: url(${banner});
-  height: 400px;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-size: 150% 150%;
+  background-position: right;
   transition: background-position 0.3s ease-in-out;
   display:flex;
   justify-content:center;
   align-items:center;
+  padding: 100px 30px;
   div{
     max-width:1170px;
   }
@@ -158,6 +158,10 @@ const Banner = styled.div`
     margin-bottom: 15px;
     font-weight: 400;
     color:${colors.black};
+  }
+  @media(max-width:550px){
+    background-size: 300% 180%;
+    height: 500px;
   }
 `
 
