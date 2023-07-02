@@ -136,7 +136,7 @@ const ClienteSection = styled.section`
 const Banner = styled.div`
   background-image: url(${banner});
   background-repeat: no-repeat;
-  background-size: 150% 150%;
+  background-size: 150% 160%;
   background-position: right;
   transition: background-position 0.3s ease-in-out;
   display:flex;
